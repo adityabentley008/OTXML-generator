@@ -1,0 +1,26 @@
+{
+  "name": "otxml-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Generate and validate OTXML from versioned common tower data",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "otxml-generator": "dist/cli.js"
+  },
+  "files": ["dist", "schema"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "generate": "npm run build && node dist/cli.js",
+    "test": "npm run build && node --test test/generator.test.js"
+  },
+  "dependencies": {
+    "xml-js": "1.6.11"
+  },
+  "devDependencies": {
+    "@types/node": "10.17.60",
+    "typescript": "4.9.5"
+  }
+}

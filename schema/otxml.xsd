@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <xs:element name="Staad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="ProjectData"/>
+        <xs:element ref="TowerInformation"/>
+        <xs:element ref="PanelProperties"/>
+        <xs:element ref="Panel"/>
+        <xs:element ref="Nodes"/>
+        <xs:element ref="RadCenterProperties"/>
+        <xs:element ref="MountProperties"/>
+        <xs:element ref="Mounts"/>
+        <xs:element ref="MountNodes"/>
+        <xs:element ref="MountPipesProperties"/>
+        <xs:element ref="MountPipes"/>
+        <xs:element ref="AntennaProperties"/>
+        <xs:element ref="Antennas"/>
+        <xs:element ref="AntennaNodes"/>
+        <xs:element ref="AttachmentProperties"/>
+        <xs:element ref="Attachments"/>
+        <xs:element ref="AttachmentNodes"/>
+        <xs:element ref="Foundations"/>
+        <xs:element ref="ConnectionDetails"/>
+        <xs:element ref="Sections"/>
+        <xs:element ref="Materials"/>
+        <xs:element ref="SitePlan"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ProjectData">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+      <xs:attribute name="Site_Lattitude" type="xs:string"/>
+      <xs:attribute name="Site_Longitude" type="xs:string"/>
+      <xs:attribute name="Site_Altitude" type="xs:string"/>
+      <xs:attribute name="HashId" type="xs:string"/>
+      <xs:attribute name="ComponentName" type="xs:string"/>
+      <xs:attribute name="CarrSubject" type="xs:string"/>
+      <xs:attribute name="CarrSiteName" type="xs:string"/>
+      <xs:attribute name="CarrSiteNumber" type="xs:string"/>
+      <xs:attribute name="CarrAnalysisType" type="xs:string"/>
+      <xs:attribute name="CarrCarrierName" type="xs:string"/>
+      <xs:attribute name="CustSiteId" type="xs:string"/>
+      <xs:attribute name="CustJobNumber" type="xs:string"/>
+      <xs:attribute name="CustSiteName" type="xs:string"/>
+      <xs:attribute name="CustCity" type="xs:string"/>
+      <xs:attribute name="CustState" type="xs:string"/>
+      <xs:attribute name="CustZip" type="xs:string"/>
+      <xs:attribute name="CustAddress" type="xs:string"/>
+      <xs:attribute name="CustProjectID" type="xs:string"/>
+      <xs:attribute name="CustApplicationId" type="xs:string"/>
+      <xs:attribute name="CustApplicationRevisionId" type="xs:string"/>
+      <xs:attribute name="WithRelationships" type="xs:string"/>
+      <xs:attribute name="CustName" type="xs:string"/>
+      <xs:attribute name="SiteAddress" type="xs:string"/>
+      <xs:attribute name="SiteCity" type="xs:string"/>
+      <xs:attribute name="SiteState" type="xs:string"/>
+      <xs:attribute name="SiteZip" type="xs:string"/>
+      <xs:attribute name="SiteCounty" type="xs:string"/>
+      <xs:attribute name="SiteLattitude" type="xs:string"/>
+      <xs:attribute name="SiteLongitude" type="xs:string"/>
+      <xs:attribute name="SiteAltitude" type="xs:string"/>
+      <xs:attribute name="SiteElevation" type="xs:string"/>
+      <xs:attribute name="SiteName" type="xs:string"/>
+      <xs:attribute name="SiteType" type="xs:string"/>
+      <xs:attribute name="SiteIdentifier" type="xs:string"/>
+      <xs:attribute name="ModelType" type="xs:string"/>
+      <xs:attribute name="WithIFC" type="xs:string"/>
+      <xs:attribute name="UserRequestId" type="xs:string"/>
+      <xs:attribute name="IfcVersion" type="xs:string"/>
+      <xs:attribute name="IfcVendorProjectId" type="xs:string"/>
+      <xs:attribute name="DateOfCapture" type="xs:string"/>
+      <xs:attribute name="IfcProjectId" type="xs:string"/>
+      <xs:attribute name="Grayscale" type="xs:string"/>
+      <xs:attribute name="WithFlatBaseStructure" type="xs:string"/>
+      <xs:attribute name="IfcFileName" type="xs:string"/>
+      <xs:attribute name="SiteAltitudeNAVD88" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TowerInformation">
+    <xs:complexType>
+      <xs:attribute name="TowerID" type="xs:string"/>
+      <xs:attribute name="ComponentName" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="TowerName" type="xs:string"/>
+      <xs:attribute name="Description" type="xs:string"/>
+      <xs:attribute name="UnitSystem" type="xs:string"/>
+      <xs:attribute name="Convention" type="xs:string"/>
+      <xs:attribute name="BearingAngle" type="xs:string"/>
+      <xs:attribute name="TowerType" type="xs:string"/>
+      <xs:attribute name="TowerHeight" type="xs:string"/>
+      <xs:attribute name="TopFaceWidth" type="xs:string"/>
+      <xs:attribute name="TopFaceDepth" type="xs:string"/>
+      <xs:attribute name="BottomFaceWidth" type="xs:string"/>
+      <xs:attribute name="BottomFaceDepth" type="xs:string"/>
+      <xs:attribute name="NoofPanel" type="xs:string"/>
+      <xs:attribute name="NoOfLegs" type="xs:string"/>
+      <xs:attribute name="ConcreteHeight" type="xs:string"/>
+      <xs:attribute name="TowerTiltX" type="xs:string"/>
+      <xs:attribute name="TowerTiltY" type="xs:string"/>
+      <xs:attribute name="BaseLongitude" type="xs:string"/>
+      <xs:attribute name="BaseLatitude" type="xs:string"/>
+      <xs:attribute name="BaseAltitude" type="xs:string"/>
+      <xs:attribute name="EPsetProjectedCRS" type="xs:string"/>
+      <xs:attribute name="Source" type="xs:string"/>
+      <xs:attribute name="TowerShape" type="xs:string"/>
+      <xs:attribute name="OTXMLAngle" type="xs:string"/>
+      <xs:attribute name="Orientation" type="xs:string"/>
+      <xs:attribute name="SourcePanelCount" type="xs:string"/>
+      <xs:attribute name="PartialExport" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PanelProperties">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Panel"/>
+        <xs:element ref="PanelProperty"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PanelProperty">
+    <xs:complexType>
+      <xs:attribute name="PanelID" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="Height" type="xs:string"/>
+      <xs:attribute name="TopWidth" type="xs:string"/>
+      <xs:attribute name="TopElevation" type="xs:string"/>
+      <xs:attribute name="BottomElevation" type="xs:string"/>
+      <xs:attribute name="BottomWidth" type="xs:string"/>
+      <xs:attribute name="FaceBracing" type="xs:string"/>
+      <xs:attribute name="PlanBracing" type="xs:string"/>
+      <xs:attribute name="HipBracing" type="xs:string"/>
+      <xs:attribute name="NumberOfSegments" type="xs:string"/>
+      <xs:attribute name="Weight" type="xs:string"/>
+      <xs:attribute name="ComponentName" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Panel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Legs" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="FaceBracingDetails" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="PlanBracingDetails" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="HipBracingDetails" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="PanelID" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="Height" type="xs:string"/>
+      <xs:attribute name="TopWidth" type="xs:string"/>
+      <xs:attribute name="TopElevation" type="xs:string"/>
+      <xs:attribute name="BottomElevation" type="xs:string"/>
+      <xs:attribute name="BottomWidth" type="xs:string"/>
+      <xs:attribute name="FaceBracing" type="xs:string"/>
+      <xs:attribute name="PlanBracing" type="xs:string"/>
+      <xs:attribute name="HipBracing" type="xs:string"/>
+      <xs:attribute name="NumberOfSegments" type="xs:string"/>
+      <xs:attribute name="Weight" type="xs:string"/>
+      <xs:attribute name="ComponentName" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+      <xs:attribute name="ID" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Legs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Leg" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Leg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PhysicalMember" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="Name" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PhysicalMember">
+    <xs:complexType>
+      <xs:attribute name="PanelPropertyID" type="xs:string"/>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="StartNodeID" type="xs:string"/>
+      <xs:attribute name="EndNodeID" type="xs:string"/>
+      <xs:attribute name="SectionID" type="xs:string"/>
+      <xs:attribute name="SectionName" type="xs:string"/>
+      <xs:attribute name="BetaAngle" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+      <xs:attribute name="MemberTag" type="xs:string"/>
+      <xs:attribute name="MaterialID" type="xs:string"/>
+      <xs:attribute name="StartRelease" type="xs:string"/>
+      <xs:attribute name="EndRelease" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="FaceBracingDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Face" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Face">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Segments" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="Name" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Segments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Segment" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Segment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PhysicalMember" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="Name" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PlanBracingDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PlanBracing" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PlanBracing">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PhysicalMember" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="Name" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="HipBracingDetails">
+  </xs:element>
+
+  <xs:element name="Nodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Node" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Node">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="X" type="xs:string"/>
+      <xs:attribute name="Y" type="xs:string"/>
+      <xs:attribute name="Z" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="RadCenterProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="RadCenterProperty" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="RadCenterProperty">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="MinAltitude" type="xs:string"/>
+      <xs:attribute name="MaxAltitude" type="xs:string"/>
+      <xs:attribute name="Elevation" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+      <xs:attribute name="ComponentName" type="xs:string"/>
+      <xs:attribute name="Operator" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MountProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MountProperty" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MountProperty">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="Name" type="xs:string"/>
+      <xs:attribute name="Elevation" type="xs:string"/>
+      <xs:attribute name="Manufacturer" type="xs:string"/>
+      <xs:attribute name="ModelName" type="xs:string"/>
+      <xs:attribute name="Type" type="xs:string"/>
+      <xs:attribute name="Location" type="xs:string"/>
+      <xs:attribute name="Azimuth" type="xs:string"/>
+      <xs:attribute name="Height" type="xs:string"/>
+      <xs:attribute name="Width" type="xs:string"/>
+      <xs:attribute name="Standoff" type="xs:string"/>
+      <xs:attribute name="Weight" type="xs:string"/>
+      <xs:attribute name="Classification" type="xs:string"/>
+      <xs:attribute name="ComponentName" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+      <xs:attribute name="MountId" type="xs:string"/>
+      <xs:attribute name="AbsoluteAzimuth" type="xs:string"/>
+      <xs:attribute name="NumberOfFaces" type="xs:string"/>
+      <xs:attribute name="FaceRotation" type="xs:string"/>
+      <xs:attribute name="RadCenterID" type="xs:string"/>
+      <xs:attribute name="Operator" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Mounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Mount" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Mount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MountMember" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="MountPipeMember" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="ID" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MountMember">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="RefID" type="xs:string"/>
+      <xs:attribute name="StartNodeID" type="xs:string"/>
+      <xs:attribute name="EndNodeID" type="xs:string"/>
+      <xs:attribute name="SectionID" type="xs:string"/>
+      <xs:attribute name="betaAngle" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="Type" type="xs:string"/>
+      <xs:attribute name="MountPropertyID" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+      <xs:attribute name="Location" type="xs:string"/>
+      <xs:attribute name="WindDescription" type="xs:string"/>
+      <xs:attribute name="TypeOfMember" type="xs:string"/>
+      <xs:attribute name="MaterialName" type="xs:string"/>
+      <xs:attribute name="SectionName" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MountPipeMember">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="RefID" type="xs:string"/>
+      <xs:attribute name="StartNodeID" type="xs:string"/>
+      <xs:attribute name="EndNodeID" type="xs:string"/>
+      <xs:attribute name="SectionID" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="MountPipePropertyID" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MountNodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MountNode" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MountNode">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="X" type="xs:string"/>
+      <xs:attribute name="Y" type="xs:string"/>
+      <xs:attribute name="Z" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MountPipesProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MountPipeProperty" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MountPipeProperty">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="Name" type="xs:string"/>
+      <xs:attribute name="Manufacturer" type="xs:string"/>
+      <xs:attribute name="ModelName" type="xs:string"/>
+      <xs:attribute name="Elevation" type="xs:string"/>
+      <xs:attribute name="Location" type="xs:string"/>
+      <xs:attribute name="Type" type="xs:string"/>
+      <xs:attribute name="LateralOffset" type="xs:string"/>
+      <xs:attribute name="VerticalOffset" type="xs:string"/>
+      <xs:attribute name="HorizontalOffset" type="xs:string"/>
+      <xs:attribute name="TopElevation" type="xs:string"/>
+      <xs:attribute name="BottomElevation" type="xs:string"/>
+      <xs:attribute name="Height" type="xs:string"/>
+      <xs:attribute name="OuterDia" type="xs:string"/>
+      <xs:attribute name="InnerDia" type="xs:string"/>
+      <xs:attribute name="Weight" type="xs:string"/>
+      <xs:attribute name="Thickness" type="xs:string"/>
+      <xs:attribute name="Classification" type="xs:string"/>
+      <xs:attribute name="MountRefId" type="xs:string"/>
+      <xs:attribute name="Allocation" type="xs:string"/>
+      <xs:attribute name="LrOrdinalNumber" type="xs:string"/>
+      <xs:attribute name="AntennaRefId" type="xs:string"/>
+      <xs:attribute name="AntennaNames" type="xs:string"/>
+      <xs:attribute name="FaceRef" type="xs:string"/>
+      <xs:attribute name="ComponentName" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+      <xs:attribute name="MountId" type="xs:string"/>
+      <xs:attribute name="Face" type="xs:string"/>
+      <xs:attribute name="AbsoluteAzimuth" type="xs:string"/>
+      <xs:attribute name="AntennaOrientation" type="xs:string"/>
+      <xs:attribute name="AdjacentForeignPipeDistance" type="xs:string"/>
+      <xs:attribute name="AdjacentForeignPipe" type="xs:string"/>
+      <xs:attribute name="MaterialName" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MountPipes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Mount" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AntennaProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AntennaProperty" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AntennaProperty">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="Name" type="xs:string"/>
+      <xs:attribute name="Elevation" type="xs:string"/>
+      <xs:attribute name="CenterLine" type="xs:string"/>
+      <xs:attribute name="Manufacturer" type="xs:string"/>
+      <xs:attribute name="ModelName" type="xs:string"/>
+      <xs:attribute name="Type" type="xs:string"/>
+      <xs:attribute name="SubType" type="xs:string"/>
+      <xs:attribute name="Location" type="xs:string"/>
+      <xs:attribute name="Azimuth" type="xs:string"/>
+      <xs:attribute name="AbsoluteAzimuth" type="xs:string"/>
+      <xs:attribute name="LateralOffset" type="xs:string"/>
+      <xs:attribute name="VerticalOffset" type="xs:string"/>
+      <xs:attribute name="HorizontalOffset" type="xs:string"/>
+      <xs:attribute name="Height" type="xs:string"/>
+      <xs:attribute name="Width" type="xs:string"/>
+      <xs:attribute name="Depth" type="xs:string"/>
+      <xs:attribute name="Tilt" type="xs:string"/>
+      <xs:attribute name="Roll" type="xs:string"/>
+      <xs:attribute name="Weight" type="xs:string"/>
+      <xs:attribute name="Classification" type="xs:string"/>
+      <xs:attribute name="ComponentName" type="xs:string"/>
+      <xs:attribute name="MountRefId" type="xs:string"/>
+      <xs:attribute name="MountPipeRefId" type="xs:string"/>
+      <xs:attribute name="MountId" type="xs:string"/>
+      <xs:attribute name="MountPipeId" type="xs:string"/>
+      <xs:attribute name="PolygonPointId" type="xs:string"/>
+      <xs:attribute name="ForceCoefficient" type="xs:string"/>
+      <xs:attribute name="DistanceFromFace" type="xs:string"/>
+      <xs:attribute name="DistanceFromMountPipe" type="xs:string"/>
+      <xs:attribute name="Orientation" type="xs:string"/>
+      <xs:attribute name="Alignment" type="xs:string"/>
+      <xs:attribute name="ClosestAntenna1" type="xs:string"/>
+      <xs:attribute name="ClosestAntenna2" type="xs:string"/>
+      <xs:attribute name="ClosestAntenna3" type="xs:string"/>
+      <xs:attribute name="ClosestAntenna1Distance" type="xs:string"/>
+      <xs:attribute name="ClosestAntenna2Distance" type="xs:string"/>
+      <xs:attribute name="ClosestAntenna3Distance" type="xs:string"/>
+      <xs:attribute name="DistanceFromClosestAntennaAbove" type="xs:string"/>
+      <xs:attribute name="DistanceFromClosestAntennaBelow" type="xs:string"/>
+      <xs:attribute name="ClosestExteriorMountPipe" type="xs:string"/>
+      <xs:attribute name="Carrier" type="xs:string"/>
+      <xs:attribute name="Shade" type="xs:string"/>
+      <xs:attribute name="Epan" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Antennas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Antenna" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Antenna">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AntennaMember" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="ID" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AntennaMember">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="RefID" type="xs:string"/>
+      <xs:attribute name="StartNodeID" type="xs:string"/>
+      <xs:attribute name="EndNodeID" type="xs:string"/>
+      <xs:attribute name="SectionID" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="AntennaPropertyID" type="xs:string"/>
+      <xs:attribute name="HashId" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AntennaNodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AntennaNode" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AntennaNode">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="X" type="xs:string"/>
+      <xs:attribute name="Y" type="xs:string"/>
+      <xs:attribute name="Z" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AttachmentProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AttachmentProperty" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AttachmentProperty">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="TopElevation" type="xs:string"/>
+      <xs:attribute name="BottomElevation" type="xs:string"/>
+      <xs:attribute name="AttachmentName" type="xs:string"/>
+      <xs:attribute name="AttachmentType" type="xs:string"/>
+      <xs:attribute name="Location" type="xs:string"/>
+      <xs:attribute name="Azimuth" type="xs:string"/>
+      <xs:attribute name="Width" type="xs:string"/>
+      <xs:attribute name="Depth" type="xs:string"/>
+      <xs:attribute name="Weight" type="xs:string"/>
+      <xs:attribute name="Classification" type="xs:string"/>
+      <xs:attribute name="ComponentName" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Attachments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Attachment" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Attachment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AttachmentMember" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="ID" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AttachmentMember">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="RefID" type="xs:string"/>
+      <xs:attribute name="StartNodeID" type="xs:string"/>
+      <xs:attribute name="EndNodeID" type="xs:string"/>
+      <xs:attribute name="SectionID" type="xs:string"/>
+      <xs:attribute name="Label" type="xs:string"/>
+      <xs:attribute name="AttachmentPropertyID" type="xs:string"/>
+      <xs:attribute name="HashId" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AttachmentNodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AttachmentNode" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AttachmentNode">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="X" type="xs:string"/>
+      <xs:attribute name="Y" type="xs:string"/>
+      <xs:attribute name="Z" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Foundations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Additions" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="changeSetActivity" type="xs:string"/>
+      <xs:attribute name="ChangeSetForFoundation" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Additions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Addition" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Addition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Foundation" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="BasePlateConnections" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Bolts" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Stiffeners" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="SitePlanMemberShapes" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="Name" type="xs:string"/>
+      <xs:attribute name="DisplayLabel" type="xs:string"/>
+      <xs:attribute name="Type" type="xs:string"/>
+      <xs:attribute name="zMin" type="xs:string"/>
+      <xs:attribute name="zMax" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+      <xs:attribute name="ParentName" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Foundation">
+    <xs:complexType>
+      <xs:attribute name="foundationId" type="xs:string"/>
+      <xs:attribute name="location" type="xs:string"/>
+      <xs:attribute name="width" type="xs:string"/>
+      <xs:attribute name="exposedDepth" type="xs:string"/>
+      <xs:attribute name="foundationType" type="xs:string"/>
+      <xs:attribute name="orientation" type="xs:string"/>
+      <xs:attribute name="altitude" type="xs:string"/>
+      <xs:attribute name="foundationName" type="xs:string"/>
+      <xs:attribute name="referencePoint" type="xs:string"/>
+      <xs:attribute name="sourceAppElementID" type="xs:string"/>
+      <xs:attribute name="guid" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="BasePlateConnections">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="BasePlateConnection" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="BasePlateConnection">
+    <xs:complexType>
+      <xs:attribute name="basePlateId" type="xs:string"/>
+      <xs:attribute name="location" type="xs:string"/>
+      <xs:attribute name="width" type="xs:string"/>
+      <xs:attribute name="thickness" type="xs:string"/>
+      <xs:attribute name="baseplatetype" type="xs:string"/>
+      <xs:attribute name="orientation" type="xs:string"/>
+      <xs:attribute name="clipDistance" type="xs:string"/>
+      <xs:attribute name="referencePoint" type="xs:string"/>
+      <xs:attribute name="sourceAppElementID" type="xs:string"/>
+      <xs:attribute name="guid" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Bolts">
+  </xs:element>
+
+  <xs:element name="Stiffeners">
+  </xs:element>
+
+  <xs:element name="SitePlanMemberShapes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="SitePlanMemberShape" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SitePlanMemberShape">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="SitePlanMemberPoint" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="ShapeID" type="xs:string"/>
+      <xs:attribute name="SourceAppElementId" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SitePlanMemberPoint">
+    <xs:complexType>
+      <xs:attribute name="PolygonId" type="xs:string"/>
+      <xs:attribute name="X" type="xs:string"/>
+      <xs:attribute name="Y" type="xs:string"/>
+      <xs:attribute name="Z" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ConnectionDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Additions" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="changeSetActivity" type="xs:string"/>
+      <xs:attribute name="ChangeSetForConnection" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Sections">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Section"/>
+        <xs:element ref="PolyLine"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Section">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="Name" type="xs:string"/>
+      <xs:attribute name="SectionName" type="xs:string"/>
+      <xs:attribute name="Radius" type="xs:string"/>
+      <xs:attribute name="WallThickness" type="xs:string"/>
+      <xs:attribute name="Width" type="xs:string"/>
+      <xs:attribute name="Depth" type="xs:string"/>
+      <xs:attribute name="Thickness" type="xs:string"/>
+      <xs:attribute name="FilletRadius" type="xs:string"/>
+      <xs:attribute name="EdgeRadius" type="xs:string"/>
+      <xs:attribute name="OuterDiameter" type="xs:string"/>
+      <xs:attribute name="InnerDiameter" type="xs:string"/>
+      <xs:attribute name="Diameter" type="xs:string"/>
+      <xs:attribute name="Tnom" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PolyLine">
+    <xs:complexType>
+      <xs:attribute name="RefID" type="xs:string"/>
+      <xs:attribute name="PolygonID" type="xs:string"/>
+      <xs:attribute name="X" type="xs:string"/>
+      <xs:attribute name="Y" type="xs:string"/>
+      <xs:attribute name="Z" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Materials">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Material"/>
+        <xs:element ref="MaterialProperty"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Material">
+    <xs:complexType>
+      <xs:attribute name="ID" type="xs:string"/>
+      <xs:attribute name="Name" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MaterialProperty">
+    <xs:complexType>
+      <xs:attribute name="RefID" type="xs:string"/>
+      <xs:attribute name="Name" type="xs:string"/>
+      <xs:attribute name="Description" type="xs:string"/>
+      <xs:attribute name="Value" type="xs:string"/>
+      <xs:attribute name="Unit" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SitePlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Changes" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Additions" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="changeSetActivityForSitePlan" type="xs:string"/>
+      <xs:attribute name="changeSetActivity" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Changes">
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Staad>
+	<ProjectData ID="1" Label="Project Data" HashId="40.7681610464-8.068940677" ComponentName="ProjectData" CarrSubject="" CarrSiteName="10106775_P-725587_V2" CarrSiteNumber="" CarrAnalysisType="" CarrCarrierName="" CustSiteId="" CustJobNumber="" CustSiteName="" CustCity="" CustState="" CustZip="" CustAddress="" CustProjectID="" CustApplicationId="OpenTower Connector" CustApplicationRevisionId="7.0.2" WithRelationships="True" CustName="" SiteAddress="" SiteCity="" SiteState="" SiteZip="" SiteCounty="" SiteLattitude="40.679788008011776" SiteLongitude="-81.18382110673565" SiteAltitude="333.46139014421595" SiteElevation="284.78" SiteName="10106775_P-725587_V2" SiteType="3x free standing" SiteIdentifier="Guy" ModelType="AsBuild" WithIFC="True" UserRequestId="" IfcVersion="IFC2x3" IfcVendorProjectId="74638135-4a4a-4aaa-b36d-e9935bb37b13" DateOfCapture="" IfcProjectId="-" Grayscale="False" WithFlatBaseStructure="False" IfcFileName="" SiteAltitudeNAVD88="333.46139014421595"/>
+	<TowerInformation TowerID="74638135-4a4a-4aaa-b36d-e9935bb37b13" ComponentName="TowerInformation" SourceAppElementId="TowerInformation_1" Label="Tower Information" TowerName="10106775_P-725587_V2" Description="" UnitSystem="Imperial" Convention="OpenTower" BearingAngle="88.674" TowerType="SelfSupported" TowerHeight="284.78" TopFaceWidth="5.08" TopFaceDepth="5.08" BottomFaceWidth="29.76" BottomFaceDepth="29.76" NoofPanel="46" NoOfLegs="3" ConcreteHeight="1.14" TowerTiltX="0.07" TowerTiltY="0.01" BaseLongitude="484465.7831487437" BaseLatitude="4503227.726255391" BaseAltitude="333.46139014421595" EPsetProjectedCRS="EPSG:32617" Source="DesignFromAsBuilt"/>
+	<PanelProperties>
+		<Panel PanelID="T1" Label="Panel T1" Height="1.339999999999975" TopWidth="5.09" TopElevation="284.78" BottomElevation="283.44" BottomWidth="5.09" FaceBracing="X Brace" PlanBracing="None" HipBracing="None" NumberOfSegments="1" Weight="0" ComponentName="Panel" SourceAppElementId="Panel_T1"/>
+		<Panel PanelID="T2" Label="Panel T2" Height="3.740000000000009" TopWidth="5.09" TopElevation="283.44" BottomElevation="279.7" BottomWidth="5.09" FaceBracing="X Brace" PlanBracing="None" HipBracing="None" NumberOfSegments="1" Weight="0" ComponentName="Panel" SourceAppElementId="Panel_T2"/>
+	</PanelProperties>
+	<Panel ID="T1">
+		<Legs>
+			<Leg Name="B">
+				<PhysicalMember PanelPropertyID="1" ID="1" StartNodeID="1" EndNodeID="2" SectionID="1" SectionName="" BetaAngle="-225" Label="Leg_B" SourceAppElementId="Leg_1"/>
+			</Leg>
+			<Leg Name="C">
+				<PhysicalMember PanelPropertyID="1" ID="2" StartNodeID="3" EndNodeID="4" SectionID="1" SectionName="" BetaAngle="90" Label="Leg_C" SourceAppElementId="Leg_2"/>
+			</Leg>
+			<Leg Name="A">
+				<PhysicalMember PanelPropertyID="1" ID="3" StartNodeID="5" EndNodeID="6" SectionID="1" SectionName="" BetaAngle="-90" Label="Leg_A" SourceAppElementId="Leg_3"/>
+			</Leg>
+		</Legs>
+		<FaceBracingDetails>
+			<Face ID="1" Name="FaceA">
+				<Segments>
+					<Segment ID="1" Name="X Brace">
+						<PhysicalMember PanelPropertyID="T1" ID="4" MemberTag="DIAGONAL" StartNodeID="7" EndNodeID="9" SectionID="1" SectionName="" BetaAngle="0" Label="Face_A_0" SourceAppElementId="DIAGONAL_4"/>
+						<PhysicalMember PanelPropertyID="T1" ID="5" MemberTag="DIAGONAL" StartNodeID="8" EndNodeID="10" SectionID="1" SectionName="" BetaAngle="0" Label="Face_A_1" SourceAppElementId="DIAGONAL_5"/>
+						<PhysicalMember PanelPropertyID="T1" ID="6" MemberTag="SECONDARYHORIZONTAL" StartNodeID="12" EndNodeID="13" SectionID="2" SectionName="" BetaAngle="0" Label="Face_A_2" SourceAppElementId="SECONDARYHORIZONTAL_6"/>
+					</Segment>
+				</Segments>
+			</Face>
+			<Face ID="2" Name="FaceB">
+				<Segments>
+					<Segment ID="1" Name="X Brace">
+						<PhysicalMember PanelPropertyID="T1" ID="7" MemberTag="DIAGONAL" StartNodeID="14" EndNodeID="16" SectionID="1" SectionName="" BetaAngle="0" Label="Face_B_0" SourceAppElementId="DIAGONAL_7"/>
+						<PhysicalMember PanelPropertyID="T1" ID="8" MemberTag="DIAGONAL" StartNodeID="15" EndNodeID="17" SectionID="1" SectionName="" BetaAngle="0" Label="Face_B_1" SourceAppElementId="DIAGONAL_8"/>
+						<PhysicalMember PanelPropertyID="T1" ID="9" MemberTag="SECONDARYHORIZONTAL" StartNodeID="19" EndNodeID="20" SectionID="2" SectionName="" BetaAngle="0" Label="Face_B_2" SourceAppElementId="SECONDARYHORIZONTAL_9"/>
+					</Segment>
+				</Segments>
+			</Face>
+			<Face ID="3" Name="FaceC">
+				<Segments>
+					<Segment ID="1" Name="X Brace">
+						<PhysicalMember PanelPropertyID="T1" ID="10" MemberTag="DIAGONAL" StartNodeID="21" EndNodeID="23" SectionID="1" SectionName="" BetaAngle="0" Label="Face_C_0" SourceAppElementId="DIAGONAL_10"/>
+						<PhysicalMember PanelPropertyID="T1" ID="11" MemberTag="DIAGONAL" StartNodeID="22" EndNodeID="24" SectionID="1" SectionName="" BetaAngle="0" Label="Face_C_1" SourceAppElementId="DIAGONAL_11"/>
+						<PhysicalMember PanelPropertyID="T1" ID="12" MemberTag="SECONDARYHORIZONTAL" StartNodeID="26" EndNodeID="27" SectionID="2" SectionName="" BetaAngle="0" Label="Face_C_2" SourceAppElementId="SECONDARYHORIZONTAL_12"/>
+					</Segment>
+				</Segments>
+			</Face>
+		</FaceBracingDetails>
+		<PlanBracingDetails/>
+		<HipBracingDetails/>
+	</Panel>
+	<Panel ID="T2">
+		<Legs>
+			<Leg Name="B">
+				<PhysicalMember PanelPropertyID="2" ID="13" StartNodeID="28" EndNodeID="29" SectionID="1" SectionName="" BetaAngle="-225" Label="Leg_B" SourceAppElementId="Leg_13"/>
+			</Leg>
+			<Leg Name="C">
+				<PhysicalMember PanelPropertyID="2" ID="14" StartNodeID="30" EndNodeID="31" SectionID="1" SectionName="" BetaAngle="90" Label="Leg_C" SourceAppElementId="Leg_14"/>
+			</Leg>
+			<Leg Name="A">
+				<PhysicalMember PanelPropertyID="2" ID="15" StartNodeID="32" EndNodeID="33" SectionID="1" SectionName="" BetaAngle="-90" Label="Leg_A" SourceAppElementId="Leg_15"/>
+			</Leg>
+		</Legs>
+		<FaceBracingDetails>
+			<Face ID="1" Name="FaceA">
+				<Segments>
+					<Segment ID="1" Name="X Brace">
+						<PhysicalMember PanelPropertyID="T2" ID="16" MemberTag="DIAGONAL" StartNodeID="34" EndNodeID="36" SectionID="1" SectionName="" BetaAngle="0" Label="Face_A_0" SourceAppElementId="DIAGONAL_16"/>
+						<PhysicalMember PanelPropertyID="T2" ID="17" MemberTag="DIAGONAL" StartNodeID="35" EndNodeID="37" SectionID="1" SectionName="" BetaAngle="0" Label="Face_A_1" SourceAppElementId="DIAGONAL_17"/>
+					</Segment>
+				</Segments>
+			</Face>
+			<Face ID="2" Name="FaceB">
+				<Segments>
+					<Segment ID="1" Name="X Brace">
+						<PhysicalMember PanelPropertyID="T2" ID="18" MemberTag="DIAGONAL" StartNodeID="41" EndNodeID="43" SectionID="1" SectionName="" BetaAngle="0" Label="Face_B_0" SourceAppElementId="DIAGONAL_18"/>
+						<PhysicalMember PanelPropertyID="T2" ID="19" MemberTag="DIAGONAL" StartNodeID="42" EndNodeID="44" SectionID="1" SectionName="" BetaAngle="0" Label="Face_B_1" SourceAppElementId="DIAGONAL_19"/>
+					</Segment>
+				</Segments>
+			</Face>
+			<Face ID="3" Name="FaceC">
+				<Segments>
+					<Segment ID="1" Name="X Brace">
+						<PhysicalMember PanelPropertyID="T2" ID="20" MemberTag="DIAGONAL" StartNodeID="48" EndNodeID="50" SectionID="1" SectionName="" BetaAngle="0" Label="Face_C_0" SourceAppElementId="DIAGONAL_20"/>
+						<PhysicalMember PanelPropertyID="T2" ID="21" MemberTag="DIAGONAL" StartNodeID="49" EndNodeID="51" SectionID="1" SectionName="" BetaAngle="0" Label="Face_C_1" SourceAppElementId="DIAGONAL_21"/>
+					</Segment>
+				</Segments>
+			</Face>
+		</FaceBracingDetails>
+		<PlanBracingDetails/>
+		<HipBracingDetails/>
+	</Panel>
+	<Nodes>
+		<Node ID="1" X="-0.3239533332774052" Y="86.80059712291042" Z="0.7748505301372144"/>
+		<Node ID="2" X="-0.3244542426404866" Y="86.39059743514323" Z="0.774922088636183"/>
+		<Node ID="3" X="-0.36395363393471836" Y="86.80037546628654" Z="-0.7751494462549358"/>
+		<Node ID="4" X="-0.36445454329779975" Y="86.39037577851934" Z="-0.7750778877559672"/>
+		<Node ID="5" X="0.9960455088719485" Y="86.79884306751958" Z="-0.03514945752578022"/>
+		<Node ID="6" X="0.9955445995088672" Y="86.3888433797524" Z="-0.03507789902681175"/>
+		<Node ID="7" X="0.9955445995088672" Y="86.3888433797524" Z="-0.03507789902681175"/>
+		<Node ID="8" X="-0.35445455076092564" Y="86.39036356121761" Z="-0.7750778877559672"/>
+		<Node ID="9" X="-0.35395364139784424" Y="86.80036324898481" Z="-0.7751494462549358"/>
+		<Node ID="10" X="0.9960455088719485" Y="86.79884306751958" Z="-0.03514945752578022"/>
+		<Node ID="11" X="0" Y="0" Z="0"/>
+		<Node ID="12" X="1.0" Y="86.59" Z="-0.04"/>
+		<Node ID="13" X="-0.35" Y="86.6" Z="-0.78"/>
+		<Node ID="14" X="-0.324454244772808" Y="86.3905956898153" Z="0.7649220887884917"/>
+		<Node ID="15" X="0.9955445995088672" Y="86.3888433797524" Z="-0.03507789902681175"/>
+		<Node ID="16" X="0.9960455088719485" Y="86.79884306751958" Z="-0.03514945752578022"/>
+		<Node ID="17" X="-0.3239533354097266" Y="86.80059537758248" Z="0.7648505302895231"/>
+		<Node ID="18" X="0" Y="0" Z="0"/>
+		<Node ID="19" X="-0.32" Y="86.6" Z="0.76"/>
+		<Node ID="20" X="1.0" Y="86.59" Z="-0.04"/>
+		<Node ID="21" X="-0.35445455076092564" Y="86.39036356121761" Z="-0.7750778877559672"/>
+		<Node ID="22" X="-0.324454244772808" Y="86.3905956898153" Z="0.7649220887884917"/>
+		<Node ID="23" X="-0.3239533354097266" Y="86.80059537758248" Z="0.7648505302895231"/>
+		<Node ID="24" X="-0.35395364139784424" Y="86.80036324898481" Z="-0.7751494462549358"/>
+		<Node ID="25" X="0" Y="0" Z="0"/>
+		<Node ID="26" X="-0.35" Y="86.6" Z="-0.78"/>
+		<Node ID="27" X="-0.32" Y="86.6" Z="0.76"/>
+		<Node ID="28" X="-0.3244542426404866" Y="86.39059743514323" Z="0.774922088636183"/>
+		<Node ID="29" X="-0.32584701501588365" Y="85.25059830330277" Z="0.7751210561699001"/>
+		<Node ID="30" X="-0.36445454329779975" Y="86.39037577851934" Z="-0.7750778877559672"/>
+		<Node ID="31" X="-0.3658473156731968" Y="85.25037664667889" Z="-0.77487892022225"/>
+		<Node ID="32" X="0.9955445995088672" Y="86.3888433797524" Z="-0.03507789902681175"/>
+		<Node ID="33" X="0.9941518271334702" Y="85.24884424791193" Z="-0.034878931493094546"/>
+		<Node ID="34" X="0.9941518271334702" Y="85.24884424791193" Z="-0.034878931493094546"/>
+		<Node ID="35" X="-0.35584732313632267" Y="85.25036442937716" Z="-0.77487892022225"/>
+		<Node ID="36" X="-0.35445455076092564" Y="86.39036356121761" Z="-0.7750778877559672"/>
+		<Node ID="37" X="0.9955445995088672" Y="86.3888433797524" Z="-0.03507789902681175"/>
+		<Node ID="38" X="0" Y="0" Z="0"/>
+		<Node ID="39" X="0.99" Y="85.82" Z="-0.03"/>
+		<Node ID="40" X="-0.36" Y="85.82" Z="-0.77"/>
+		<Node ID="41" X="-0.325847017148205" Y="85.25059655797483" Z="0.7651210563222088"/>
+		<Node ID="42" X="0.9941518271334702" Y="85.24884424791193" Z="-0.034878931493094546"/>
+		<Node ID="43" X="0.9955445995088672" Y="86.3888433797524" Z="-0.03507789902681175"/>
+		<Node ID="44" X="-0.324454244772808" Y="86.3905956898153" Z="0.7649220887884917"/>
+		<Node ID="45" X="0.33484879118033123" Y="85.81971996886362" Z="0.3650215786476984"/>
+		<Node ID="46" X="-0.33" Y="85.82" Z="0.77"/>
+		<Node ID="47" X="0.99" Y="85.82" Z="-0.03"/>
+		<Node ID="48" X="-0.35584732313632267" Y="85.25036442937716" Z="-0.77487892022225"/>
+		<Node ID="49" X="-0.325847017148205" Y="85.25059655797483" Z="0.7651210563222088"/>
+		<Node ID="50" X="-0.324454244772808" Y="86.3905956898153" Z="0.7649220887884917"/>
+		<Node ID="51" X="-0.35445455076092564" Y="86.39036356121761" Z="-0.7750778877559672"/>
+	</Nodes>
+	<Sections>
+		<Section ID="1" Name="HollowCircleProfile" Radius="1.1875" WallThickness="0.154"/>
+		<Section ID="2" Name="LShapeProfile" Width="1.1875" Depth="2.0" Thickness="0.1875" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="3" Name="LShapeProfile" Width="1.1875" Depth="-1" Thickness="-1" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="4" Name="FlatBar" Depth="10" Width="0.5" Thickness="0.5"/>
+		<Section ID="5" Name="PIPE" OuterDiameter="4.5" InnerDiameter="2.96"/>
+		<Section ID="6" Name="RB" Diameter="0.75"/>
+		<Section ID="7" Name="RB" Diameter="1"/>
+		<Section ID="8" Name="RodSection" Diameter="1"/>
+		<Section ID="9" Name="SQUARE" Depth="5" Width="5" Tnom="0.375"/>
+		<Section ID="10" Name="PIPE" OuterDiameter="2.38" InnerDiameter="1.02"/>
+		<Section ID="11" Name="RB" Diameter="0.625"/>
+		<Section ID="12" Name="RB" Diameter="0.5"/>
+		<Section ID="13" Name="LShapeProfile" Width="2.5" Depth="2.5" Thickness="0.25" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="14" Name="FlatBar" Depth="6" Width="0.5" Thickness="0.5"/>
+		<Section ID="15" Name="LShapeProfile" Width="2" Depth="2" Thickness="0.25" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="16" Name="FlatBar" Depth="1" Width="0.5" Thickness="0.5"/>
+		<Section ID="17" Name="LShapeProfile" Width="1.75" Depth="1.75" Thickness="0.25" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="18" Name="FlatBar" Depth="8" Width="0.5" Thickness="0.5"/>
+		<Section ID="19" Name="LShapeProfile" Width="4" Depth="4" Thickness="0.3125" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="20" Name="FlatBar" Depth="0.1875" Width="2.125" Thickness="2.125"/>
+		<Section ID="21" Name="LShapeProfile" Width="3" Depth="3" Thickness="0.1875" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="22" Name="LShapeProfile" Width="1.75" Depth="3" Thickness="0.1875" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="23" Name="AttachmentProfile" Width="22.24" Depth="18.49"/>
+		<Section ID="24" Name="AttachmentProfile" Width="1.44" Depth="3.04"/>
+		<Section ID="25" Name="AttachmentProfile" Width="3.18" Depth="6.17"/>
+		<Section ID="26" Name="AttachmentProfile" Width="0.22" Depth="0.9"/>
+		<Section ID="27" Name="AttachmentProfile" Width="2.08" Depth="4.24"/>
+		<Section ID="28" Name="AttachmentProfile" Width="1.13" Depth="1.85"/>
+		<Section ID="29" Name="AttachmentProfile" Width="13.16" Depth="26.94"/>
+		<Section ID="30" Name="AttachmentProfile" Width="11.14" Depth="28.56"/>
+		<Section ID="31" Name="AttachmentProfile" Width="12.59" Depth="6.17"/>
+		<Section ID="32" Name="AttachmentProfile" Width="3.63" Depth="1.81"/>
+		<Section ID="33" Name="AttachmentProfile" Width="11.44" Depth="1.27"/>
+		<Section ID="34" Name="AttachmentProfile" Width="10.53" Depth="1.79"/>
+		<Section ID="35" Name="AttachmentProfile" Width="2.59" Depth="1.69"/>
+		<Section ID="36" Name="AttachmentProfile" Width="2.9" Depth="5.13"/>
+		<Section ID="37" Name="AttachmentProfile" Width="3.15" Depth="6.67"/>
+		<Section ID="38" Name="AttachmentProfile" Width="2.36" Depth="1.37"/>
+		<Section ID="39" Name="AttachmentProfile" Width="3.3" Depth="2.1"/>
+		<Section ID="40" Name="AttachmentProfile" Width="2.93" Depth="5.14"/>
+		<Section ID="41" Name="AttachmentProfile" Width="8.6" Depth="5.09"/>
+		<Section ID="42" Name="AttachmentProfile" Width="11.37" Depth="17.53"/>
+		<Section ID="43" Name="AttachmentProfile" Width="31.25" Depth="17.57"/>
+		<Section ID="44" Name="AttachmentProfile" Width="3.96" Depth="7.99"/>
+		<Section ID="45" Name="AttachmentProfile" Width="10.93" Depth="29.23"/>
+		<Section ID="46" Name="AttachmentProfile" Width="12.47" Depth="28.47"/>
+		<Section ID="47" Name="AttachmentProfile" Width="38.5" Depth="20.27"/>
+		<Section ID="48" Name="AttachmentProfile" Width="10.63" Depth="27.99"/>
+		<Section ID="49" Name="AttachmentProfile" Width="7.55" Depth="15.93"/>
+		<Section ID="50" Name="AttachmentProfile" Width="2.34" Depth="5.28"/>
+		<Section ID="51" Name="AttachmentProfile" Width="13.53" Depth="4.71"/>
+		<Section ID="52" Name="AttachmentProfile" Width="14.25" Depth="24.54"/>
+		<Section ID="53" Name="AttachmentProfile" Width="21.29" Depth="12.18"/>
+	</Sections>
+</Staad>

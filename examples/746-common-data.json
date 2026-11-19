@@ -1,0 +1,2181 @@
+{
+  "schemaVersion": "1.0-draft",
+  "source": {
+    "format": "OTXML",
+    "fileName": "746_detect.xml"
+  },
+  "units": {
+    "nodeCoordinates": {
+      "unit": "m",
+      "basis": "existing connector convention; verify for other sources"
+    },
+    "panelDimensions": {
+      "unit": "ft",
+      "basis": "existing connector convention; verify for other sources"
+    },
+    "towerDimensions": {
+      "unit": "ft",
+      "basis": "inferred from source and existing convention; verify"
+    },
+    "sectionDimensions": {
+      "unit": "in",
+      "basis": "existing connector convention; verify for all section types"
+    },
+    "panelWeight": {
+      "unit": "unknown"
+    }
+  },
+  "coordinateSystem": {
+    "upAxis": "Y",
+    "basis": "existing connector convention"
+  },
+  "projectData": {
+    "projectId": "1",
+    "siteName": "10106775_P-725587_V2",
+    "location": {
+      "latitudeDegrees": 40.679788008011776,
+      "longitudeDegrees": -81.18382110673565,
+      "altitudeMetres": 333.46139014421595,
+      "altitudeBasis": "existing connector convention; verify"
+    },
+    "sourceAttributes": {
+      "ID": "1",
+      "Label": "Project Data",
+      "HashId": "40.7681610464-8.068940677",
+      "ComponentName": "ProjectData",
+      "CarrSubject": "",
+      "CarrSiteName": "10106775_P-725587_V2",
+      "CarrSiteNumber": "",
+      "CarrAnalysisType": "",
+      "CarrCarrierName": "",
+      "CustSiteId": "",
+      "CustJobNumber": "",
+      "CustSiteName": "",
+      "CustCity": "",
+      "CustState": "",
+      "CustZip": "",
+      "CustAddress": "",
+      "CustProjectID": "",
+      "CustApplicationId": "OpenTower Connector",
+      "CustApplicationRevisionId": "7.0.2",
+      "WithRelationships": "True",
+      "CustName": "",
+      "SiteAddress": "",
+      "SiteCity": "",
+      "SiteState": "",
+      "SiteZip": "",
+      "SiteCounty": "",
+      "SiteLattitude": "40.679788008011776",
+      "SiteLongitude": "-81.18382110673565",
+      "SiteAltitude": "333.46139014421595",
+      "SiteElevation": "284.78",
+      "SiteName": "10106775_P-725587_V2",
+      "SiteType": "3x free standing",
+      "SiteIdentifier": "Guy",
+      "ModelType": "AsBuild",
+      "WithIFC": "True",
+      "UserRequestId": "",
+      "IfcVersion": "IFC2x3",
+      "IfcVendorProjectId": "74638135-4a4a-4aaa-b36d-e9935bb37b13",
+      "DateOfCapture": "",
+      "IfcProjectId": "-",
+      "Grayscale": "False",
+      "WithFlatBaseStructure": "False",
+      "IfcFileName": "",
+      "SiteAltitudeNAVD88": "333.46139014421595"
+    }
+  },
+  "towerInformation": {
+    "id": "74638135-4a4a-4aaa-b36d-e9935bb37b13",
+    "name": "10106775_P-725587_V2",
+    "type": "SelfSupported",
+    "height": 284.78,
+    "numberOfLegs": 3,
+    "declaredPanelCount": 46,
+    "bearingAngleDegrees": 88.674,
+    "topFaceWidth": 5.08,
+    "topFaceDepth": 5.08,
+    "bottomFaceWidth": 29.76,
+    "bottomFaceDepth": 29.76,
+    "concreteHeight": 1.14,
+    "tiltX": 0.07,
+    "tiltY": 0.01,
+    "sourceAttributes": {
+      "TowerID": "74638135-4a4a-4aaa-b36d-e9935bb37b13",
+      "ComponentName": "TowerInformation",
+      "SourceAppElementId": "TowerInformation_1",
+      "Label": "Tower Information",
+      "TowerName": "10106775_P-725587_V2",
+      "Description": "",
+      "UnitSystem": "Imperial",
+      "Convention": "OpenTower",
+      "BearingAngle": "88.674",
+      "TowerType": "SelfSupported",
+      "TowerHeight": "284.78",
+      "TopFaceWidth": "5.08",
+      "TopFaceDepth": "5.08",
+      "BottomFaceWidth": "29.76",
+      "BottomFaceDepth": "29.76",
+      "NoofPanel": "46",
+      "NoOfLegs": "3",
+      "ConcreteHeight": "1.14",
+      "TowerTiltX": "0.07",
+      "TowerTiltY": "0.01",
+      "BaseLongitude": "484465.7831487437",
+      "BaseLatitude": "4503227.726255391",
+      "BaseAltitude": "333.46139014421595",
+      "EPsetProjectedCRS": "EPSG:32617",
+      "Source": "DesignFromAsBuilt"
+    }
+  },
+  "panels": [
+    {
+      "id": "T1",
+      "label": "Panel T1",
+      "height": 1.339999999999975,
+      "topWidth": 5.09,
+      "bottomWidth": 5.09,
+      "topElevation": 284.78,
+      "bottomElevation": 283.44,
+      "faceBracing": "X Brace",
+      "planBracing": "None",
+      "hipBracing": "None",
+      "numberOfSegments": 1,
+      "weight": 0.0,
+      "legs": [
+        {
+          "name": "B",
+          "members": [
+            "1"
+          ]
+        },
+        {
+          "name": "C",
+          "members": [
+            "2"
+          ]
+        },
+        {
+          "name": "A",
+          "members": [
+            "3"
+          ]
+        }
+      ],
+      "faces": [
+        {
+          "id": "1",
+          "name": "FaceA",
+          "segments": [
+            {
+              "id": "1",
+              "name": "X Brace",
+              "members": [
+                "4",
+                "5",
+                "6"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "FaceB",
+          "segments": [
+            {
+              "id": "1",
+              "name": "X Brace",
+              "members": [
+                "7",
+                "8",
+                "9"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "name": "FaceC",
+          "segments": [
+            {
+              "id": "1",
+              "name": "X Brace",
+              "members": [
+                "10",
+                "11",
+                "12"
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceAttributes": {
+        "panel": {
+          "ID": "T1"
+        },
+        "panelProperty": {
+          "PanelID": "T1",
+          "Label": "Panel T1",
+          "Height": "1.339999999999975",
+          "TopWidth": "5.09",
+          "TopElevation": "284.78",
+          "BottomElevation": "283.44",
+          "BottomWidth": "5.09",
+          "FaceBracing": "X Brace",
+          "PlanBracing": "None",
+          "HipBracing": "None",
+          "NumberOfSegments": "1",
+          "Weight": "0",
+          "ComponentName": "Panel",
+          "SourceAppElementId": "Panel_T1"
+        }
+      }
+    },
+    {
+      "id": "T2",
+      "label": "Panel T2",
+      "height": 3.740000000000009,
+      "topWidth": 5.09,
+      "bottomWidth": 5.09,
+      "topElevation": 283.44,
+      "bottomElevation": 279.7,
+      "faceBracing": "X Brace",
+      "planBracing": "None",
+      "hipBracing": "None",
+      "numberOfSegments": 1,
+      "weight": 0.0,
+      "legs": [
+        {
+          "name": "B",
+          "members": [
+            "13"
+          ]
+        },
+        {
+          "name": "C",
+          "members": [
+            "14"
+          ]
+        },
+        {
+          "name": "A",
+          "members": [
+            "15"
+          ]
+        }
+      ],
+      "faces": [
+        {
+          "id": "1",
+          "name": "FaceA",
+          "segments": [
+            {
+              "id": "1",
+              "name": "X Brace",
+              "members": [
+                "16",
+                "17"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "FaceB",
+          "segments": [
+            {
+              "id": "1",
+              "name": "X Brace",
+              "members": [
+                "18",
+                "19"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "name": "FaceC",
+          "segments": [
+            {
+              "id": "1",
+              "name": "X Brace",
+              "members": [
+                "20",
+                "21"
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceAttributes": {
+        "panel": {
+          "ID": "T2"
+        },
+        "panelProperty": {
+          "PanelID": "T2",
+          "Label": "Panel T2",
+          "Height": "3.740000000000009",
+          "TopWidth": "5.09",
+          "TopElevation": "283.44",
+          "BottomElevation": "279.7",
+          "BottomWidth": "5.09",
+          "FaceBracing": "X Brace",
+          "PlanBracing": "None",
+          "HipBracing": "None",
+          "NumberOfSegments": "1",
+          "Weight": "0",
+          "ComponentName": "Panel",
+          "SourceAppElementId": "Panel_T2"
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "1",
+      "x": -0.3239533332774052,
+      "y": 86.80059712291042,
+      "z": 0.7748505301372144,
+      "sourceAttributes": {
+        "ID": "1",
+        "X": "-0.3239533332774052",
+        "Y": "86.80059712291042",
+        "Z": "0.7748505301372144"
+      }
+    },
+    {
+      "id": "2",
+      "x": -0.3244542426404866,
+      "y": 86.39059743514323,
+      "z": 0.774922088636183,
+      "sourceAttributes": {
+        "ID": "2",
+        "X": "-0.3244542426404866",
+        "Y": "86.39059743514323",
+        "Z": "0.774922088636183"
+      }
+    },
+    {
+      "id": "3",
+      "x": -0.36395363393471836,
+      "y": 86.80037546628654,
+      "z": -0.7751494462549358,
+      "sourceAttributes": {
+        "ID": "3",
+        "X": "-0.36395363393471836",
+        "Y": "86.80037546628654",
+        "Z": "-0.7751494462549358"
+      }
+    },
+    {
+      "id": "4",
+      "x": -0.36445454329779975,
+      "y": 86.39037577851934,
+      "z": -0.7750778877559672,
+      "sourceAttributes": {
+        "ID": "4",
+        "X": "-0.36445454329779975",
+        "Y": "86.39037577851934",
+        "Z": "-0.7750778877559672"
+      }
+    },
+    {
+      "id": "5",
+      "x": 0.9960455088719485,
+      "y": 86.79884306751958,
+      "z": -0.03514945752578022,
+      "sourceAttributes": {
+        "ID": "5",
+        "X": "0.9960455088719485",
+        "Y": "86.79884306751958",
+        "Z": "-0.03514945752578022"
+      }
+    },
+    {
+      "id": "6",
+      "x": 0.9955445995088672,
+      "y": 86.3888433797524,
+      "z": -0.03507789902681175,
+      "sourceAttributes": {
+        "ID": "6",
+        "X": "0.9955445995088672",
+        "Y": "86.3888433797524",
+        "Z": "-0.03507789902681175"
+      }
+    },
+    {
+      "id": "7",
+      "x": 0.9955445995088672,
+      "y": 86.3888433797524,
+      "z": -0.03507789902681175,
+      "sourceAttributes": {
+        "ID": "7",
+        "X": "0.9955445995088672",
+        "Y": "86.3888433797524",
+        "Z": "-0.03507789902681175"
+      }
+    },
+    {
+      "id": "8",
+      "x": -0.35445455076092564,
+      "y": 86.39036356121761,
+      "z": -0.7750778877559672,
+      "sourceAttributes": {
+        "ID": "8",
+        "X": "-0.35445455076092564",
+        "Y": "86.39036356121761",
+        "Z": "-0.7750778877559672"
+      }
+    },
+    {
+      "id": "9",
+      "x": -0.35395364139784424,
+      "y": 86.80036324898481,
+      "z": -0.7751494462549358,
+      "sourceAttributes": {
+        "ID": "9",
+        "X": "-0.35395364139784424",
+        "Y": "86.80036324898481",
+        "Z": "-0.7751494462549358"
+      }
+    },
+    {
+      "id": "10",
+      "x": 0.9960455088719485,
+      "y": 86.79884306751958,
+      "z": -0.03514945752578022,
+      "sourceAttributes": {
+        "ID": "10",
+        "X": "0.9960455088719485",
+        "Y": "86.79884306751958",
+        "Z": "-0.03514945752578022"
+      }
+    },
+    {
+      "id": "11",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "sourceAttributes": {
+        "ID": "11",
+        "X": "0",
+        "Y": "0",
+        "Z": "0"
+      }
+    },
+    {
+      "id": "12",
+      "x": 1.0,
+      "y": 86.59,
+      "z": -0.04,
+      "sourceAttributes": {
+        "ID": "12",
+        "X": "1.0",
+        "Y": "86.59",
+        "Z": "-0.04"
+      }
+    },
+    {
+      "id": "13",
+      "x": -0.35,
+      "y": 86.6,
+      "z": -0.78,
+      "sourceAttributes": {
+        "ID": "13",
+        "X": "-0.35",
+        "Y": "86.6",
+        "Z": "-0.78"
+      }
+    },
+    {
+      "id": "14",
+      "x": -0.324454244772808,
+      "y": 86.3905956898153,
+      "z": 0.7649220887884917,
+      "sourceAttributes": {
+        "ID": "14",
+        "X": "-0.324454244772808",
+        "Y": "86.3905956898153",
+        "Z": "0.7649220887884917"
+      }
+    },
+    {
+      "id": "15",
+      "x": 0.9955445995088672,
+      "y": 86.3888433797524,
+      "z": -0.03507789902681175,
+      "sourceAttributes": {
+        "ID": "15",
+        "X": "0.9955445995088672",
+        "Y": "86.3888433797524",
+        "Z": "-0.03507789902681175"
+      }
+    },
+    {
+      "id": "16",
+      "x": 0.9960455088719485,
+      "y": 86.79884306751958,
+      "z": -0.03514945752578022,
+      "sourceAttributes": {
+        "ID": "16",
+        "X": "0.9960455088719485",
+        "Y": "86.79884306751958",
+        "Z": "-0.03514945752578022"
+      }
+    },
+    {
+      "id": "17",
+      "x": -0.3239533354097266,
+      "y": 86.80059537758248,
+      "z": 0.7648505302895231,
+      "sourceAttributes": {
+        "ID": "17",
+        "X": "-0.3239533354097266",
+        "Y": "86.80059537758248",
+        "Z": "0.7648505302895231"
+      }
+    },
+    {
+      "id": "18",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "sourceAttributes": {
+        "ID": "18",
+        "X": "0",
+        "Y": "0",
+        "Z": "0"
+      }
+    },
+    {
+      "id": "19",
+      "x": -0.32,
+      "y": 86.6,
+      "z": 0.76,
+      "sourceAttributes": {
+        "ID": "19",
+        "X": "-0.32",
+        "Y": "86.6",
+        "Z": "0.76"
+      }
+    },
+    {
+      "id": "20",
+      "x": 1.0,
+      "y": 86.59,
+      "z": -0.04,
+      "sourceAttributes": {
+        "ID": "20",
+        "X": "1.0",
+        "Y": "86.59",
+        "Z": "-0.04"
+      }
+    },
+    {
+      "id": "21",
+      "x": -0.35445455076092564,
+      "y": 86.39036356121761,
+      "z": -0.7750778877559672,
+      "sourceAttributes": {
+        "ID": "21",
+        "X": "-0.35445455076092564",
+        "Y": "86.39036356121761",
+        "Z": "-0.7750778877559672"
+      }
+    },
+    {
+      "id": "22",
+      "x": -0.324454244772808,
+      "y": 86.3905956898153,
+      "z": 0.7649220887884917,
+      "sourceAttributes": {
+        "ID": "22",
+        "X": "-0.324454244772808",
+        "Y": "86.3905956898153",
+        "Z": "0.7649220887884917"
+      }
+    },
+    {
+      "id": "23",
+      "x": -0.3239533354097266,
+      "y": 86.80059537758248,
+      "z": 0.7648505302895231,
+      "sourceAttributes": {
+        "ID": "23",
+        "X": "-0.3239533354097266",
+        "Y": "86.80059537758248",
+        "Z": "0.7648505302895231"
+      }
+    },
+    {
+      "id": "24",
+      "x": -0.35395364139784424,
+      "y": 86.80036324898481,
+      "z": -0.7751494462549358,
+      "sourceAttributes": {
+        "ID": "24",
+        "X": "-0.35395364139784424",
+        "Y": "86.80036324898481",
+        "Z": "-0.7751494462549358"
+      }
+    },
+    {
+      "id": "25",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "sourceAttributes": {
+        "ID": "25",
+        "X": "0",
+        "Y": "0",
+        "Z": "0"
+      }
+    },
+    {
+      "id": "26",
+      "x": -0.35,
+      "y": 86.6,
+      "z": -0.78,
+      "sourceAttributes": {
+        "ID": "26",
+        "X": "-0.35",
+        "Y": "86.6",
+        "Z": "-0.78"
+      }
+    },
+    {
+      "id": "27",
+      "x": -0.32,
+      "y": 86.6,
+      "z": 0.76,
+      "sourceAttributes": {
+        "ID": "27",
+        "X": "-0.32",
+        "Y": "86.6",
+        "Z": "0.76"
+      }
+    },
+    {
+      "id": "28",
+      "x": -0.3244542426404866,
+      "y": 86.39059743514323,
+      "z": 0.774922088636183,
+      "sourceAttributes": {
+        "ID": "28",
+        "X": "-0.3244542426404866",
+        "Y": "86.39059743514323",
+        "Z": "0.774922088636183"
+      }
+    },
+    {
+      "id": "29",
+      "x": -0.32584701501588365,
+      "y": 85.25059830330277,
+      "z": 0.7751210561699001,
+      "sourceAttributes": {
+        "ID": "29",
+        "X": "-0.32584701501588365",
+        "Y": "85.25059830330277",
+        "Z": "0.7751210561699001"
+      }
+    },
+    {
+      "id": "30",
+      "x": -0.36445454329779975,
+      "y": 86.39037577851934,
+      "z": -0.7750778877559672,
+      "sourceAttributes": {
+        "ID": "30",
+        "X": "-0.36445454329779975",
+        "Y": "86.39037577851934",
+        "Z": "-0.7750778877559672"
+      }
+    },
+    {
+      "id": "31",
+      "x": -0.3658473156731968,
+      "y": 85.25037664667889,
+      "z": -0.77487892022225,
+      "sourceAttributes": {
+        "ID": "31",
+        "X": "-0.3658473156731968",
+        "Y": "85.25037664667889",
+        "Z": "-0.77487892022225"
+      }
+    },
+    {
+      "id": "32",
+      "x": 0.9955445995088672,
+      "y": 86.3888433797524,
+      "z": -0.03507789902681175,
+      "sourceAttributes": {
+        "ID": "32",
+        "X": "0.9955445995088672",
+        "Y": "86.3888433797524",
+        "Z": "-0.03507789902681175"
+      }
+    },
+    {
+      "id": "33",
+      "x": 0.9941518271334702,
+      "y": 85.24884424791193,
+      "z": -0.034878931493094546,
+      "sourceAttributes": {
+        "ID": "33",
+        "X": "0.9941518271334702",
+        "Y": "85.24884424791193",
+        "Z": "-0.034878931493094546"
+      }
+    },
+    {
+      "id": "34",
+      "x": 0.9941518271334702,
+      "y": 85.24884424791193,
+      "z": -0.034878931493094546,
+      "sourceAttributes": {
+        "ID": "34",
+        "X": "0.9941518271334702",
+        "Y": "85.24884424791193",
+        "Z": "-0.034878931493094546"
+      }
+    },
+    {
+      "id": "35",
+      "x": -0.35584732313632267,
+      "y": 85.25036442937716,
+      "z": -0.77487892022225,
+      "sourceAttributes": {
+        "ID": "35",
+        "X": "-0.35584732313632267",
+        "Y": "85.25036442937716",
+        "Z": "-0.77487892022225"
+      }
+    },
+    {
+      "id": "36",
+      "x": -0.35445455076092564,
+      "y": 86.39036356121761,
+      "z": -0.7750778877559672,
+      "sourceAttributes": {
+        "ID": "36",
+        "X": "-0.35445455076092564",
+        "Y": "86.39036356121761",
+        "Z": "-0.7750778877559672"
+      }
+    },
+    {
+      "id": "37",
+      "x": 0.9955445995088672,
+      "y": 86.3888433797524,
+      "z": -0.03507789902681175,
+      "sourceAttributes": {
+        "ID": "37",
+        "X": "0.9955445995088672",
+        "Y": "86.3888433797524",
+        "Z": "-0.03507789902681175"
+      }
+    },
+    {
+      "id": "38",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "sourceAttributes": {
+        "ID": "38",
+        "X": "0",
+        "Y": "0",
+        "Z": "0"
+      }
+    },
+    {
+      "id": "39",
+      "x": 0.99,
+      "y": 85.82,
+      "z": -0.03,
+      "sourceAttributes": {
+        "ID": "39",
+        "X": "0.99",
+        "Y": "85.82",
+        "Z": "-0.03"
+      }
+    },
+    {
+      "id": "40",
+      "x": -0.36,
+      "y": 85.82,
+      "z": -0.77,
+      "sourceAttributes": {
+        "ID": "40",
+        "X": "-0.36",
+        "Y": "85.82",
+        "Z": "-0.77"
+      }
+    },
+    {
+      "id": "41",
+      "x": -0.325847017148205,
+      "y": 85.25059655797483,
+      "z": 0.7651210563222088,
+      "sourceAttributes": {
+        "ID": "41",
+        "X": "-0.325847017148205",
+        "Y": "85.25059655797483",
+        "Z": "0.7651210563222088"
+      }
+    },
+    {
+      "id": "42",
+      "x": 0.9941518271334702,
+      "y": 85.24884424791193,
+      "z": -0.034878931493094546,
+      "sourceAttributes": {
+        "ID": "42",
+        "X": "0.9941518271334702",
+        "Y": "85.24884424791193",
+        "Z": "-0.034878931493094546"
+      }
+    },
+    {
+      "id": "43",
+      "x": 0.9955445995088672,
+      "y": 86.3888433797524,
+      "z": -0.03507789902681175,
+      "sourceAttributes": {
+        "ID": "43",
+        "X": "0.9955445995088672",
+        "Y": "86.3888433797524",
+        "Z": "-0.03507789902681175"
+      }
+    },
+    {
+      "id": "44",
+      "x": -0.324454244772808,
+      "y": 86.3905956898153,
+      "z": 0.7649220887884917,
+      "sourceAttributes": {
+        "ID": "44",
+        "X": "-0.324454244772808",
+        "Y": "86.3905956898153",
+        "Z": "0.7649220887884917"
+      }
+    },
+    {
+      "id": "45",
+      "x": 0.33484879118033123,
+      "y": 85.81971996886362,
+      "z": 0.3650215786476984,
+      "sourceAttributes": {
+        "ID": "45",
+        "X": "0.33484879118033123",
+        "Y": "85.81971996886362",
+        "Z": "0.3650215786476984"
+      }
+    },
+    {
+      "id": "46",
+      "x": -0.33,
+      "y": 85.82,
+      "z": 0.77,
+      "sourceAttributes": {
+        "ID": "46",
+        "X": "-0.33",
+        "Y": "85.82",
+        "Z": "0.77"
+      }
+    },
+    {
+      "id": "47",
+      "x": 0.99,
+      "y": 85.82,
+      "z": -0.03,
+      "sourceAttributes": {
+        "ID": "47",
+        "X": "0.99",
+        "Y": "85.82",
+        "Z": "-0.03"
+      }
+    },
+    {
+      "id": "48",
+      "x": -0.35584732313632267,
+      "y": 85.25036442937716,
+      "z": -0.77487892022225,
+      "sourceAttributes": {
+        "ID": "48",
+        "X": "-0.35584732313632267",
+        "Y": "85.25036442937716",
+        "Z": "-0.77487892022225"
+      }
+    },
+    {
+      "id": "49",
+      "x": -0.325847017148205,
+      "y": 85.25059655797483,
+      "z": 0.7651210563222088,
+      "sourceAttributes": {
+        "ID": "49",
+        "X": "-0.325847017148205",
+        "Y": "85.25059655797483",
+        "Z": "0.7651210563222088"
+      }
+    },
+    {
+      "id": "50",
+      "x": -0.324454244772808,
+      "y": 86.3905956898153,
+      "z": 0.7649220887884917,
+      "sourceAttributes": {
+        "ID": "50",
+        "X": "-0.324454244772808",
+        "Y": "86.3905956898153",
+        "Z": "0.7649220887884917"
+      }
+    },
+    {
+      "id": "51",
+      "x": -0.35445455076092564,
+      "y": 86.39036356121761,
+      "z": -0.7750778877559672,
+      "sourceAttributes": {
+        "ID": "51",
+        "X": "-0.35445455076092564",
+        "Y": "86.39036356121761",
+        "Z": "-0.7750778877559672"
+      }
+    }
+  ],
+  "members": [
+    {
+      "id": "1",
+      "startNodeId": "1",
+      "endNodeId": "2",
+      "sectionId": "1",
+      "betaAngleDegrees": -225.0,
+      "label": "Leg_B",
+      "sourceAttributes": {
+        "PanelPropertyID": "1",
+        "ID": "1",
+        "StartNodeID": "1",
+        "EndNodeID": "2",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "-225",
+        "Label": "Leg_B",
+        "SourceAppElementId": "Leg_1"
+      }
+    },
+    {
+      "id": "2",
+      "startNodeId": "3",
+      "endNodeId": "4",
+      "sectionId": "1",
+      "betaAngleDegrees": 90.0,
+      "label": "Leg_C",
+      "sourceAttributes": {
+        "PanelPropertyID": "1",
+        "ID": "2",
+        "StartNodeID": "3",
+        "EndNodeID": "4",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "90",
+        "Label": "Leg_C",
+        "SourceAppElementId": "Leg_2"
+      }
+    },
+    {
+      "id": "3",
+      "startNodeId": "5",
+      "endNodeId": "6",
+      "sectionId": "1",
+      "betaAngleDegrees": -90.0,
+      "label": "Leg_A",
+      "sourceAttributes": {
+        "PanelPropertyID": "1",
+        "ID": "3",
+        "StartNodeID": "5",
+        "EndNodeID": "6",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "-90",
+        "Label": "Leg_A",
+        "SourceAppElementId": "Leg_3"
+      }
+    },
+    {
+      "id": "4",
+      "startNodeId": "7",
+      "endNodeId": "9",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_A_0",
+      "sourceAttributes": {
+        "PanelPropertyID": "T1",
+        "ID": "4",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "7",
+        "EndNodeID": "9",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_A_0",
+        "SourceAppElementId": "DIAGONAL_4"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "5",
+      "startNodeId": "8",
+      "endNodeId": "10",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_A_1",
+      "sourceAttributes": {
+        "PanelPropertyID": "T1",
+        "ID": "5",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "8",
+        "EndNodeID": "10",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_A_1",
+        "SourceAppElementId": "DIAGONAL_5"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "6",
+      "startNodeId": "12",
+      "endNodeId": "13",
+      "sectionId": "2",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_A_2",
+      "sourceAttributes": {
+        "PanelPropertyID": "T1",
+        "ID": "6",
+        "MemberTag": "SECONDARYHORIZONTAL",
+        "StartNodeID": "12",
+        "EndNodeID": "13",
+        "SectionID": "2",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_A_2",
+        "SourceAppElementId": "SECONDARYHORIZONTAL_6"
+      },
+      "tag": "SECONDARYHORIZONTAL"
+    },
+    {
+      "id": "7",
+      "startNodeId": "14",
+      "endNodeId": "16",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_B_0",
+      "sourceAttributes": {
+        "PanelPropertyID": "T1",
+        "ID": "7",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "14",
+        "EndNodeID": "16",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_B_0",
+        "SourceAppElementId": "DIAGONAL_7"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "8",
+      "startNodeId": "15",
+      "endNodeId": "17",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_B_1",
+      "sourceAttributes": {
+        "PanelPropertyID": "T1",
+        "ID": "8",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "15",
+        "EndNodeID": "17",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_B_1",
+        "SourceAppElementId": "DIAGONAL_8"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "9",
+      "startNodeId": "19",
+      "endNodeId": "20",
+      "sectionId": "2",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_B_2",
+      "sourceAttributes": {
+        "PanelPropertyID": "T1",
+        "ID": "9",
+        "MemberTag": "SECONDARYHORIZONTAL",
+        "StartNodeID": "19",
+        "EndNodeID": "20",
+        "SectionID": "2",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_B_2",
+        "SourceAppElementId": "SECONDARYHORIZONTAL_9"
+      },
+      "tag": "SECONDARYHORIZONTAL"
+    },
+    {
+      "id": "10",
+      "startNodeId": "21",
+      "endNodeId": "23",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_C_0",
+      "sourceAttributes": {
+        "PanelPropertyID": "T1",
+        "ID": "10",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "21",
+        "EndNodeID": "23",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_C_0",
+        "SourceAppElementId": "DIAGONAL_10"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "11",
+      "startNodeId": "22",
+      "endNodeId": "24",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_C_1",
+      "sourceAttributes": {
+        "PanelPropertyID": "T1",
+        "ID": "11",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "22",
+        "EndNodeID": "24",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_C_1",
+        "SourceAppElementId": "DIAGONAL_11"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "12",
+      "startNodeId": "26",
+      "endNodeId": "27",
+      "sectionId": "2",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_C_2",
+      "sourceAttributes": {
+        "PanelPropertyID": "T1",
+        "ID": "12",
+        "MemberTag": "SECONDARYHORIZONTAL",
+        "StartNodeID": "26",
+        "EndNodeID": "27",
+        "SectionID": "2",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_C_2",
+        "SourceAppElementId": "SECONDARYHORIZONTAL_12"
+      },
+      "tag": "SECONDARYHORIZONTAL"
+    },
+    {
+      "id": "13",
+      "startNodeId": "28",
+      "endNodeId": "29",
+      "sectionId": "1",
+      "betaAngleDegrees": -225.0,
+      "label": "Leg_B",
+      "sourceAttributes": {
+        "PanelPropertyID": "2",
+        "ID": "13",
+        "StartNodeID": "28",
+        "EndNodeID": "29",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "-225",
+        "Label": "Leg_B",
+        "SourceAppElementId": "Leg_13"
+      }
+    },
+    {
+      "id": "14",
+      "startNodeId": "30",
+      "endNodeId": "31",
+      "sectionId": "1",
+      "betaAngleDegrees": 90.0,
+      "label": "Leg_C",
+      "sourceAttributes": {
+        "PanelPropertyID": "2",
+        "ID": "14",
+        "StartNodeID": "30",
+        "EndNodeID": "31",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "90",
+        "Label": "Leg_C",
+        "SourceAppElementId": "Leg_14"
+      }
+    },
+    {
+      "id": "15",
+      "startNodeId": "32",
+      "endNodeId": "33",
+      "sectionId": "1",
+      "betaAngleDegrees": -90.0,
+      "label": "Leg_A",
+      "sourceAttributes": {
+        "PanelPropertyID": "2",
+        "ID": "15",
+        "StartNodeID": "32",
+        "EndNodeID": "33",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "-90",
+        "Label": "Leg_A",
+        "SourceAppElementId": "Leg_15"
+      }
+    },
+    {
+      "id": "16",
+      "startNodeId": "34",
+      "endNodeId": "36",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_A_0",
+      "sourceAttributes": {
+        "PanelPropertyID": "T2",
+        "ID": "16",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "34",
+        "EndNodeID": "36",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_A_0",
+        "SourceAppElementId": "DIAGONAL_16"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "17",
+      "startNodeId": "35",
+      "endNodeId": "37",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_A_1",
+      "sourceAttributes": {
+        "PanelPropertyID": "T2",
+        "ID": "17",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "35",
+        "EndNodeID": "37",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_A_1",
+        "SourceAppElementId": "DIAGONAL_17"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "18",
+      "startNodeId": "41",
+      "endNodeId": "43",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_B_0",
+      "sourceAttributes": {
+        "PanelPropertyID": "T2",
+        "ID": "18",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "41",
+        "EndNodeID": "43",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_B_0",
+        "SourceAppElementId": "DIAGONAL_18"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "19",
+      "startNodeId": "42",
+      "endNodeId": "44",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_B_1",
+      "sourceAttributes": {
+        "PanelPropertyID": "T2",
+        "ID": "19",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "42",
+        "EndNodeID": "44",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_B_1",
+        "SourceAppElementId": "DIAGONAL_19"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "20",
+      "startNodeId": "48",
+      "endNodeId": "50",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_C_0",
+      "sourceAttributes": {
+        "PanelPropertyID": "T2",
+        "ID": "20",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "48",
+        "EndNodeID": "50",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_C_0",
+        "SourceAppElementId": "DIAGONAL_20"
+      },
+      "tag": "DIAGONAL"
+    },
+    {
+      "id": "21",
+      "startNodeId": "49",
+      "endNodeId": "51",
+      "sectionId": "1",
+      "betaAngleDegrees": 0.0,
+      "label": "Face_C_1",
+      "sourceAttributes": {
+        "PanelPropertyID": "T2",
+        "ID": "21",
+        "MemberTag": "DIAGONAL",
+        "StartNodeID": "49",
+        "EndNodeID": "51",
+        "SectionID": "1",
+        "SectionName": "",
+        "BetaAngle": "0",
+        "Label": "Face_C_1",
+        "SourceAppElementId": "DIAGONAL_21"
+      },
+      "tag": "DIAGONAL"
+    }
+  ],
+  "sections": [
+    {
+      "id": "1",
+      "shape": "HollowCircleProfile",
+      "dimensions": {
+        "Radius": 1.1875,
+        "WallThickness": 0.154
+      },
+      "sourceAttributes": {
+        "ID": "1",
+        "Name": "HollowCircleProfile",
+        "Radius": "1.1875",
+        "WallThickness": "0.154"
+      }
+    },
+    {
+      "id": "2",
+      "shape": "LShapeProfile",
+      "dimensions": {
+        "Width": 1.1875,
+        "Depth": 2.0,
+        "Thickness": 0.1875,
+        "FilletRadius": 0.0,
+        "EdgeRadius": 0.0
+      },
+      "sourceAttributes": {
+        "ID": "2",
+        "Name": "LShapeProfile",
+        "Width": "1.1875",
+        "Depth": "2.0",
+        "Thickness": "0.1875",
+        "FilletRadius": "0",
+        "EdgeRadius": "0"
+      }
+    },
+    {
+      "id": "3",
+      "shape": "LShapeProfile",
+      "dimensions": {
+        "Width": 1.1875,
+        "Depth": -1.0,
+        "Thickness": -1.0,
+        "FilletRadius": 0.0,
+        "EdgeRadius": 0.0
+      },
+      "sourceAttributes": {
+        "ID": "3",
+        "Name": "LShapeProfile",
+        "Width": "1.1875",
+        "Depth": "-1",
+        "Thickness": "-1",
+        "FilletRadius": "0",
+        "EdgeRadius": "0"
+      }
+    },
+    {
+      "id": "4",
+      "shape": "FlatBar",
+      "dimensions": {
+        "Depth": 10.0,
+        "Width": 0.5,
+        "Thickness": 0.5
+      },
+      "sourceAttributes": {
+        "ID": "4",
+        "Name": "FlatBar",
+        "Depth": "10",
+        "Width": "0.5",
+        "Thickness": "0.5"
+      }
+    },
+    {
+      "id": "5",
+      "shape": "PIPE",
+      "dimensions": {
+        "OuterDiameter": 4.5,
+        "InnerDiameter": 2.96
+      },
+      "sourceAttributes": {
+        "ID": "5",
+        "Name": "PIPE",
+        "OuterDiameter": "4.5",
+        "InnerDiameter": "2.96"
+      }
+    },
+    {
+      "id": "6",
+      "shape": "RB",
+      "dimensions": {
+        "Diameter": 0.75
+      },
+      "sourceAttributes": {
+        "ID": "6",
+        "Name": "RB",
+        "Diameter": "0.75"
+      }
+    },
+    {
+      "id": "7",
+      "shape": "RB",
+      "dimensions": {
+        "Diameter": 1.0
+      },
+      "sourceAttributes": {
+        "ID": "7",
+        "Name": "RB",
+        "Diameter": "1"
+      }
+    },
+    {
+      "id": "8",
+      "shape": "RodSection",
+      "dimensions": {
+        "Diameter": 1.0
+      },
+      "sourceAttributes": {
+        "ID": "8",
+        "Name": "RodSection",
+        "Diameter": "1"
+      }
+    },
+    {
+      "id": "9",
+      "shape": "SQUARE",
+      "dimensions": {
+        "Depth": 5.0,
+        "Width": 5.0,
+        "Tnom": 0.375
+      },
+      "sourceAttributes": {
+        "ID": "9",
+        "Name": "SQUARE",
+        "Depth": "5",
+        "Width": "5",
+        "Tnom": "0.375"
+      }
+    },
+    {
+      "id": "10",
+      "shape": "PIPE",
+      "dimensions": {
+        "OuterDiameter": 2.38,
+        "InnerDiameter": 1.02
+      },
+      "sourceAttributes": {
+        "ID": "10",
+        "Name": "PIPE",
+        "OuterDiameter": "2.38",
+        "InnerDiameter": "1.02"
+      }
+    },
+    {
+      "id": "11",
+      "shape": "RB",
+      "dimensions": {
+        "Diameter": 0.625
+      },
+      "sourceAttributes": {
+        "ID": "11",
+        "Name": "RB",
+        "Diameter": "0.625"
+      }
+    },
+    {
+      "id": "12",
+      "shape": "RB",
+      "dimensions": {
+        "Diameter": 0.5
+      },
+      "sourceAttributes": {
+        "ID": "12",
+        "Name": "RB",
+        "Diameter": "0.5"
+      }
+    },
+    {
+      "id": "13",
+      "shape": "LShapeProfile",
+      "dimensions": {
+        "Width": 2.5,
+        "Depth": 2.5,
+        "Thickness": 0.25,
+        "FilletRadius": 0.0,
+        "EdgeRadius": 0.0
+      },
+      "sourceAttributes": {
+        "ID": "13",
+        "Name": "LShapeProfile",
+        "Width": "2.5",
+        "Depth": "2.5",
+        "Thickness": "0.25",
+        "FilletRadius": "0",
+        "EdgeRadius": "0"
+      }
+    },
+    {
+      "id": "14",
+      "shape": "FlatBar",
+      "dimensions": {
+        "Depth": 6.0,
+        "Width": 0.5,
+        "Thickness": 0.5
+      },
+      "sourceAttributes": {
+        "ID": "14",
+        "Name": "FlatBar",
+        "Depth": "6",
+        "Width": "0.5",
+        "Thickness": "0.5"
+      }
+    },
+    {
+      "id": "15",
+      "shape": "LShapeProfile",
+      "dimensions": {
+        "Width": 2.0,
+        "Depth": 2.0,
+        "Thickness": 0.25,
+        "FilletRadius": 0.0,
+        "EdgeRadius": 0.0
+      },
+      "sourceAttributes": {
+        "ID": "15",
+        "Name": "LShapeProfile",
+        "Width": "2",
+        "Depth": "2",
+        "Thickness": "0.25",
+        "FilletRadius": "0",
+        "EdgeRadius": "0"
+      }
+    },
+    {
+      "id": "16",
+      "shape": "FlatBar",
+      "dimensions": {
+        "Depth": 1.0,
+        "Width": 0.5,
+        "Thickness": 0.5
+      },
+      "sourceAttributes": {
+        "ID": "16",
+        "Name": "FlatBar",
+        "Depth": "1",
+        "Width": "0.5",
+        "Thickness": "0.5"
+      }
+    },
+    {
+      "id": "17",
+      "shape": "LShapeProfile",
+      "dimensions": {
+        "Width": 1.75,
+        "Depth": 1.75,
+        "Thickness": 0.25,
+        "FilletRadius": 0.0,
+        "EdgeRadius": 0.0
+      },
+      "sourceAttributes": {
+        "ID": "17",
+        "Name": "LShapeProfile",
+        "Width": "1.75",
+        "Depth": "1.75",
+        "Thickness": "0.25",
+        "FilletRadius": "0",
+        "EdgeRadius": "0"
+      }
+    },
+    {
+      "id": "18",
+      "shape": "FlatBar",
+      "dimensions": {
+        "Depth": 8.0,
+        "Width": 0.5,
+        "Thickness": 0.5
+      },
+      "sourceAttributes": {
+        "ID": "18",
+        "Name": "FlatBar",
+        "Depth": "8",
+        "Width": "0.5",
+        "Thickness": "0.5"
+      }
+    },
+    {
+      "id": "19",
+      "shape": "LShapeProfile",
+      "dimensions": {
+        "Width": 4.0,
+        "Depth": 4.0,
+        "Thickness": 0.3125,
+        "FilletRadius": 0.0,
+        "EdgeRadius": 0.0
+      },
+      "sourceAttributes": {
+        "ID": "19",
+        "Name": "LShapeProfile",
+        "Width": "4",
+        "Depth": "4",
+        "Thickness": "0.3125",
+        "FilletRadius": "0",
+        "EdgeRadius": "0"
+      }
+    },
+    {
+      "id": "20",
+      "shape": "FlatBar",
+      "dimensions": {
+        "Depth": 0.1875,
+        "Width": 2.125,
+        "Thickness": 2.125
+      },
+      "sourceAttributes": {
+        "ID": "20",
+        "Name": "FlatBar",
+        "Depth": "0.1875",
+        "Width": "2.125",
+        "Thickness": "2.125"
+      }
+    },
+    {
+      "id": "21",
+      "shape": "LShapeProfile",
+      "dimensions": {
+        "Width": 3.0,
+        "Depth": 3.0,
+        "Thickness": 0.1875,
+        "FilletRadius": 0.0,
+        "EdgeRadius": 0.0
+      },
+      "sourceAttributes": {
+        "ID": "21",
+        "Name": "LShapeProfile",
+        "Width": "3",
+        "Depth": "3",
+        "Thickness": "0.1875",
+        "FilletRadius": "0",
+        "EdgeRadius": "0"
+      }
+    },
+    {
+      "id": "22",
+      "shape": "LShapeProfile",
+      "dimensions": {
+        "Width": 1.75,
+        "Depth": 3.0,
+        "Thickness": 0.1875,
+        "FilletRadius": 0.0,
+        "EdgeRadius": 0.0
+      },
+      "sourceAttributes": {
+        "ID": "22",
+        "Name": "LShapeProfile",
+        "Width": "1.75",
+        "Depth": "3",
+        "Thickness": "0.1875",
+        "FilletRadius": "0",
+        "EdgeRadius": "0"
+      }
+    },
+    {
+      "id": "23",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 22.24,
+        "Depth": 18.49
+      },
+      "sourceAttributes": {
+        "ID": "23",
+        "Name": "AttachmentProfile",
+        "Width": "22.24",
+        "Depth": "18.49"
+      }
+    },
+    {
+      "id": "24",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 1.44,
+        "Depth": 3.04
+      },
+      "sourceAttributes": {
+        "ID": "24",
+        "Name": "AttachmentProfile",
+        "Width": "1.44",
+        "Depth": "3.04"
+      }
+    },
+    {
+      "id": "25",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 3.18,
+        "Depth": 6.17
+      },
+      "sourceAttributes": {
+        "ID": "25",
+        "Name": "AttachmentProfile",
+        "Width": "3.18",
+        "Depth": "6.17"
+      }
+    },
+    {
+      "id": "26",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 0.22,
+        "Depth": 0.9
+      },
+      "sourceAttributes": {
+        "ID": "26",
+        "Name": "AttachmentProfile",
+        "Width": "0.22",
+        "Depth": "0.9"
+      }
+    },
+    {
+      "id": "27",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 2.08,
+        "Depth": 4.24
+      },
+      "sourceAttributes": {
+        "ID": "27",
+        "Name": "AttachmentProfile",
+        "Width": "2.08",
+        "Depth": "4.24"
+      }
+    },
+    {
+      "id": "28",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 1.13,
+        "Depth": 1.85
+      },
+      "sourceAttributes": {
+        "ID": "28",
+        "Name": "AttachmentProfile",
+        "Width": "1.13",
+        "Depth": "1.85"
+      }
+    },
+    {
+      "id": "29",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 13.16,
+        "Depth": 26.94
+      },
+      "sourceAttributes": {
+        "ID": "29",
+        "Name": "AttachmentProfile",
+        "Width": "13.16",
+        "Depth": "26.94"
+      }
+    },
+    {
+      "id": "30",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 11.14,
+        "Depth": 28.56
+      },
+      "sourceAttributes": {
+        "ID": "30",
+        "Name": "AttachmentProfile",
+        "Width": "11.14",
+        "Depth": "28.56"
+      }
+    },
+    {
+      "id": "31",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 12.59,
+        "Depth": 6.17
+      },
+      "sourceAttributes": {
+        "ID": "31",
+        "Name": "AttachmentProfile",
+        "Width": "12.59",
+        "Depth": "6.17"
+      }
+    },
+    {
+      "id": "32",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 3.63,
+        "Depth": 1.81
+      },
+      "sourceAttributes": {
+        "ID": "32",
+        "Name": "AttachmentProfile",
+        "Width": "3.63",
+        "Depth": "1.81"
+      }
+    },
+    {
+      "id": "33",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 11.44,
+        "Depth": 1.27
+      },
+      "sourceAttributes": {
+        "ID": "33",
+        "Name": "AttachmentProfile",
+        "Width": "11.44",
+        "Depth": "1.27"
+      }
+    },
+    {
+      "id": "34",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 10.53,
+        "Depth": 1.79
+      },
+      "sourceAttributes": {
+        "ID": "34",
+        "Name": "AttachmentProfile",
+        "Width": "10.53",
+        "Depth": "1.79"
+      }
+    },
+    {
+      "id": "35",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 2.59,
+        "Depth": 1.69
+      },
+      "sourceAttributes": {
+        "ID": "35",
+        "Name": "AttachmentProfile",
+        "Width": "2.59",
+        "Depth": "1.69"
+      }
+    },
+    {
+      "id": "36",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 2.9,
+        "Depth": 5.13
+      },
+      "sourceAttributes": {
+        "ID": "36",
+        "Name": "AttachmentProfile",
+        "Width": "2.9",
+        "Depth": "5.13"
+      }
+    },
+    {
+      "id": "37",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 3.15,
+        "Depth": 6.67
+      },
+      "sourceAttributes": {
+        "ID": "37",
+        "Name": "AttachmentProfile",
+        "Width": "3.15",
+        "Depth": "6.67"
+      }
+    },
+    {
+      "id": "38",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 2.36,
+        "Depth": 1.37
+      },
+      "sourceAttributes": {
+        "ID": "38",
+        "Name": "AttachmentProfile",
+        "Width": "2.36",
+        "Depth": "1.37"
+      }
+    },
+    {
+      "id": "39",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 3.3,
+        "Depth": 2.1
+      },
+      "sourceAttributes": {
+        "ID": "39",
+        "Name": "AttachmentProfile",
+        "Width": "3.3",
+        "Depth": "2.1"
+      }
+    },
+    {
+      "id": "40",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 2.93,
+        "Depth": 5.14
+      },
+      "sourceAttributes": {
+        "ID": "40",
+        "Name": "AttachmentProfile",
+        "Width": "2.93",
+        "Depth": "5.14"
+      }
+    },
+    {
+      "id": "41",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 8.6,
+        "Depth": 5.09
+      },
+      "sourceAttributes": {
+        "ID": "41",
+        "Name": "AttachmentProfile",
+        "Width": "8.6",
+        "Depth": "5.09"
+      }
+    },
+    {
+      "id": "42",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 11.37,
+        "Depth": 17.53
+      },
+      "sourceAttributes": {
+        "ID": "42",
+        "Name": "AttachmentProfile",
+        "Width": "11.37",
+        "Depth": "17.53"
+      }
+    },
+    {
+      "id": "43",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 31.25,
+        "Depth": 17.57
+      },
+      "sourceAttributes": {
+        "ID": "43",
+        "Name": "AttachmentProfile",
+        "Width": "31.25",
+        "Depth": "17.57"
+      }
+    },
+    {
+      "id": "44",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 3.96,
+        "Depth": 7.99
+      },
+      "sourceAttributes": {
+        "ID": "44",
+        "Name": "AttachmentProfile",
+        "Width": "3.96",
+        "Depth": "7.99"
+      }
+    },
+    {
+      "id": "45",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 10.93,
+        "Depth": 29.23
+      },
+      "sourceAttributes": {
+        "ID": "45",
+        "Name": "AttachmentProfile",
+        "Width": "10.93",
+        "Depth": "29.23"
+      }
+    },
+    {
+      "id": "46",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 12.47,
+        "Depth": 28.47
+      },
+      "sourceAttributes": {
+        "ID": "46",
+        "Name": "AttachmentProfile",
+        "Width": "12.47",
+        "Depth": "28.47"
+      }
+    },
+    {
+      "id": "47",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 38.5,
+        "Depth": 20.27
+      },
+      "sourceAttributes": {
+        "ID": "47",
+        "Name": "AttachmentProfile",
+        "Width": "38.5",
+        "Depth": "20.27"
+      }
+    },
+    {
+      "id": "48",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 10.63,
+        "Depth": 27.99
+      },
+      "sourceAttributes": {
+        "ID": "48",
+        "Name": "AttachmentProfile",
+        "Width": "10.63",
+        "Depth": "27.99"
+      }
+    },
+    {
+      "id": "49",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 7.55,
+        "Depth": 15.93
+      },
+      "sourceAttributes": {
+        "ID": "49",
+        "Name": "AttachmentProfile",
+        "Width": "7.55",
+        "Depth": "15.93"
+      }
+    },
+    {
+      "id": "50",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 2.34,
+        "Depth": 5.28
+      },
+      "sourceAttributes": {
+        "ID": "50",
+        "Name": "AttachmentProfile",
+        "Width": "2.34",
+        "Depth": "5.28"
+      }
+    },
+    {
+      "id": "51",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 13.53,
+        "Depth": 4.71
+      },
+      "sourceAttributes": {
+        "ID": "51",
+        "Name": "AttachmentProfile",
+        "Width": "13.53",
+        "Depth": "4.71"
+      }
+    },
+    {
+      "id": "52",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 14.25,
+        "Depth": 24.54
+      },
+      "sourceAttributes": {
+        "ID": "52",
+        "Name": "AttachmentProfile",
+        "Width": "14.25",
+        "Depth": "24.54"
+      }
+    },
+    {
+      "id": "53",
+      "shape": "AttachmentProfile",
+      "dimensions": {
+        "Width": 21.29,
+        "Depth": 12.18
+      },
+      "sourceAttributes": {
+        "ID": "53",
+        "Name": "AttachmentProfile",
+        "Width": "21.29",
+        "Depth": "12.18"
+      }
+    }
+  ],
+  "materials": [],
+  "notes": [
+    "Illustrative draft only; not an implemented or validated common-data contract.",
+    "Source declares 46 panels but contains two panel definitions; missing panels are not synthesized.",
+    "Source has no material entries or member material assignments; none were invented.",
+    "Section 3 has negative dimensions in the source; preserved as supplied, not accepted as valid geometry.",
+    "Raw source attributes retain exact strings, including source IDs, precision, and unresolved fields."
+  ]
+}

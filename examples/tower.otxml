@@ -1,0 +1,2132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Staad>
+  <ProjectData ComponentName="ProjectData" SourceAppElementId="ProjectData_1" Site_Lattitude="44.14805748924252" Site_Longitude="-72.89783734321719" Site_Altitude="682.0251363344806" ID="1"/>
+  <TowerInformation ComponentName="TowerInformation" SourceAppElementId="TowerInformation_1" OTXMLAngle="210" TowerID="fd1d8f5f-e550-4e69-922a-5dac2307c8d7" TowerName="DemoTower" TowerType="SelfSupported" TowerHeight="284.76181290305" NoOfLegs="3" NoofPanel="45" BearingAngle="0" TopFaceWidth="5.05249347166667" TopFaceDepth="5.05249347166667" BottomFaceWidth="29.7572180441667" BottomFaceDepth="29.7572180441667" ConcreteHeight="0" TowerTiltX="0" TowerTiltY="0" Convention="MS TOWER" UnitSystem="Metric" TowerShape="ISOTRIANGLE" Orientation="OpenTower"/>
+  <PanelProperties>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_1" Height="2.774" TopWidth="5.0519999999999996" BottomWidth="5.0519999999999996" TopElevation="284.762" BottomElevation="281.988" NumberOfSegments="1" Weight="126." PanelID="1" Label="Panel 1" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_2" Height="6.4630000000000001" TopWidth="5.0519999999999996" BottomWidth="5.0519999999999996" TopElevation="281.988" BottomElevation="275.52499999999998" NumberOfSegments="1" Weight="159." PanelID="2" Label="Panel 2" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_3" Height="6.4630000000000001" TopWidth="5.0519999999999996" BottomWidth="5.0519999999999996" TopElevation="275.52499999999998" BottomElevation="269.06200000000001" NumberOfSegments="1" Weight="159." PanelID="3" Label="Panel 3" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_4" Height="6.4630000000000001" TopWidth="5.0519999999999996" BottomWidth="5.0519999999999996" TopElevation="269.06200000000001" BottomElevation="262.59800000000001" NumberOfSegments="1" Weight="159." PanelID="4" Label="Panel 4" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_5" Height="6.4630000000000001" TopWidth="5.0519999999999996" BottomWidth="5.0519999999999996" TopElevation="262.59800000000001" BottomElevation="256.13499999999999" NumberOfSegments="1" Weight="159." PanelID="5" Label="Panel 5" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_6" Height="6.4630000000000001" TopWidth="5.0519999999999996" BottomWidth="5.0519999999999996" TopElevation="256.13499999999999" BottomElevation="249.672" NumberOfSegments="1" Weight="159." PanelID="6" Label="Panel 6" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_7" Height="4.0679999999999996" TopWidth="5.0519999999999996" BottomWidth="5.4550000000000001" TopElevation="249.672" BottomElevation="245.60400000000001" NumberOfSegments="1" Weight="118." PanelID="7" Label="Panel 7" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_8" Height="6.4630000000000001" TopWidth="5.4550000000000001" BottomWidth="6.0949999999999998" TopElevation="245.60400000000001" BottomElevation="239.13999999999999" NumberOfSegments="1" Weight="165." PanelID="8" Label="Panel 8" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_9" Height="6.4630000000000001" TopWidth="6.0949999999999998" BottomWidth="6.734" TopElevation="239.13999999999999" BottomElevation="232.67699999999999" NumberOfSegments="1" Weight="170." PanelID="9" Label="Panel 9" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_10" Height="6.4630000000000001" TopWidth="6.734" BottomWidth="7.3739999999999997" TopElevation="232.67699999999999" BottomElevation="226.214" NumberOfSegments="1" Weight="176." PanelID="10" Label="Panel 10" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_11" Height="6.4630000000000001" TopWidth="7.3739999999999997" BottomWidth="8.0129999999999999" TopElevation="226.214" BottomElevation="219.751" NumberOfSegments="1" Weight="181." PanelID="11" Label="Panel 11" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_12" Height="6.4630000000000001" TopWidth="8.0129999999999999" BottomWidth="8.6530000000000005" TopElevation="219.751" BottomElevation="213.28700000000001" NumberOfSegments="1" Weight="187." PanelID="12" Label="Panel 12" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_13" Height="6.4630000000000001" TopWidth="8.6530000000000005" BottomWidth="9.2919999999999998" TopElevation="213.28700000000001" BottomElevation="206.82400000000001" NumberOfSegments="1" Weight="194." PanelID="13" Label="Panel 13" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_14" Height="6.4630000000000001" TopWidth="9.2919999999999998" BottomWidth="9.9320000000000004" TopElevation="206.82400000000001" BottomElevation="200.36099999999999" NumberOfSegments="1" Weight="200." PanelID="14" Label="Panel 14" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_15" Height="6.4630000000000001" TopWidth="9.9320000000000004" BottomWidth="10.571" TopElevation="200.36099999999999" BottomElevation="193.898" NumberOfSegments="1" Weight="207." PanelID="15" Label="Panel 15" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_16" Height="6.4630000000000001" TopWidth="10.571" BottomWidth="11.211" TopElevation="193.898" BottomElevation="187.434" NumberOfSegments="1" Weight="213." PanelID="16" Label="Panel 16" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_17" Height="6.4630000000000001" TopWidth="11.211" BottomWidth="11.85" TopElevation="187.434" BottomElevation="180.971" NumberOfSegments="1" Weight="220." PanelID="17" Label="Panel 17" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_18" Height="6.4630000000000001" TopWidth="11.85" BottomWidth="12.49" TopElevation="180.971" BottomElevation="174.50800000000001" NumberOfSegments="1" Weight="227." PanelID="18" Label="Panel 18" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_19" Height="6.4630000000000001" TopWidth="12.49" BottomWidth="13.129" TopElevation="174.50800000000001" BottomElevation="168.04499999999999" NumberOfSegments="1" Weight="234." PanelID="19" Label="Panel 19" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_20" Height="6.4630000000000001" TopWidth="13.129" BottomWidth="13.769" TopElevation="168.04499999999999" BottomElevation="161.58099999999999" NumberOfSegments="1" Weight="241." PanelID="20" Label="Panel 20" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_21" Height="6.4630000000000001" TopWidth="13.769" BottomWidth="14.407999999999999" TopElevation="161.58099999999999" BottomElevation="155.11799999999999" NumberOfSegments="1" Weight="248." PanelID="21" Label="Panel 21" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_22" Height="6.4630000000000001" TopWidth="14.407999999999999" BottomWidth="15.048" TopElevation="155.11799999999999" BottomElevation="148.655" NumberOfSegments="1" Weight="255." PanelID="22" Label="Panel 22" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_23" Height="6.4630000000000001" TopWidth="15.048" BottomWidth="15.688000000000001" TopElevation="148.655" BottomElevation="142.19200000000001" NumberOfSegments="1" Weight="262." PanelID="23" Label="Panel 23" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_24" Height="6.4630000000000001" TopWidth="15.688000000000001" BottomWidth="16.327000000000002" TopElevation="142.19200000000001" BottomElevation="135.72800000000001" NumberOfSegments="1" Weight="269." PanelID="24" Label="Panel 24" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_25" Height="6.4630000000000001" TopWidth="16.327000000000002" BottomWidth="16.966999999999999" TopElevation="135.72800000000001" BottomElevation="129.26499999999999" NumberOfSegments="1" Weight="276." PanelID="25" Label="Panel 25" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_26" Height="6.4630000000000001" TopWidth="16.966999999999999" BottomWidth="17.606000000000002" TopElevation="129.26499999999999" BottomElevation="122.80200000000001" NumberOfSegments="1" Weight="284." PanelID="26" Label="Panel 26" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_27" Height="6.4630000000000001" TopWidth="17.606000000000002" BottomWidth="18.245999999999999" TopElevation="122.80200000000001" BottomElevation="116.339" NumberOfSegments="1" Weight="291." PanelID="27" Label="Panel 27" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_28" Height="6.4630000000000001" TopWidth="18.245999999999999" BottomWidth="18.885000000000002" TopElevation="116.339" BottomElevation="109.875" NumberOfSegments="1" Weight="298." PanelID="28" Label="Panel 28" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_29" Height="6.4630000000000001" TopWidth="18.885000000000002" BottomWidth="19.524999999999999" TopElevation="109.875" BottomElevation="103.41200000000001" NumberOfSegments="1" Weight="306." PanelID="29" Label="Panel 29" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_30" Height="6.4630000000000001" TopWidth="19.524999999999999" BottomWidth="20.164000000000001" TopElevation="103.41200000000001" BottomElevation="96.948999999999998" NumberOfSegments="1" Weight="313." PanelID="30" Label="Panel 30" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_31" Height="6.4630000000000001" TopWidth="20.164000000000001" BottomWidth="20.803999999999998" TopElevation="96.948999999999998" BottomElevation="90.486000000000004" NumberOfSegments="1" Weight="320." PanelID="31" Label="Panel 31" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_32" Height="6.4630000000000001" TopWidth="20.803999999999998" BottomWidth="21.443000000000001" TopElevation="90.486000000000004" BottomElevation="84.022000000000006" NumberOfSegments="1" Weight="328." PanelID="32" Label="Panel 32" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_33" Height="6.4630000000000001" TopWidth="21.443000000000001" BottomWidth="22.082999999999998" TopElevation="84.022000000000006" BottomElevation="77.558999999999997" NumberOfSegments="1" Weight="335." PanelID="33" Label="Panel 33" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_34" Height="6.4630000000000001" TopWidth="22.082999999999998" BottomWidth="22.722000000000001" TopElevation="77.558999999999997" BottomElevation="71.096000000000004" NumberOfSegments="1" Weight="343." PanelID="34" Label="Panel 34" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_35" Height="6.4630000000000001" TopWidth="22.722000000000001" BottomWidth="23.361999999999998" TopElevation="71.096000000000004" BottomElevation="64.632999999999996" NumberOfSegments="1" Weight="350." PanelID="35" Label="Panel 35" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_36" Height="6.4630000000000001" TopWidth="23.361999999999998" BottomWidth="24.001000000000001" TopElevation="64.632999999999996" BottomElevation="58.168999999999997" NumberOfSegments="1" Weight="358." PanelID="36" Label="Panel 36" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_37" Height="6.4630000000000001" TopWidth="24.001000000000001" BottomWidth="24.640999999999998" TopElevation="58.168999999999997" BottomElevation="51.706000000000003" NumberOfSegments="1" Weight="365." PanelID="37" Label="Panel 37" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_38" Height="6.4630000000000001" TopWidth="24.640999999999998" BottomWidth="25.280999999999999" TopElevation="51.706000000000003" BottomElevation="45.243000000000002" NumberOfSegments="1" Weight="373." PanelID="38" Label="Panel 38" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_39" Height="6.4630000000000001" TopWidth="25.280999999999999" BottomWidth="25.920000000000002" TopElevation="45.243000000000002" BottomElevation="38.780000000000001" NumberOfSegments="1" Weight="380." PanelID="39" Label="Panel 39" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_40" Height="6.4630000000000001" TopWidth="25.920000000000002" BottomWidth="26.559999999999999" TopElevation="38.780000000000001" BottomElevation="32.316000000000003" NumberOfSegments="1" Weight="388." PanelID="40" Label="Panel 40" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_41" Height="6.4630000000000001" TopWidth="26.559999999999999" BottomWidth="27.199000000000002" TopElevation="32.316000000000003" BottomElevation="25.853000000000002" NumberOfSegments="1" Weight="395." PanelID="41" Label="Panel 41" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_42" Height="6.4630000000000001" TopWidth="27.199000000000002" BottomWidth="27.838999999999999" TopElevation="25.853000000000002" BottomElevation="19.390000000000001" NumberOfSegments="1" Weight="403." PanelID="42" Label="Panel 42" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_43" Height="6.4630000000000001" TopWidth="27.838999999999999" BottomWidth="28.478000000000002" TopElevation="19.390000000000001" BottomElevation="12.927" NumberOfSegments="1" Weight="410." PanelID="43" Label="Panel 43" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_44" Height="6.4630000000000001" TopWidth="28.478000000000002" BottomWidth="29.117999999999999" TopElevation="12.927" BottomElevation="6.4630000000000001" NumberOfSegments="1" Weight="418." PanelID="44" Label="Panel 44" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+    <Panel ComponentName="Panel" SourceAppElementId="Panel_45" Height="6.4630000000000001" TopWidth="29.117999999999999" BottomWidth="29.757000000000001" TopElevation="6.4630000000000001" BottomElevation="-0." NumberOfSegments="1" Weight="426." PanelID="45" Label="Panel 45" FaceBracing="X BRACE" PlanBracing="None" HipBracing="None"/>
+  </PanelProperties>
+  <Panel ID="1">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="1" ID="1382" StartNodeID="1" EndNodeID="2" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_3hV2$kV8RBHwCsvTmxQh28" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="1" ID="2747" StartNodeID="3" EndNodeID="4" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2ycUzy3QbDJf6yJZqFic1T" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="1" ID="3871" StartNodeID="5" EndNodeID="6" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_11DmhAdF2OIegOdyDojt43" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="1" ID="5055" StartNodeID="3" EndNodeID="6" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2twGqwlGpdGxvbtwQyLWZL" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="1" ID="5136" StartNodeID="5" EndNodeID="4" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3oQUQjmd4lGQe41dym91Kf" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="1" ID="5216" StartNodeID="4" EndNodeID="6" SectionID="2" MaterialID="2" BetaAngle="180" Label="TOPHORIZONTAL 1" SourceAppElementId="IFC_1kp_2ckjDuGeKb0ettVkbv" StartRelease="000000" EndRelease="000000" MemberTag="TOPHORIZONTAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="1" ID="5335" StartNodeID="1" EndNodeID="4" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0yZz5LIswWJBpFfBYVcVzy" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="1" ID="5416" StartNodeID="3" EndNodeID="2" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0_1KJZSxGTHQ4mgAhQoXYb" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="1" ID="5496" StartNodeID="2" EndNodeID="4" SectionID="2" MaterialID="2" BetaAngle="180" Label="TOPHORIZONTAL 1" SourceAppElementId="IFC_3eyPwdrmCFH8RWYOL0s4RK" StartRelease="000000" EndRelease="000000" MemberTag="TOPHORIZONTAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="1" ID="5615" StartNodeID="5" EndNodeID="2" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0ybZ4A4ai_HhSi$IJONiMJ" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="1" ID="5696" StartNodeID="1" EndNodeID="6" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3BGVdN0j$MIBcbo5iA_OeI" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="1" ID="5776" StartNodeID="6" EndNodeID="2" SectionID="2" MaterialID="2" BetaAngle="180" Label="TOPHORIZONTAL 1" SourceAppElementId="IFC_1qtQc9gwl8HuIGAjgg5Lk7" StartRelease="000000" EndRelease="000000" MemberTag="TOPHORIZONTAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="2">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="2" ID="5886" StartNodeID="7" EndNodeID="1" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_1_1Y6CwQcOHha4jfjcj78M" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="2" ID="7251" StartNodeID="8" EndNodeID="3" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_3i4KIMeBAkIeg63Eb13U1d" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="2" ID="8375" StartNodeID="9" EndNodeID="5" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0i5hJF_i3gGOTxuzdmQe6L" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="2" ID="9559" StartNodeID="8" EndNodeID="5" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3kDQEZbueYJBUztnJ8mZaO" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="2" ID="9640" StartNodeID="9" EndNodeID="3" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0OH8ldfwuXJwQIYfjT8PvE" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="2" ID="9759" StartNodeID="7" EndNodeID="3" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1gn9z$4imaGOPebHUDfGXK" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="2" ID="9840" StartNodeID="8" EndNodeID="1" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2OFotyoc1NGxOA1cdTruPB" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="2" ID="9959" StartNodeID="9" EndNodeID="1" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0SjNvYmaqwGxHJ_1f3SFvf" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="2" ID="10040" StartNodeID="7" EndNodeID="5" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1Lmka8vljBGBrlJbLZi5KJ" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="3">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="3" ID="10150" StartNodeID="10" EndNodeID="7" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_08z_j9hTKlGR2QPuQoEthM" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="3" ID="11275" StartNodeID="11" EndNodeID="8" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2bFnaPKf9DGw4$4MALKDyp" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="3" ID="12399" StartNodeID="12" EndNodeID="9" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0vcC7b2a0vGhTp83vprtEi" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="3" ID="13583" StartNodeID="11" EndNodeID="9" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2PdujZMgQSGwwzxMDCWkTd" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="3" ID="13652" StartNodeID="12" EndNodeID="8" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1QN87JmyEgJOkEN$HPeHyc" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="3" ID="13759" StartNodeID="10" EndNodeID="8" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3HTWqTixD$JhHn_KOfMHze" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="3" ID="13828" StartNodeID="11" EndNodeID="7" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3VVydbwE6xJvX827MoA1GB" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="3" ID="13935" StartNodeID="12" EndNodeID="7" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0e61SharhqHxjMAZF3kpH0" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="3" ID="14004" StartNodeID="10" EndNodeID="9" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3qNwSXxNz2IgZXdlQEUN1h" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="4">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="4" ID="14102" StartNodeID="13" EndNodeID="10" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_16i4h7A3L$HeQJazfz$8Op" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="4" ID="15227" StartNodeID="14" EndNodeID="11" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2v6VpD9P31JvSb8k327nqZ" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="4" ID="16351" StartNodeID="15" EndNodeID="12" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_1446dUs7VaHfwCQ6QKKYfS" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="4" ID="17535" StartNodeID="14" EndNodeID="12" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3B4mmSiMfbIu$EyY4E_e9v" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="4" ID="17604" StartNodeID="15" EndNodeID="11" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2JF_qnjLpkGOo8jDLuNSa6" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="4" ID="17711" StartNodeID="13" EndNodeID="11" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0ChnDr4m$rI9z$uUTAU8nY" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="4" ID="17780" StartNodeID="14" EndNodeID="10" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0LgOJAEeZQIQJeovMvCnRN" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="4" ID="17887" StartNodeID="15" EndNodeID="10" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_25wfQ3fAgPH9ZvIlYR_f3W" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="4" ID="17956" StartNodeID="13" EndNodeID="12" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0TFE7v8L_yHwpsVT4tqZCy" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="5">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="5" ID="18054" StartNodeID="16" EndNodeID="13" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_38Uy83lsA7JgTFqAnA$oUJ" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="5" ID="19179" StartNodeID="17" EndNodeID="14" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2$UxqdD4KsJ8wXdaO38HNk" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="5" ID="20303" StartNodeID="18" EndNodeID="15" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0g30PX8JnvHf3$CHLT72nr" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="5" ID="21487" StartNodeID="17" EndNodeID="15" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3Q3g_$U8EeHfCsDMphJida" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="5" ID="21556" StartNodeID="18" EndNodeID="14" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0PhMnXXiPDGuZQ1Zw3Mo7j" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="5" ID="21663" StartNodeID="16" EndNodeID="14" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1X8m6kpUhEIfvatzbjSWkt" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="5" ID="21732" StartNodeID="17" EndNodeID="13" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3uAdIYHFjQGfkzqN44YtrA" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="5" ID="21839" StartNodeID="18" EndNodeID="13" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_37dk5z93bDHOAjcJY419p8" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="5" ID="21908" StartNodeID="16" EndNodeID="15" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2aNRop4_w0HAwDvZvq2SlB" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="6">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="6" ID="22006" StartNodeID="19" EndNodeID="16" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_3ShU3FZ$MWGOUBKbQJZTAm" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="6" ID="23131" StartNodeID="20" EndNodeID="17" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_3Dd3$rQ$CMHvSlI8Q_3Q3i" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="6" ID="24255" StartNodeID="21" EndNodeID="18" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_00J4Kf14CaGBuneCQE2jTN" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="6" ID="25439" StartNodeID="20" EndNodeID="18" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_11QmnRw3qUHAMjRazqlfOl" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="6" ID="25508" StartNodeID="21" EndNodeID="17" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_28V2fAJdbdHOG4h3rGzoBU" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="6" ID="25615" StartNodeID="19" EndNodeID="17" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2rkH2zC2zgH9tUxx7fCa7q" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="6" ID="25684" StartNodeID="20" EndNodeID="16" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1fCnuINo1TJPy4i0UUUH4$" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="6" ID="25791" StartNodeID="21" EndNodeID="16" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0kFdy7Bw27HR67_ViJ8pR0" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="6" ID="25860" StartNodeID="19" EndNodeID="18" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2pR2hlVvhxHen6$DZjs78v" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="7">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="7" ID="25958" StartNodeID="22" EndNodeID="19" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_3zSohnUV85HBnlC1$djytZ" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="7" ID="27323" StartNodeID="23" EndNodeID="20" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_1XqM37AhDFIPD8igwbQ0H1" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="7" ID="28687" StartNodeID="24" EndNodeID="21" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_3RkbBnYcUQHwju6nM7PUjS" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="7" ID="30111" StartNodeID="23" EndNodeID="21" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2J2oavsv0SIxvKNf9u9XnR" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="7" ID="30192" StartNodeID="24" EndNodeID="20" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3X6eGQYIKOIB6Yhxnb_NJO" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="7" ID="30311" StartNodeID="22" EndNodeID="20" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2$AeSkAJoFIByOPOSvyMsi" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="7" ID="30392" StartNodeID="23" EndNodeID="19" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2fzRp8$S6PJg9L7u_eGS96" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="7" ID="30511" StartNodeID="24" EndNodeID="19" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2pdT4dFYqzHe1epweWkykh" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="7" ID="30592" StartNodeID="22" EndNodeID="21" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_07SKkdzN2pGRMkYdhNHwFl" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="8">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="8" ID="30702" StartNodeID="25" EndNodeID="22" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_0zp6If8uw1JBi2ESFpCDrB" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="8" ID="32067" StartNodeID="26" EndNodeID="23" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_15mPc8x4XTJRNHJ80LaTUM" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="8" ID="33431" StartNodeID="27" EndNodeID="24" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_3BFywRwHiNIAjBVUlcFnoQ" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="8" ID="34855" StartNodeID="26" EndNodeID="24" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0fXeGgZPCxIfPbAebfVbYC" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="8" ID="34936" StartNodeID="27" EndNodeID="23" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1dYUzzBBlSJhgECJJ8FYdE" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="8" ID="35055" StartNodeID="25" EndNodeID="23" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3mczsp5p6_Hh1Efr5YBiFA" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="8" ID="35136" StartNodeID="26" EndNodeID="22" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0$Pm_VKg8YI9PW2TEdl6Pj" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="8" ID="35255" StartNodeID="27" EndNodeID="22" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1cjosQTbV1He5LiqUQrRpo" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="8" ID="35336" StartNodeID="25" EndNodeID="24" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1_0bVYrvdrIQJpqhs7VMnR" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="9">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="9" ID="35446" StartNodeID="28" EndNodeID="25" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_1B1SrOuQaBGuxbkw64Bgkz" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="9" ID="36571" StartNodeID="29" EndNodeID="26" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_26uhVDrdZVGuxtkl4D0I7K" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="9" ID="37935" StartNodeID="30" EndNodeID="27" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0ErgXSowIBJR2zkd3qlZ$h" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="9" ID="39359" StartNodeID="29" EndNodeID="27" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1WURmfLjJjJvPQILmNWQ_0" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="9" ID="39440" StartNodeID="30" EndNodeID="26" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3Aov7FqHkPJv4Rs0X8Me8D" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="9" ID="39559" StartNodeID="28" EndNodeID="26" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_04AXS$iiZkGB82wGXxmo$O" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="9" ID="39640" StartNodeID="29" EndNodeID="25" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3m6$0_Yn7XGeWGlm_VJXVG" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="9" ID="39759" StartNodeID="30" EndNodeID="25" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3uu8V5dTZjH8zGv6hxt3Ny" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="9" ID="39840" StartNodeID="28" EndNodeID="27" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_27_YuXJPMmGRzDnnk3PJip" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="10">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="10" ID="39950" StartNodeID="31" EndNodeID="28" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_03_SMSqRH$Jhk0q8kOr_B$" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="10" ID="41315" StartNodeID="32" EndNodeID="29" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_17vTY4RVwEG9SD2c_Ip$H7" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="10" ID="42679" StartNodeID="33" EndNodeID="30" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0aTsiMG8r0IuJ1Xdrl4gMg" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="10" ID="44103" StartNodeID="32" EndNodeID="30" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3BWesyYqK3Iho$EqsGJlVH" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="10" ID="44184" StartNodeID="33" EndNodeID="29" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2sxC3wGRseIB9gW7AyiPkt" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="10" ID="44303" StartNodeID="31" EndNodeID="29" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2_ah94odHNJQ1t$slLKKm2" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="10" ID="44384" StartNodeID="32" EndNodeID="28" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3dm2TTexuwIOvz2q1o_c_j" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="10" ID="44503" StartNodeID="33" EndNodeID="28" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3uFw4FmDHjJQWQaTXbLXNu" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="10" ID="44584" StartNodeID="31" EndNodeID="30" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3X6UL8VU94JhVh5cVO_oVm" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="11">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="11" ID="44694" StartNodeID="34" EndNodeID="31" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_14qrJvYOPpGvNcA$1GGUs8" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="11" ID="45819" StartNodeID="35" EndNodeID="32" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_0EePbFcwWLGQe$m34lBrIi" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="11" ID="46944" StartNodeID="36" EndNodeID="33" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_2skHVGiBwxGw7K2xUaavtb" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="11" ID="48130" StartNodeID="35" EndNodeID="33" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3v6rK_dom_Guox$Zyt60z5" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="11" ID="48211" StartNodeID="36" EndNodeID="32" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2P$9mmJjBTIwy$hpbwMMFK" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="11" ID="48330" StartNodeID="34" EndNodeID="32" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2h8i8D0TJHHvLAM9HxUn1j" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="11" ID="48411" StartNodeID="35" EndNodeID="31" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1o6Ga9GROZHQwTRibxhiQD" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="11" ID="48530" StartNodeID="36" EndNodeID="31" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0dbcUdCg8UJAS799zQlwEH" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="11" ID="48611" StartNodeID="34" EndNodeID="33" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2Qdb_PQ13KHRXTdsLcfPYY" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="12">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="12" ID="48721" StartNodeID="37" EndNodeID="34" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_0gytQ1NvtOGuJfbcvcgS5c" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="12" ID="49846" StartNodeID="38" EndNodeID="35" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_1wGRq7GsMuIxUocqlSHeC9" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="12" ID="50970" StartNodeID="39" EndNodeID="36" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0nzixZqGZDGRvMCMjpcliz" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="12" ID="52154" StartNodeID="38" EndNodeID="36" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0PZbzmhFn3Jfb92842J6fz" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="12" ID="52235" StartNodeID="39" EndNodeID="35" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1_Eur0GNivIxvYYr8BIf53" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="12" ID="52354" StartNodeID="37" EndNodeID="35" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3JF7ua5kRgIv71EcImC2YR" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="12" ID="52435" StartNodeID="38" EndNodeID="34" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0jtOyAVA4HIedPFQwMSxbS" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="12" ID="52554" StartNodeID="39" EndNodeID="34" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3Shiu7MoMjHhNYja4U9OQw" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="12" ID="52635" StartNodeID="37" EndNodeID="36" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3dUgD19Vf1HvGoek4d7ivM" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="13">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="13" ID="52745" StartNodeID="40" EndNodeID="37" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_0J60WmaSeTJRlK6LO9v5xC" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="13" ID="53870" StartNodeID="41" EndNodeID="38" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_1nwLx_t$cmHwfHv01rxDEa" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="13" ID="54994" StartNodeID="42" EndNodeID="39" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0roHzB7lvDI9erUP$$MfTC" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="13" ID="56178" StartNodeID="41" EndNodeID="39" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_175yukeKi1JOjxh7eKX4ys" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="13" ID="56259" StartNodeID="42" EndNodeID="38" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1muJOUv1ngGvH0OXg2lOth" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="13" ID="56378" StartNodeID="40" EndNodeID="38" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1GZF9vx6w6HgzoSyd9T$tn" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="13" ID="56459" StartNodeID="41" EndNodeID="37" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2_ORaS1UqkI8GHcblqnqGf" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="13" ID="56578" StartNodeID="42" EndNodeID="37" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1MPz8mSBklHASYbeAFs_$9" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="13" ID="56659" StartNodeID="40" EndNodeID="39" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3nKRjRwUOcJur$4AKY8c64" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="14">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="14" ID="56769" StartNodeID="43" EndNodeID="40" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_2Q6uJewDKhHODvhqaKiOmR" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="14" ID="57894" StartNodeID="44" EndNodeID="41" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_0k_XpD_pKPHuq_R_WbSSaT" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="14" ID="59018" StartNodeID="45" EndNodeID="42" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0PLeJlOzSwGv2KP8fhHIwS" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="14" ID="60202" StartNodeID="44" EndNodeID="42" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3J6tIDIeGsGR6BIl_xvxQv" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="14" ID="60283" StartNodeID="45" EndNodeID="41" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0Jk4gazj3SGA0Pyraa8DJj" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="14" ID="60402" StartNodeID="43" EndNodeID="41" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2gPRfWh_PoGg0TRGpxhzPc" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="14" ID="60483" StartNodeID="44" EndNodeID="40" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3muO0LvLfiIflDht5l39g$" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="14" ID="60602" StartNodeID="45" EndNodeID="40" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1kg_a4OHxAGwyMPO9sHPFO" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="14" ID="60683" StartNodeID="43" EndNodeID="42" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1NS_meHqIxHe9pJAOgE_V7" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="15">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="15" ID="60793" StartNodeID="46" EndNodeID="43" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_0PVlZI1N7tH9uCZt534rQH" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="15" ID="61918" StartNodeID="47" EndNodeID="44" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2YVXTtJV30GwXhRb$A5FEI" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="15" ID="63042" StartNodeID="48" EndNodeID="45" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_13uMvLPu$mGBRrNJmnhYeE" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="15" ID="64226" StartNodeID="47" EndNodeID="45" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3KdYmS3duBHu7U$eDG4tT_" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="15" ID="64307" StartNodeID="48" EndNodeID="44" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0hEKnKOGlTHuglZs1WPHkT" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="15" ID="64426" StartNodeID="46" EndNodeID="44" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_19JUeSg$NkIQU$VXxpfSn9" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="15" ID="64507" StartNodeID="47" EndNodeID="43" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3oenVxuXCFGA72Z4PMJJVu" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="15" ID="64626" StartNodeID="48" EndNodeID="43" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0618695bXaIOxYrrNLhcDo" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="15" ID="64707" StartNodeID="46" EndNodeID="45" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0QguVtcEuWIQINWPIooFN_" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="16">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="16" ID="64817" StartNodeID="49" EndNodeID="46" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_0dt2qU0gV0HBdn0p4iseIU" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="16" ID="65942" StartNodeID="50" EndNodeID="47" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_1why5ZyiwiJ9KX4jnHv8Qb" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="16" ID="67066" StartNodeID="51" EndNodeID="48" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_3bAQZ0GhBhJ9Lx1NApH9R8" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="16" ID="68250" StartNodeID="50" EndNodeID="48" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1ZWAee3Lv5HxnjGY4VMc08" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="16" ID="68331" StartNodeID="51" EndNodeID="47" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2JNNol97mrJg6zRwJsLENu" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="16" ID="68450" StartNodeID="49" EndNodeID="47" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1oAHVHLKmHJRsuV5_wWmwB" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="16" ID="68531" StartNodeID="50" EndNodeID="46" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1F53egqPYjG9vQ8vP9znzg" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="16" ID="68650" StartNodeID="51" EndNodeID="46" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0HaDoAIuSuHBXwLlS6mlhf" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="16" ID="68731" StartNodeID="49" EndNodeID="48" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3e1dqUy4WCGfPMGf4dMmxf" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="17">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="17" ID="68841" StartNodeID="52" EndNodeID="49" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_2AdY5Iou4lJQbFJ$5gO1Sg" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="17" ID="69966" StartNodeID="53" EndNodeID="50" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_3UjprmowaTHxR2coSn2CuJ" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="17" ID="71090" StartNodeID="54" EndNodeID="51" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_1jTxGjDJGRH8lwglSiFzAR" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="17" ID="72274" StartNodeID="53" EndNodeID="51" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1M8x6jdm4fI8J16Ni0CfgR" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="17" ID="72355" StartNodeID="54" EndNodeID="50" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2$UhqqqSShIf9MyDvMh_Ga" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="17" ID="72474" StartNodeID="52" EndNodeID="50" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3kM4c6swNCI96IGO0HalTW" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="17" ID="72555" StartNodeID="53" EndNodeID="49" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_23tq4faCMBJgcDGppOrLfB" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="17" ID="72674" StartNodeID="54" EndNodeID="49" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1y2_Yu5C4LHQikwRhd0T9G" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="17" ID="72755" StartNodeID="52" EndNodeID="51" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0H7sN0MKB3Ie5Z4fpsSE$L" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="18">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="18" ID="72865" StartNodeID="55" EndNodeID="52" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_3t4pjwN_x3JvW36WsrK_vh" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="18" ID="73990" StartNodeID="56" EndNodeID="53" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_181rCGG6jYHfTUJ$aNXHgl" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="18" ID="75114" StartNodeID="57" EndNodeID="54" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_3xDdzgUOvnGfblhlZKg_VM" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="18" ID="76298" StartNodeID="56" EndNodeID="54" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1lDUVaOEmRGvKEiJ11hVkG" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="18" ID="76379" StartNodeID="57" EndNodeID="53" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2p8yqyCIbTHONPg8_T6cHo" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="18" ID="76498" StartNodeID="55" EndNodeID="53" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_30GUWDr6aDGg0ZDoPEMY2Q" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="18" ID="76579" StartNodeID="56" EndNodeID="52" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1ill1itEokG9hLJ0$TTaGb" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="18" ID="76698" StartNodeID="57" EndNodeID="52" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2yyk_5cnzYJ91BDxm5nC$h" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="18" ID="76779" StartNodeID="55" EndNodeID="54" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_35Yzl0gTgrIAbAWWSyEznb" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="19">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="19" ID="76889" StartNodeID="58" EndNodeID="55" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_0ZRilxNXvpGByjncHeQaKX" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="19" ID="78014" StartNodeID="59" EndNodeID="56" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_0aOSVC_dJ8I9QvUMTlKG7h" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="19" ID="79378" StartNodeID="60" EndNodeID="57" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_2K17zBaGn9IAvnBbtt7BcE" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="19" ID="80802" StartNodeID="59" EndNodeID="57" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2lpj4uGa_sGw$QbatIymR9" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="19" ID="80883" StartNodeID="60" EndNodeID="56" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0bO5aH7sPyJh8oEPkW$Oce" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="19" ID="81002" StartNodeID="58" EndNodeID="56" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1cRc8gI0GHJvpIytyg2etu" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="19" ID="81083" StartNodeID="59" EndNodeID="55" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0oIXNkiVTDG80Cgzg6Cqc4" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="19" ID="81202" StartNodeID="60" EndNodeID="55" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1mHBFL7RfqHO02Q4E3OQ8A" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="19" ID="81283" StartNodeID="58" EndNodeID="57" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0pPtG8L2pKJxktlpdHDSvy" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="20">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="20" ID="81393" StartNodeID="61" EndNodeID="58" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_2OKRWfPbfAIu$3nIaef6LS" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="20" ID="82518" StartNodeID="62" EndNodeID="59" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2SI0izj4i6IepCB7K0cMpt" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="20" ID="83642" StartNodeID="63" EndNodeID="60" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_3L4_9JZz9MIw$plPWIBSiv" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="20" ID="84826" StartNodeID="62" EndNodeID="60" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0U_FnruOHMHfBJD_5pU1jv" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="20" ID="84907" StartNodeID="63" EndNodeID="59" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3hlmB$$F8oG9EH1ZpcSwdB" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="20" ID="85026" StartNodeID="61" EndNodeID="59" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2j3TLyZx9fJRQECmrLIhLB" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="20" ID="85107" StartNodeID="62" EndNodeID="58" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0W1QvajL2fHPJ5pm9Jkl2z" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="20" ID="85226" StartNodeID="63" EndNodeID="58" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1KxFyBcCX6JghZMXMPTKF4" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="20" ID="85307" StartNodeID="61" EndNodeID="60" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1NMV4fgA9QIxk_mJAkMeTl" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="21">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="21" ID="85417" StartNodeID="64" EndNodeID="61" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_11SI$wV9yJJeNY3hSkPIbw" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="21" ID="86542" StartNodeID="65" EndNodeID="62" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2CE8yrQLKQGesLAXrSmvHI" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="21" ID="87666" StartNodeID="66" EndNodeID="63" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_2Fp29xhFuFGgBGT8HkGi3e" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="21" ID="88850" StartNodeID="65" EndNodeID="63" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3JJRQ6tok4J9OcWJwr_Rrh" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="21" ID="88931" StartNodeID="66" EndNodeID="62" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1LWx5eEBKeHPREql8yAOEN" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="21" ID="89050" StartNodeID="64" EndNodeID="62" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3qG$cbUL_OGhh8X3zctz4o" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="21" ID="89131" StartNodeID="65" EndNodeID="61" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_35S4Zj808iHhMT5NSXSdKc" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="21" ID="89250" StartNodeID="66" EndNodeID="61" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0TfVycnWqdJ9oqzbLoyoR5" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="21" ID="89331" StartNodeID="64" EndNodeID="63" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0vppSLyijpJgusxaoM57xC" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="22">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="22" ID="89441" StartNodeID="67" EndNodeID="64" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_1KEPYk0de0JBJLu7fK1oxF" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="22" ID="90566" StartNodeID="68" EndNodeID="65" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2zqpgHOv_aGhohmMh60nBa" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="22" ID="91691" StartNodeID="69" EndNodeID="66" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0x8g8Y2I05IQQmt2scdQMV" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="22" ID="92875" StartNodeID="68" EndNodeID="66" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3AVU57s3H6IghzRERbTJSt" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="22" ID="92956" StartNodeID="69" EndNodeID="65" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0XAE_goP90GvnXVxQz35Xn" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="22" ID="93075" StartNodeID="67" EndNodeID="65" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_04TI50Z0GNGv5c8LVQ88xP" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="22" ID="93156" StartNodeID="68" EndNodeID="64" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1grx1hanv2HPZNV_cq71ei" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="22" ID="93275" StartNodeID="69" EndNodeID="64" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_09lTEajeMMHxo0dEkcHFCu" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="22" ID="93356" StartNodeID="67" EndNodeID="66" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1rgunqqjZrJf$p9fghPIAj" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="23">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="23" ID="93466" StartNodeID="70" EndNodeID="67" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_1PgDNAUG2yJA6KQpnyIg4C" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="23" ID="94591" StartNodeID="71" EndNodeID="68" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2rwJ8WPfUuJPOMguyw5AJ7" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="23" ID="95715" StartNodeID="72" EndNodeID="69" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_3fgpOorw_dG9EQx9kUoWgm" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="23" ID="96899" StartNodeID="71" EndNodeID="69" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3AYsB_5le4JhM_szVjI3nL" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="23" ID="96980" StartNodeID="72" EndNodeID="68" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2ebNAcCRqzJ9oHL3sqLomS" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="23" ID="97099" StartNodeID="70" EndNodeID="68" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2loPp3$E_yIBTLnpaFFjfc" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="23" ID="97180" StartNodeID="71" EndNodeID="67" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3vQp1bc65kIvmpcdVwY49V" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="23" ID="97299" StartNodeID="72" EndNodeID="67" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3Ldft5WGLQIR_Cy06bvrQe" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="23" ID="97380" StartNodeID="70" EndNodeID="69" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3IGixzMacdGQu$2DHsnXm1" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="24">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="24" ID="97490" StartNodeID="73" EndNodeID="70" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_0dMn1G03HKJBnHNt9hFfFT" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="24" ID="98615" StartNodeID="74" EndNodeID="71" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2JIOjAQhaFIhm2K944kV50" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="24" ID="99739" StartNodeID="75" EndNodeID="72" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_24RYirF2LcJxxfuwJa8uT9" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="24" ID="100925" StartNodeID="74" EndNodeID="72" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1GrMj7jqyIJhK2ofPiAkkr" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="24" ID="101006" StartNodeID="75" EndNodeID="71" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0i1SsbYtCYJf$kOh6Vfrse" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="24" ID="101125" StartNodeID="73" EndNodeID="71" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2JZBVVLcggIgNO_GWZ29Xw" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="24" ID="101206" StartNodeID="74" EndNodeID="70" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3KTXToTN4WHxZs4_2GCW8C" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="24" ID="101325" StartNodeID="75" EndNodeID="70" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2sQPoa4GR1J9vhOw09TEYV" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="24" ID="101406" StartNodeID="73" EndNodeID="72" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0jSeOXISXOGROCS9_71I5u" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="25">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="25" ID="101516" StartNodeID="76" EndNodeID="73" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_3ZP24G0lhlH9cu0Grav1Cy" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="25" ID="102641" StartNodeID="77" EndNodeID="74" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_3_vNLl6YuNIOwlyHVnCRiR" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="25" ID="103765" StartNodeID="78" EndNodeID="75" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_1AUFVjyyr2HB0xCHu$lPAr" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="25" ID="104949" StartNodeID="77" EndNodeID="75" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3z1IAM7BqhJPul5AyJJlmA" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="25" ID="105030" StartNodeID="78" EndNodeID="74" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3wG0k$La77IBkrAghNovLx" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="25" ID="105149" StartNodeID="76" EndNodeID="74" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1Yrh9LkxgJJvile89i5$cz" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="25" ID="105230" StartNodeID="77" EndNodeID="73" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_21TFwVK3LyG95YvLBUUq0Y" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="25" ID="105349" StartNodeID="78" EndNodeID="73" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1yESYgN7C9IA9X6Wc0lpmM" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="25" ID="105430" StartNodeID="76" EndNodeID="75" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0jydUh1Wb_Hv6zCK73jloH" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="26">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="26" ID="105540" StartNodeID="79" EndNodeID="76" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_1fwtTXWA$pJweLqpKZyNeb" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="26" ID="106665" StartNodeID="80" EndNodeID="77" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2VaueoW6ajIRjVyzIyUJhG" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="26" ID="107789" StartNodeID="81" EndNodeID="78" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_07763dC70$Iun6cFVApUFG" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="26" ID="108973" StartNodeID="80" EndNodeID="78" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_06lrUUqhzPHPNBeRpAJOpf" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="26" ID="109054" StartNodeID="81" EndNodeID="77" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2vuYg5ce$0GesdMHBfdjLr" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="26" ID="109173" StartNodeID="79" EndNodeID="77" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0Q8V6ACe25HuN65s1fE7ne" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="26" ID="109254" StartNodeID="80" EndNodeID="76" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_29WrVCReYkGPwyXbc6SfFz" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="26" ID="109373" StartNodeID="81" EndNodeID="76" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0OGNhfvGLEHgPNysDSya7G" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="26" ID="109454" StartNodeID="79" EndNodeID="78" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_12ny2rFV6EIu8hM4OQwkhe" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="27">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="27" ID="109564" StartNodeID="82" EndNodeID="79" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_2gPUVonbvFIeg5OHzLJgMI" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="27" ID="110689" StartNodeID="83" EndNodeID="80" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_270vBiMnqDH9GuWTnXY9yI" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="27" ID="111813" StartNodeID="84" EndNodeID="81" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0XY23K0DujIAZrUCJdc0rB" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="27" ID="112997" StartNodeID="83" EndNodeID="81" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_24HOfYla1SJfbl0OizPmkz" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="27" ID="113078" StartNodeID="84" EndNodeID="80" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0d27cm84R1HvZmt6$qOei$" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="27" ID="113197" StartNodeID="82" EndNodeID="80" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3ajCMMhXQQJPSZCxKK1_8M" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="27" ID="113278" StartNodeID="83" EndNodeID="79" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_03EIRf0DmuJBpHNApOSixb" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="27" ID="113397" StartNodeID="84" EndNodeID="79" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3wZirFNLw7JwZSuK3rY$e7" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="27" ID="113478" StartNodeID="82" EndNodeID="81" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0sZ_JVfUESHu_syFA8DX7P" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="28">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="28" ID="113588" StartNodeID="85" EndNodeID="82" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_21IMF07HY_IuPGcoXLg7TG" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="28" ID="114713" StartNodeID="86" EndNodeID="83" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2YmNSReSQcI8ZxHCpkKUTD" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="28" ID="115837" StartNodeID="87" EndNodeID="84" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0A9J5LgreOGBGYhDvjLDjq" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="28" ID="117021" StartNodeID="86" EndNodeID="84" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3iDVq50MlFJOu7BU5z6_3i" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="28" ID="117102" StartNodeID="87" EndNodeID="83" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1NgcZGAT4LIBQGQNQ6c6In" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="28" ID="117221" StartNodeID="85" EndNodeID="83" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1IAC3IQE8SJRJkeNdsA1km" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="28" ID="117302" StartNodeID="86" EndNodeID="82" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1Mb49CWdmQHB_51UsANi8E" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="28" ID="117421" StartNodeID="87" EndNodeID="82" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_069TH$XKvXHAN9jbJwHbo8" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="28" ID="117502" StartNodeID="85" EndNodeID="84" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2xZ2PgdOwVIB97gYDxrLs8" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="29">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="29" ID="117612" StartNodeID="88" EndNodeID="85" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_3bSTinL4AFHvEm3yqx_zau" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="29" ID="118737" StartNodeID="89" EndNodeID="86" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_11bzapdOLUHOngRraKPkst" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="29" ID="119861" StartNodeID="90" EndNodeID="87" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0qletPLcz$Iwu1pkpeb56U" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="29" ID="121045" StartNodeID="89" EndNodeID="87" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3647JZ3qg_I8x$DNTDx9W3" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="29" ID="121126" StartNodeID="90" EndNodeID="86" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1xbIhQRlJkJ8QOyOxBNrSe" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="29" ID="121245" StartNodeID="88" EndNodeID="86" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3GL$RDuTX7HxGnVrQLkLQv" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="29" ID="121326" StartNodeID="89" EndNodeID="85" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1yDx9G_zlYHf3k_sgjve$v" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="29" ID="121445" StartNodeID="90" EndNodeID="85" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2zwGVejz4oGQX8q$loGYc5" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="29" ID="121526" StartNodeID="88" EndNodeID="87" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2d7h$QDFXBHx0OZQOE0eh$" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="30">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="30" ID="121636" StartNodeID="91" EndNodeID="88" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_1PpO4RB87LHOuFoEjbcBtA" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="30" ID="122761" StartNodeID="92" EndNodeID="89" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_28GtckyBGaI8FAc7R4fiFL" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="30" ID="123885" StartNodeID="93" EndNodeID="90" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0ekBA8T0Y2JhpA3y_B3LBP" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="30" ID="125069" StartNodeID="92" EndNodeID="90" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2ORyqi0$jcG87VOj14s_Vh" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="30" ID="125150" StartNodeID="93" EndNodeID="89" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2jEwBZNX63HOsQ54McrgW5" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="30" ID="125269" StartNodeID="91" EndNodeID="89" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_37rq6Hx8rnGQJctbv9yI2g" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="30" ID="125350" StartNodeID="92" EndNodeID="88" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3VNZuI73BPGx9vfum3DZFz" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="30" ID="125469" StartNodeID="93" EndNodeID="88" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2UWj$G7q7AJfEvNHfHz4l0" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="30" ID="125550" StartNodeID="91" EndNodeID="90" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2Qelk$6_ieI9hfDjFj9weY" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="31">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="31" ID="125660" StartNodeID="94" EndNodeID="91" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_3eRBMtWGPfHPvULKbcZWiz" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="31" ID="126785" StartNodeID="95" EndNodeID="92" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_29nXnWWwj1JgifleG07AYs" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="31" ID="127909" StartNodeID="96" EndNodeID="93" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_1HxFJD2zeFIPbVhDL5Fc0Z" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="31" ID="129093" StartNodeID="95" EndNodeID="93" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1yRY5qcEiFHgENY66oXcre" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="31" ID="129174" StartNodeID="96" EndNodeID="92" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3ns3f$yb3$JwYjcU9Un7sH" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="31" ID="129293" StartNodeID="94" EndNodeID="92" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1suUVAE3i6HgZ1X9Ho1v4H" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="31" ID="129374" StartNodeID="95" EndNodeID="91" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0woR5DV7YwHQiupBkTMEi4" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="31" ID="129493" StartNodeID="96" EndNodeID="91" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2LjRPGVU4XH9J81btOJYND" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="31" ID="129574" StartNodeID="94" EndNodeID="93" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_05myn$DuY3J8eVzqAYXQaX" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="32">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="32" ID="129684" StartNodeID="97" EndNodeID="94" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_243y1R7X0ZHQA8qI0IMxrO" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="32" ID="130809" StartNodeID="98" EndNodeID="95" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_0YRnPFT_T2JhzXHbeZ7PoV" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="32" ID="131933" StartNodeID="99" EndNodeID="96" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0Kuf2mzr7pIfuu7EVz0uF7" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="32" ID="133117" StartNodeID="98" EndNodeID="96" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3ueUOtWXsdHf_nqc_4PBXQ" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="32" ID="133198" StartNodeID="99" EndNodeID="95" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2ARZylvIlOIOKhk0ukfS4I" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="32" ID="133317" StartNodeID="97" EndNodeID="95" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2HB3ntl_wcIwz1DyWt6JwW" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="32" ID="133398" StartNodeID="98" EndNodeID="94" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1btmgyFUaxGxkWHtXu6jND" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="32" ID="133517" StartNodeID="99" EndNodeID="94" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3epRMKX$7lJuWOVgkk2_IA" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="32" ID="133598" StartNodeID="97" EndNodeID="96" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_35wx3W5USsHuihXzlLHXfz" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="33">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="33" ID="133708" StartNodeID="100" EndNodeID="97" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_2NMbFgpA$hG8mLtVOlGzUl" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="33" ID="134833" StartNodeID="101" EndNodeID="98" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_0FSt74T0UrG8OIbf1x4mJS" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="33" ID="135957" StartNodeID="102" EndNodeID="99" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_2tiESHRjmmH8SkBcfIzRoi" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="33" ID="137141" StartNodeID="101" EndNodeID="99" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0VPvGlC9_7IePbBhmA$ojS" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="33" ID="137222" StartNodeID="102" EndNodeID="98" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2RUbP0sonkGhGHcCzwPq09" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="33" ID="137341" StartNodeID="100" EndNodeID="98" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0i3HACXEO_H9jLsFHfgk3m" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="33" ID="137422" StartNodeID="101" EndNodeID="97" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1s6opreBIhIw6ykxBqZxfJ" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="33" ID="137541" StartNodeID="102" EndNodeID="97" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1nrfeqVsfUIBpy3_Pe9l1g" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="33" ID="137622" StartNodeID="100" EndNodeID="99" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2PQf8FpKSKGgQQyoi3GODb" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="34">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="34" ID="137732" StartNodeID="103" EndNodeID="100" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_1Y05I0UjnMJgY6d7umME9C" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="34" ID="138857" StartNodeID="104" EndNodeID="101" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_3D9oCppNqgIeJZBEnUVH1Y" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="34" ID="139981" StartNodeID="105" EndNodeID="102" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0xU9dnHn09H8FcQYX1AV7Z" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="34" ID="141165" StartNodeID="104" EndNodeID="102" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2k1s8jykrtJg80zt0okyTF" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="34" ID="141246" StartNodeID="105" EndNodeID="101" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0ccSDKZrb5HQfHb20FSLXv" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="34" ID="141365" StartNodeID="103" EndNodeID="101" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1NATkvJRkAIA$4C6wwUKU_" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="34" ID="141446" StartNodeID="104" EndNodeID="100" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0ZaggS_fTOHOYNyWtKF5sU" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="34" ID="141565" StartNodeID="105" EndNodeID="100" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2GjKp89LmNIxkBSE907UJH" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="34" ID="141646" StartNodeID="103" EndNodeID="102" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_06EU9N4zG5GhlUAPQAICR1" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="35">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="35" ID="141756" StartNodeID="106" EndNodeID="103" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_1SpHyeKowOHA274gY5vYxc" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="35" ID="142881" StartNodeID="107" EndNodeID="104" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_1nXgdAQksNHvniXaYgty_A" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="35" ID="144005" StartNodeID="108" EndNodeID="105" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_31Pq97qlzlJxoBSj57M4Ob" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="35" ID="145189" StartNodeID="107" EndNodeID="105" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2LO6lET$0OIOYuCh$3rEs5" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="35" ID="145270" StartNodeID="108" EndNodeID="104" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_27tqD0i4zdHuiA9SqDIjiM" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="35" ID="145389" StartNodeID="106" EndNodeID="104" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0W5ZUrl73sHeHEb1d2etDr" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="35" ID="145470" StartNodeID="107" EndNodeID="103" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0rrUUV9BpjJvzkX4Pez1JD" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="35" ID="145589" StartNodeID="108" EndNodeID="103" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3vQC6IO8HcGh$$ZW22Z5h3" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="35" ID="145670" StartNodeID="106" EndNodeID="105" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3CgWftJJscJgbsyaWOoKSC" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="36">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="36" ID="145780" StartNodeID="109" EndNodeID="106" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_2GhLqByD4RJuOER4KktnQF" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="36" ID="146905" StartNodeID="110" EndNodeID="107" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_036_MHSIFYIuNULap9LeUE" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="36" ID="148029" StartNodeID="111" EndNodeID="108" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_1MG56p6LQiHwt0DOwXmn2E" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="36" ID="149213" StartNodeID="110" EndNodeID="108" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1mmlF$A6MVGBguNzgOA9Ir" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="36" ID="149294" StartNodeID="111" EndNodeID="107" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2J_YuXWjfrHRH8RyaaaEUe" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="36" ID="149413" StartNodeID="109" EndNodeID="107" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1EC7$$sR4OHBq1GU_Cp25y" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="36" ID="149494" StartNodeID="110" EndNodeID="106" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1GH5i19vQPHB2IahXnuJbl" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="36" ID="149613" StartNodeID="111" EndNodeID="106" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_36poQbsw7WIvJtytMnA6Ho" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="36" ID="149694" StartNodeID="109" EndNodeID="108" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1FlE$FmYoXGB0gLuoXlU3R" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="37">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="37" ID="149804" StartNodeID="112" EndNodeID="109" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_0bQQiakKutHhTjQu1Bf0$3" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="37" ID="150929" StartNodeID="113" EndNodeID="110" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_1sYpSGVOaRGfu1XLrsrGGf" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="37" ID="152053" StartNodeID="114" EndNodeID="111" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_1xV7XsZzvKJfvIwVw5tY4X" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="37" ID="153237" StartNodeID="113" EndNodeID="111" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1xiHlCP4qQGQSOMteA2AbI" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="37" ID="153318" StartNodeID="114" EndNodeID="110" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2c29lbROjKGQxZP7RQqAZ8" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="37" ID="153437" StartNodeID="112" EndNodeID="110" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0oNre5i1x8IOBrTqMez_Jv" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="37" ID="153518" StartNodeID="113" EndNodeID="109" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1zTx8PEzWYIOsnzPI0$0GS" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="37" ID="153637" StartNodeID="114" EndNodeID="109" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3le0jLjdacIei$RhWKR1k1" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="37" ID="153718" StartNodeID="112" EndNodeID="111" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1WZizxEv1nJOlJ_TTivOJ5" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="38">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="38" ID="153828" StartNodeID="115" EndNodeID="112" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_0ZpQ2as9fSG8$iWTTrjA_d" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="38" ID="154953" StartNodeID="116" EndNodeID="113" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2lEKfFT2beJRNBHowZHmXv" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="38" ID="156077" StartNodeID="117" EndNodeID="114" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_3E00y9N0QNIQDGYDo0UKhW" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="38" ID="157261" StartNodeID="116" EndNodeID="114" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1lx54D3dI3HuwJ$p4yqBDo" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="38" ID="157342" StartNodeID="117" EndNodeID="113" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0mw9Za8GwZIPVjiSFNtSUM" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="38" ID="157461" StartNodeID="115" EndNodeID="113" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1VpkHvEl6LJP3DVFdwAMV2" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="38" ID="157542" StartNodeID="116" EndNodeID="112" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0wzflZeXyqHfWexzd3h75Z" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="38" ID="157661" StartNodeID="117" EndNodeID="112" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3q$FGGBy6vJBEl0V7fUpbT" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="38" ID="157742" StartNodeID="115" EndNodeID="114" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0bgJZRUb7nJhExMamM7Axx" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="39">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="39" ID="157852" StartNodeID="118" EndNodeID="115" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_0hnpsYRcT2H8Ql02$TYaBs" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="39" ID="158977" StartNodeID="119" EndNodeID="116" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_18FvsoKtjCGviU77b44$8m" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="39" ID="160101" StartNodeID="120" EndNodeID="117" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0wSP1pS$l7JOe1CVg4wXMd" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="39" ID="161285" StartNodeID="119" EndNodeID="117" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3_P7bQsSVlGwNXGwvZ45Ld" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="39" ID="161366" StartNodeID="120" EndNodeID="116" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0mcqsp2WavHg0PKRGtbtLA" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="39" ID="161485" StartNodeID="118" EndNodeID="116" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0r_U$UqH1$G87BlFc3VaFt" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="39" ID="161566" StartNodeID="119" EndNodeID="115" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1I_GB8j0bjHwRd4NRa03i1" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="39" ID="161685" StartNodeID="120" EndNodeID="115" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0HaGpjM2TyIxHzZK8jC_0Z" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="39" ID="161766" StartNodeID="118" EndNodeID="117" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_2HdPfbnCLzH8WTN0OmzoBS" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="40">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="40" ID="161876" StartNodeID="121" EndNodeID="118" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_1be0pCFmZuIvD5vn04DfRG" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="40" ID="163001" StartNodeID="122" EndNodeID="119" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_1OThD3uEZ7Iwdxi6QCIuq1" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="40" ID="164125" StartNodeID="123" EndNodeID="120" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_3WgmHn9YDpHvwdudthJ9_p" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="40" ID="165309" StartNodeID="122" EndNodeID="120" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0iHxb_FtuXJu9MF4W1A0FW" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="40" ID="165390" StartNodeID="123" EndNodeID="119" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3BVBL5zOIiI8CNCk79JdWZ" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="40" ID="165509" StartNodeID="121" EndNodeID="119" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1$g8q_IqdJGfhFQ81gEU9v" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="40" ID="165590" StartNodeID="122" EndNodeID="118" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_33BclIpAxPJe7zmmQsBVWp" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="40" ID="165709" StartNodeID="123" EndNodeID="118" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_28dqEDlrQ$JuCQAf3qs0QF" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="40" ID="165790" StartNodeID="121" EndNodeID="120" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0HTpzVF6X1HOkjUFaL1ioE" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="41">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="41" ID="165900" StartNodeID="124" EndNodeID="121" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_19pLpBorbEJfycQNBZrdds" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="41" ID="167025" StartNodeID="125" EndNodeID="122" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_0MlNk8004WHhzHrdNppWuk" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="41" ID="168149" StartNodeID="126" EndNodeID="123" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0ceG2Sn65LHQ1$dQbbKO1U" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="41" ID="169333" StartNodeID="125" EndNodeID="123" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_2f72QFS9DxHhaLg$t2QH3_" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="41" ID="169414" StartNodeID="126" EndNodeID="122" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_00oMAm0lxsJBNGuOusQzNK" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="41" ID="169533" StartNodeID="124" EndNodeID="122" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0tJYqhwCBnJQgGsRLxTBgG" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="41" ID="169614" StartNodeID="125" EndNodeID="121" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1M8YsOnyIzHhFzphBaiNNi" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="41" ID="169733" StartNodeID="126" EndNodeID="121" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0zoZixmk$ZGv0p84KfA$4i" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="41" ID="169814" StartNodeID="124" EndNodeID="123" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0edYWwyANeGR0VH$OHQbXB" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="42">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="42" ID="169924" StartNodeID="127" EndNodeID="124" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_1kQwYU22pYGQSUa_6W9lnZ" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="42" ID="171049" StartNodeID="128" EndNodeID="125" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_3JlHStPe5SIgXOLQifjPyR" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="42" ID="172173" StartNodeID="129" EndNodeID="126" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0Q8EBMKTD3HuVVAKWnMHbF" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="42" ID="173357" StartNodeID="128" EndNodeID="126" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_33vwVHMG2WIvASX_YYouCu" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="42" ID="173438" StartNodeID="129" EndNodeID="125" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1ERRghf8SJHwed1XIRcaVW" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="42" ID="173557" StartNodeID="127" EndNodeID="125" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0J9IcQYBG_GP5Uqxl_y3DW" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="42" ID="173638" StartNodeID="128" EndNodeID="124" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0wJCNHI7VJJAJQkWVg_c8U" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="42" ID="173757" StartNodeID="129" EndNodeID="124" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3$Ip_Lh5kwJPks9tB7eAIL" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="42" ID="173838" StartNodeID="127" EndNodeID="126" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_29W68QvAVEGxEC8b4D1mSa" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="43">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="43" ID="173948" StartNodeID="130" EndNodeID="127" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_06XU7PsTOmHO4PrOAtg1cs" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="43" ID="175073" StartNodeID="131" EndNodeID="128" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_3ydxK77qBTG9PHrnxSiPxb" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="43" ID="176197" StartNodeID="132" EndNodeID="129" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_1sg5EqCM5GHwXCwva8ZNSX" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="43" ID="177381" StartNodeID="131" EndNodeID="129" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_26Kul5bZmwGw8QGWHXNmuv" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="43" ID="177462" StartNodeID="132" EndNodeID="128" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_32_iavglKlHf4mmKInoAPH" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="43" ID="177581" StartNodeID="130" EndNodeID="128" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3JvcmK06TYG81ipaBew4GR" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="43" ID="177662" StartNodeID="131" EndNodeID="127" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1T3XpCGvdAGRDVtztyKL3$" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="43" ID="177781" StartNodeID="132" EndNodeID="127" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1JEtJ93QPIJxOgH3waNqer" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="43" ID="177862" StartNodeID="130" EndNodeID="129" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_11cJUFKN2yIhSw69SuCL2e" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="44">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="44" ID="177972" StartNodeID="133" EndNodeID="130" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_2KY80dBlYkIfxml4oXJkE3" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="44" ID="179097" StartNodeID="134" EndNodeID="131" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_1F97j0LmlMHeSy9KsEradS" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="44" ID="180221" StartNodeID="135" EndNodeID="132" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_0aO_AVv2SoHBhdTjVTL8_v" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="44" ID="181405" StartNodeID="134" EndNodeID="132" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0HO2U2$9JUJQg7ALUixwUF" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="44" ID="181486" StartNodeID="135" EndNodeID="131" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_1bnJIIrlz$GepGmP35xVQH" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="44" ID="181605" StartNodeID="133" EndNodeID="131" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1R1JG3pjVkGPR5bvtBfleE" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="44" ID="181686" StartNodeID="134" EndNodeID="130" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3l8MWhuyU9GPyd$xpdHr$V" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="44" ID="181805" StartNodeID="135" EndNodeID="130" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_3TE$vRAxd0JQsLeYqX8EOE" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="44" ID="181886" StartNodeID="133" EndNodeID="132" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_3Fs2l88qb_Gx63vGp_Hl4P" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Panel ID="45">
+    <Legs>
+      <Leg Name="A">
+        <PhysicalMember PanelPropertyID="45" ID="181996" StartNodeID="136" EndNodeID="133" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_A" SourceAppElementId="IFC_2Lf_2Fw1mbJuLVqFNJULmN" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="C">
+        <PhysicalMember PanelPropertyID="45" ID="183121" StartNodeID="137" EndNodeID="134" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_C" SourceAppElementId="IFC_2KmqdNMmDFI90RVF2RI5bs" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+      <Leg Name="B">
+        <PhysicalMember PanelPropertyID="45" ID="184245" StartNodeID="138" EndNodeID="135" SectionID="1" MaterialID="1" BetaAngle="0" Label="Leg_B" SourceAppElementId="IFC_2Ef7WLaW37IfdA93F6IeS3" StartRelease="00000" EndRelease="00000"/>
+      </Leg>
+    </Legs>
+    <FaceBracingDetails>
+      <Face ID="1" Name="FaceA">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="45" ID="185429" StartNodeID="137" EndNodeID="135" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_0IcHC4K_0cHRYH2jvpM3wy" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="45" ID="185510" StartNodeID="138" EndNodeID="134" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_17yuLKn_DQJv91n6$GwCfN" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="2" Name="FaceB">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="45" ID="185629" StartNodeID="136" EndNodeID="134" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_05vKv58URQG8$CsUfvi0c1" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="45" ID="185710" StartNodeID="137" EndNodeID="133" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0zE$ED$mstJP0p2Fez4qJw" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+      <Face ID="3" Name="FaceC">
+        <Segments>
+          <Segment ID="1" Name="X Brace">
+            <PhysicalMember PanelPropertyID="45" ID="185829" StartNodeID="138" EndNodeID="133" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 1" SourceAppElementId="IFC_1uBZijoI4EGOSGg$3sBREt" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+            <PhysicalMember PanelPropertyID="45" ID="185910" StartNodeID="136" EndNodeID="135" SectionID="2" MaterialID="2" BetaAngle="180" Label="DIAGONAL 2" SourceAppElementId="IFC_0V1R1Sa9hLJuBfOftofvS6" StartRelease="000000" EndRelease="000000" MemberTag="DIAGONAL"/>
+          </Segment>
+        </Segments>
+      </Face>
+    </FaceBracingDetails>
+    <PlanBracingDetails/>
+    <HipBracingDetails/>
+  </Panel>
+  <Nodes>
+    <Node ID="1" X="0" Y="85.95" Z="-0.8891"/>
+    <Node ID="2" X="0" Y="86.7954" Z="-0.8891"/>
+    <Node ID="3" X="-0.77" Y="85.95" Z="0.4446"/>
+    <Node ID="4" X="-0.77" Y="86.7954" Z="0.4446"/>
+    <Node ID="5" X="0.77" Y="85.95" Z="0.4446"/>
+    <Node ID="6" X="0.77" Y="86.7954" Z="0.4446"/>
+    <Node ID="7" X="0" Y="83.98" Z="-0.8891"/>
+    <Node ID="8" X="-0.77" Y="83.98" Z="0.4446"/>
+    <Node ID="9" X="0.77" Y="83.98" Z="0.4446"/>
+    <Node ID="10" X="0" Y="82.01" Z="-0.8891"/>
+    <Node ID="11" X="-0.77" Y="82.01" Z="0.4446"/>
+    <Node ID="12" X="0.77" Y="82.01" Z="0.4446"/>
+    <Node ID="13" X="0" Y="80.04" Z="-0.8891"/>
+    <Node ID="14" X="-0.77" Y="80.04" Z="0.4446"/>
+    <Node ID="15" X="0.77" Y="80.04" Z="0.4446"/>
+    <Node ID="16" X="0" Y="78.07" Z="-0.8891"/>
+    <Node ID="17" X="-0.77" Y="78.07" Z="0.4446"/>
+    <Node ID="18" X="0.77" Y="78.07" Z="0.4446"/>
+    <Node ID="19" X="0" Y="76.1" Z="-0.8891"/>
+    <Node ID="20" X="-0.77" Y="76.1" Z="0.4446"/>
+    <Node ID="21" X="0.77" Y="76.1" Z="0.4446"/>
+    <Node ID="22" X="0" Y="74.86" Z="-0.96"/>
+    <Node ID="23" X="-0.8313" Y="74.86" Z="0.48"/>
+    <Node ID="24" X="0.8313" Y="74.86" Z="0.48"/>
+    <Node ID="25" X="0" Y="72.89" Z="-1.0725"/>
+    <Node ID="26" X="-0.9288" Y="72.89" Z="0.5363"/>
+    <Node ID="27" X="0.9288" Y="72.89" Z="0.5363"/>
+    <Node ID="28" X="0" Y="70.92" Z="-1.185"/>
+    <Node ID="29" X="-1.0263" Y="70.92" Z="0.5925"/>
+    <Node ID="30" X="1.0263" Y="70.92" Z="0.5925"/>
+    <Node ID="31" X="0" Y="68.95" Z="-1.2976"/>
+    <Node ID="32" X="-1.1237" Y="68.95" Z="0.6488"/>
+    <Node ID="33" X="1.1237" Y="68.95" Z="0.6488"/>
+    <Node ID="34" X="0" Y="66.98" Z="-1.4101"/>
+    <Node ID="35" X="-1.2212" Y="66.98" Z="0.7051"/>
+    <Node ID="36" X="1.2212" Y="66.98" Z="0.7051"/>
+    <Node ID="37" X="0" Y="65.01" Z="-1.5227"/>
+    <Node ID="38" X="-1.3187" Y="65.01" Z="0.7613"/>
+    <Node ID="39" X="1.3187" Y="65.01" Z="0.7613"/>
+    <Node ID="40" X="0" Y="63.04" Z="-1.6352"/>
+    <Node ID="41" X="-1.4161" Y="63.04" Z="0.8176"/>
+    <Node ID="42" X="1.4161" Y="63.04" Z="0.8176"/>
+    <Node ID="43" X="0" Y="61.07" Z="-1.7478"/>
+    <Node ID="44" X="-1.5136" Y="61.07" Z="0.8739"/>
+    <Node ID="45" X="1.5136" Y="61.07" Z="0.8739"/>
+    <Node ID="46" X="0" Y="59.1" Z="-1.8603"/>
+    <Node ID="47" X="-1.6111" Y="59.1" Z="0.9301"/>
+    <Node ID="48" X="1.6111" Y="59.1" Z="0.9301"/>
+    <Node ID="49" X="0" Y="57.13" Z="-1.9728"/>
+    <Node ID="50" X="-1.7085" Y="57.13" Z="0.9864"/>
+    <Node ID="51" X="1.7085" Y="57.13" Z="0.9864"/>
+    <Node ID="52" X="0" Y="55.16" Z="-2.0854"/>
+    <Node ID="53" X="-1.806" Y="55.16" Z="1.0427"/>
+    <Node ID="54" X="1.806" Y="55.16" Z="1.0427"/>
+    <Node ID="55" X="0" Y="53.19" Z="-2.1979"/>
+    <Node ID="56" X="-1.9035" Y="53.19" Z="1.099"/>
+    <Node ID="57" X="1.9035" Y="53.19" Z="1.099"/>
+    <Node ID="58" X="0" Y="51.22" Z="-2.3105"/>
+    <Node ID="59" X="-2.0009" Y="51.22" Z="1.1552"/>
+    <Node ID="60" X="2.0009" Y="51.22" Z="1.1552"/>
+    <Node ID="61" X="0" Y="49.25" Z="-2.423"/>
+    <Node ID="62" X="-2.0984" Y="49.25" Z="1.2115"/>
+    <Node ID="63" X="2.0984" Y="49.25" Z="1.2115"/>
+    <Node ID="64" X="0" Y="47.28" Z="-2.5356"/>
+    <Node ID="65" X="-2.1959" Y="47.28" Z="1.2678"/>
+    <Node ID="66" X="2.1959" Y="47.28" Z="1.2678"/>
+    <Node ID="67" X="0" Y="45.31" Z="-2.6481"/>
+    <Node ID="68" X="-2.2933" Y="45.31" Z="1.324"/>
+    <Node ID="69" X="2.2933" Y="45.31" Z="1.324"/>
+    <Node ID="70" X="0" Y="43.34" Z="-2.7606"/>
+    <Node ID="71" X="-2.3908" Y="43.34" Z="1.3803"/>
+    <Node ID="72" X="2.3908" Y="43.34" Z="1.3803"/>
+    <Node ID="73" X="0" Y="41.37" Z="-2.8732"/>
+    <Node ID="74" X="-2.4882" Y="41.37" Z="1.4366"/>
+    <Node ID="75" X="2.4882" Y="41.37" Z="1.4366"/>
+    <Node ID="76" X="0" Y="39.4" Z="-2.9857"/>
+    <Node ID="77" X="-2.5857" Y="39.4" Z="1.4929"/>
+    <Node ID="78" X="2.5857" Y="39.4" Z="1.4929"/>
+    <Node ID="79" X="0" Y="37.43" Z="-3.0983"/>
+    <Node ID="80" X="-2.6832" Y="37.43" Z="1.5491"/>
+    <Node ID="81" X="2.6832" Y="37.43" Z="1.5491"/>
+    <Node ID="82" X="0" Y="35.46" Z="-3.2108"/>
+    <Node ID="83" X="-2.7806" Y="35.46" Z="1.6054"/>
+    <Node ID="84" X="2.7806" Y="35.46" Z="1.6054"/>
+    <Node ID="85" X="0" Y="33.49" Z="-3.3233"/>
+    <Node ID="86" X="-2.8781" Y="33.49" Z="1.6617"/>
+    <Node ID="87" X="2.8781" Y="33.49" Z="1.6617"/>
+    <Node ID="88" X="0" Y="31.52" Z="-3.4359"/>
+    <Node ID="89" X="-2.9756" Y="31.52" Z="1.7179"/>
+    <Node ID="90" X="2.9756" Y="31.52" Z="1.7179"/>
+    <Node ID="91" X="0" Y="29.55" Z="-3.5484"/>
+    <Node ID="92" X="-3.073" Y="29.55" Z="1.7742"/>
+    <Node ID="93" X="3.073" Y="29.55" Z="1.7742"/>
+    <Node ID="94" X="0" Y="27.58" Z="-3.661"/>
+    <Node ID="95" X="-3.1705" Y="27.58" Z="1.8305"/>
+    <Node ID="96" X="3.1705" Y="27.58" Z="1.8305"/>
+    <Node ID="97" X="0" Y="25.61" Z="-3.7735"/>
+    <Node ID="98" X="-3.268" Y="25.61" Z="1.8868"/>
+    <Node ID="99" X="3.268" Y="25.61" Z="1.8868"/>
+    <Node ID="100" X="0" Y="23.64" Z="-3.8861"/>
+    <Node ID="101" X="-3.3654" Y="23.64" Z="1.943"/>
+    <Node ID="102" X="3.3654" Y="23.64" Z="1.943"/>
+    <Node ID="103" X="0" Y="21.67" Z="-3.9986"/>
+    <Node ID="104" X="-3.4629" Y="21.67" Z="1.9993"/>
+    <Node ID="105" X="3.4629" Y="21.67" Z="1.9993"/>
+    <Node ID="106" X="0" Y="19.7" Z="-4.1111"/>
+    <Node ID="107" X="-3.5604" Y="19.7" Z="2.0556"/>
+    <Node ID="108" X="3.5604" Y="19.7" Z="2.0556"/>
+    <Node ID="109" X="0" Y="17.73" Z="-4.2237"/>
+    <Node ID="110" X="-3.6578" Y="17.73" Z="2.1118"/>
+    <Node ID="111" X="3.6578" Y="17.73" Z="2.1118"/>
+    <Node ID="112" X="0" Y="15.76" Z="-4.3362"/>
+    <Node ID="113" X="-3.7553" Y="15.76" Z="2.1681"/>
+    <Node ID="114" X="3.7553" Y="15.76" Z="2.1681"/>
+    <Node ID="115" X="0" Y="13.79" Z="-4.4488"/>
+    <Node ID="116" X="-3.8527" Y="13.79" Z="2.2244"/>
+    <Node ID="117" X="3.8527" Y="13.79" Z="2.2244"/>
+    <Node ID="118" X="0" Y="11.82" Z="-4.5613"/>
+    <Node ID="119" X="-3.9502" Y="11.82" Z="2.2807"/>
+    <Node ID="120" X="3.9502" Y="11.82" Z="2.2807"/>
+    <Node ID="121" X="0" Y="9.85" Z="-4.6739"/>
+    <Node ID="122" X="-4.0477" Y="9.85" Z="2.3369"/>
+    <Node ID="123" X="4.0477" Y="9.85" Z="2.3369"/>
+    <Node ID="124" X="0" Y="7.88" Z="-4.7864"/>
+    <Node ID="125" X="-4.1451" Y="7.88" Z="2.3932"/>
+    <Node ID="126" X="4.1451" Y="7.88" Z="2.3932"/>
+    <Node ID="127" X="0" Y="5.91" Z="-4.8989"/>
+    <Node ID="128" X="-4.2426" Y="5.91" Z="2.4495"/>
+    <Node ID="129" X="4.2426" Y="5.91" Z="2.4495"/>
+    <Node ID="130" X="0" Y="3.94" Z="-5.0115"/>
+    <Node ID="131" X="-4.3401" Y="3.94" Z="2.5057"/>
+    <Node ID="132" X="4.3401" Y="3.94" Z="2.5057"/>
+    <Node ID="133" X="0" Y="1.97" Z="-5.124"/>
+    <Node ID="134" X="-4.4375" Y="1.97" Z="2.562"/>
+    <Node ID="135" X="4.4375" Y="1.97" Z="2.562"/>
+    <Node ID="136" X="0" Y="0" Z="-5.2366"/>
+    <Node ID="137" X="-4.535" Y="0" Z="2.6183"/>
+    <Node ID="138" X="4.535" Y="0" Z="2.6183"/>
+  </Nodes>
+  <Sections>
+    <Section ID="1" Name="HollowCircleProfile" SectionName="CHS50X4.0" Radius="0.9842524995693482" WallThickness="0.15748031599999993"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.023776413297653197" Y="0" Z="-0.0077254247665404785"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.022838635933399198" Y="0" Z="-0.010168416243791611"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.021650634622573897" Y="0" Z="-0.012500000095367447"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.020225424861907995" Y="0" Z="-0.014694632065296198"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.018578620100021398" Y="0" Z="-0.0167282652020454"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.016728265202045397" Y="0" Z="-0.018578620100021426"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.014694632065296198" Y="0" Z="-0.020225424861908037"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.012500000095367399" Y="0" Z="-0.021650634622573883"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.010168416243791598" Y="0" Z="-0.022838635933399187"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.007725424766540499" Y="0" Z="-0.02377641329765323"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.0051977924406527995" Y="0" Z="-0.02445368996858599"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.0026132116392254797" Y="0" Z="-0.024863047552108775"/>
+    <PolyLine RefID="1" PolygonID="1" X="0" Y="0" Z="-0.025000000190734895"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.0026132116392254797" Y="0" Z="-0.024863047552108775"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.005197792440652899" Y="0" Z="-0.02445368996858599"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.007725424766540499" Y="0" Z="-0.02377641329765323"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.010168416243791598" Y="0" Z="-0.022838635933399187"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.012500000095367399" Y="0" Z="-0.021650634622573883"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.014694632065296198" Y="0" Z="-0.020225424861908037"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.016728265202045397" Y="0" Z="-0.018578620100021426"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.018578620100021398" Y="0" Z="-0.0167282652020454"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.020225424861907995" Y="0" Z="-0.014694632065296198"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.021650634622573897" Y="0" Z="-0.012500000095367447"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.022838635933399198" Y="0" Z="-0.010168416243791611"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.023776413297653197" Y="0" Z="-0.0077254247665404785"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.024453689968585997" Y="0" Z="-0.005197792440652882"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.024863047552108795" Y="0" Z="-0.0026132116392254545"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.025000000190734898" Y="0" Z="0"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.024863047552108795" Y="0" Z="0.0026132116392254545"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.024453689968585997" Y="0" Z="0.005197792440652882"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.023776413297653197" Y="0" Z="0.0077254247665404785"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.022838635933399198" Y="0" Z="0.010168416243791611"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.021650634622573897" Y="0" Z="0.012500000095367447"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.020225424861907995" Y="0" Z="0.014694632065296198"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.018578620100021398" Y="0" Z="0.0167282652020454"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.016728265202045397" Y="0" Z="0.018578620100021426"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.014694632065296198" Y="0" Z="0.020225424861908037"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.012500000095367399" Y="0" Z="0.021650634622573883"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.010168416243791598" Y="0" Z="0.022838635933399187"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.007725424766540499" Y="0" Z="0.02377641329765323"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.005197792440652899" Y="0" Z="0.02445368996858599"/>
+    <PolyLine RefID="1" PolygonID="1" X="0.0026132116392254797" Y="0" Z="0.024863047552108775"/>
+    <PolyLine RefID="1" PolygonID="1" X="0" Y="0" Z="0.025000000190734895"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.0026132116392254797" Y="0" Z="0.024863047552108775"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.0051977924406527995" Y="0" Z="0.02445368996858599"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.007725424766540499" Y="0" Z="0.02377641329765323"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.010168416243791598" Y="0" Z="0.022838635933399187"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.012500000095367399" Y="0" Z="0.021650634622573883"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.014694632065296198" Y="0" Z="0.020225424861908037"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.016728265202045397" Y="0" Z="0.018578620100021426"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.018578620100021398" Y="0" Z="0.0167282652020454"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.020225424861907995" Y="0" Z="0.014694632065296198"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.021650634622573897" Y="0" Z="0.012500000095367447"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.022838635933399198" Y="0" Z="0.010168416243791611"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.023776413297653197" Y="0" Z="0.0077254247665404785"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.024453689968585997" Y="0" Z="0.005197792440652882"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.024863047552108795" Y="0" Z="0.0026132116392254545"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.025000000190734898" Y="0" Z="0"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.024863047552108795" Y="0" Z="-0.0026132116392254545"/>
+    <PolyLine RefID="1" PolygonID="1" X="-0.024453689968585997" Y="0" Z="-0.005197792440652882"/>
+    <Section ID="2" Name="LShapeProfile" SectionName="EA50X50X4" Width="1.968505015018495" Depth="1.968505015018084" Thickness="0.15748041431450233" FilletRadius="0" EdgeRadius="0"/>
+    <PolyLine RefID="2" PolygonID="1" X="-0.013979167318343805" Y="0" Z="0.01397916731832538"/>
+    <PolyLine RefID="2" PolygonID="1" X="-0.013979167318343796" Y="0" Z="-0.03602083306313375"/>
+    <PolyLine RefID="2" PolygonID="1" X="-0.009979166954755633" Y="0" Z="-0.03602083306313375"/>
+    <PolyLine RefID="2" PolygonID="1" X="-0.00997916695475553" Y="0" Z="0.009979166954735774"/>
+    <PolyLine RefID="2" PolygonID="1" X="0.036020833063125764" Y="0" Z="0.009979166954735774"/>
+    <PolyLine RefID="2" PolygonID="1" X="0.036020833063125764" Y="0" Z="0.01397916731832538"/>
+  </Sections>
+  <Materials>
+    <Material ID="1" Name="S 275"/>
+    <MaterialProperty RefID="1" Name="E" Description="E" Value="205000" Unit="N/mm2"/>
+    <MaterialProperty RefID="1" Name="G" Description="G" Value="78846.153846" Unit="N/mm2"/>
+    <MaterialProperty RefID="1" Name="Fy" Description="Fy" Value="275" Unit="N/mm2"/>
+    <MaterialProperty RefID="1" Name="Fu" Description="Fu" Value="430" Unit="N/mm2"/>
+    <MaterialProperty RefID="1" Name="Mu" Description="Mu" Value="0.3" Unit=""/>
+    <MaterialProperty RefID="1" Name="Rho" Description="Rho" Value="7850" Unit="kg/m3"/>
+    <MaterialProperty RefID="1" Name="Gamma" Description="Gamma" Value="76.9822" Unit="kN/m3"/>
+    <MaterialProperty RefID="1" Name="Alpha" Description="Alpha" Value="0.000012" Unit="/C"/>
+    <MaterialProperty RefID="1" Name="CDAMP" Description="CDAMP" Value="0.03" Unit=""/>
+    <Material ID="2" Name="Default Steel"/>
+    <MaterialProperty RefID="2" Name="E" Description="E" Value="205000" Unit="N/mm2"/>
+    <MaterialProperty RefID="2" Name="G" Description="G" Value="78846.153846" Unit="N/mm2"/>
+    <MaterialProperty RefID="2" Name="Fy" Description="Fy" Value="275" Unit="N/mm2"/>
+    <MaterialProperty RefID="2" Name="Fu" Description="Fu" Value="430" Unit="N/mm2"/>
+    <MaterialProperty RefID="2" Name="Mu" Description="Mu" Value="0.3" Unit=""/>
+    <MaterialProperty RefID="2" Name="Rho" Description="Rho" Value="7850" Unit="kg/m3"/>
+    <MaterialProperty RefID="2" Name="Gamma" Description="Gamma" Value="76.9822" Unit="kN/m3"/>
+    <MaterialProperty RefID="2" Name="Alpha" Description="Alpha" Value="0.000012" Unit="/C"/>
+    <MaterialProperty RefID="2" Name="CDAMP" Description="CDAMP" Value="0.03" Unit=""/>
+  </Materials>
+</Staad>
