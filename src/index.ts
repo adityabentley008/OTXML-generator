@@ -1,16 +1,21 @@
 import { serialize } from "./generator";
 import { validateCommonData } from "./validation";
 import { validateOtxml } from "./xsd";
+import { DEFAULT_SECTION_ID } from "./model";
+import { supportMembers } from "./supports";
 
 export * from "./model";
 
 export interface GenerateResult { xml: string; warnings: string[]; }
 
 export function generateOtxml(data: unknown, options: { pythonExecutable?: string; connector?: boolean } = {}): GenerateResult {
-    validateCommonData(data);
+    const warnings: string[] = [];
+    validateCommonData(data, warnings);
     const xml = serialize(data, options.connector);
     validateOtxml(xml, options.pythonExecutable);
-    const warnings: string[] = [];
+    const ignoredSupports = new Set(supportMembers(data).map((member) => member.id));
+    const defaults = data.members.filter((member) => !ignoredSupports.has(member.id) && member.sectionId === undefined).length;
+    if (defaults) warnings.push(`Used default SectionID="${DEFAULT_SECTION_ID}" for ${defaults} members with no section assignment; these are not recovered sections.`);
     if (data.panels.length !== data.towerInformation.declaredPanelCount) {
         warnings.push(`Source declares ${data.towerInformation.declaredPanelCount} panels but contains ${data.panels.length}; missing panels are not generated.`);
     }

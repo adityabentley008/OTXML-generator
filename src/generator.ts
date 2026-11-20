@@ -1,5 +1,6 @@
 import { Element, js2xml } from "xml-js";
-import { CommonData, Member, Panel, SourceAttributes } from "./model";
+import { CommonData, DEFAULT_SECTION_ID, Member, Panel, SourceAttributes } from "./model";
+import { supportOnlyNodeIds } from "./supports";
 
 type AttributeValue = string | number;
 
@@ -61,8 +62,8 @@ function physicalMember(member: Member): Element {
     const original = { ...member.sourceAttributes };
     if (member.tag === undefined) delete original.MemberTag;
     const attrs: Record<string, AttributeValue> = {
-        ID: member.id, StartNodeID: member.startNodeId, EndNodeID: member.endNodeId, SectionID: member.sectionId,
-        BetaAngle: member.betaAngleDegrees, Label: member.label,
+        ID: member.id, StartNodeID: member.startNodeId, EndNodeID: member.endNodeId, SectionID: member.sectionId ?? DEFAULT_SECTION_ID,
+        ...(member.betaAngleDegrees === undefined ? {} : { BetaAngle: member.betaAngleDegrees }), Label: member.label,
     };
     if (member.tag !== undefined) attrs.MemberTag = member.tag;
     for (const [key, value] of Object.entries({ MaterialID: member.materialId, StartRelease: member.startRelease, EndRelease: member.endRelease, SourceAppElementId: member.sourceElementId })) {
@@ -81,8 +82,10 @@ function panelElement(panel: Panel, members: Map<string, Member>): Element {
     const faces = element("FaceBracingDetails", {}, panel.faces.map((face) =>
         element("Face", { ID: face.id, Name: face.name }, [element("Segments", {}, face.segments.map((segment) =>
             element("Segment", { ID: segment.id, Name: segment.name }, children(segment.members))))])));
+    const plan = (panel.memberGroups || []).filter((group) => group.type === "PlanBracing").map((group) =>
+        element("PlanBracing", { ID: group.id, Name: group.label }, children(group.members)));
     return element("Panel", mapped(panel.sourceAttributes && panel.sourceAttributes.panel, { ID: panel.id }), [
-        legs, faces, element("PlanBracingDetails"), element("HipBracingDetails"),
+        legs, faces, element("PlanBracingDetails", {}, plan), element("HipBracingDetails"),
     ]);
 }
 
@@ -104,7 +107,8 @@ export function serialize(data: CommonData, connector = false): string {
         element("Material", { ID: m.id, Name: m.name }),
         ...m.properties.map((p) => element("MaterialProperty", { RefID: m.id, Name: p.name, Description: p.description, Value: p.value, Unit: p.unit })),
     ]), []);
-    const nodes = data.nodes.map((node) => element("Node", mapped(node.sourceAttributes, { ID: node.id, X: node.x, Y: node.y, Z: node.z })));
+    const omittedNodes = supportOnlyNodeIds(data);
+    const nodes = data.nodes.filter((node) => !omittedNodes.has(node.id)).map((node) => element("Node", mapped(node.sourceAttributes, { ID: node.id, X: node.x, Y: node.y, Z: node.z })));
     const projectElement = project(data);
     const towerElement = tower(data);
     const panelProperties = element("PanelProperties", {}, data.panels.map((panel) => panelProperty(panel, connector)));

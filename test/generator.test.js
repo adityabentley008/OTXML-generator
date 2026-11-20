@@ -95,6 +95,92 @@ test("connector profile writes material assignments, contours and actual partial
     assert.throws(() => generateOtxml(hidden), /materialId is required/);
 });
 
+function planBracingSample() {
+    const data = sample();
+    data.schemaVersion = "1.1-draft";
+    const panel = data.panels[0];
+    const id = panel.legs[0].members.shift();
+    const member = data.members.find((entry) => entry.id === id);
+    delete member.sectionId;
+    member.sourceAttributes.SectionID = "stale";
+    member.extractionIssues = ["Missing section."];
+    panel.planBracing = "TRIANGULAR Portal";
+    panel.memberGroups = [{ id: "9510", type: "PlanBracing", label: "PlanBracing 1", members: [id] }];
+    data.towerInformation.memberGroups = [{ id: "9000", type: "BaseStructure", label: "Base", members: [], propertySets: [
+        { name: "Future", properties: [{ name: "Factors", type: "IFCPROPERTYLISTVALUE", value: [1, null, true] }] },
+    ] }];
+    return { data, panel, member };
+}
+
+test("1.1-draft writes plan bracing and defaults only missing section assignments", () => {
+    const { data, member } = planBracingSample();
+    const assigned = data.members.find((entry) => entry.sectionId !== undefined && entry.sectionId !== "1");
+    assert(assigned);
+    const result = generateOtxml(data, { connector: true });
+    const tree = parse(result.xml);
+    const details = find(tree, "PlanBracingDetails");
+    const group = details.elements[0];
+    assert.equal(group.name, "PlanBracing");
+    assert.deepEqual(group.attributes, { ID: "9510", Name: "PlanBracing 1" });
+    assert.equal(group.elements[0].name, "PhysicalMember");
+    assert.equal(group.elements[0].attributes.ID, member.id);
+    assert.equal(group.elements[0].attributes.SectionID, "1");
+    assert.equal(find(tree, "PanelProperty").attributes.PlanBracing, "TRIANGULAR Portal");
+    assert.match(result.xml, new RegExp(`<PhysicalMember[^>]*\\bID="${assigned.id}"[^>]*\\bSectionID="${assigned.sectionId}"`));
+    assert.equal(member.sectionId, undefined);
+    assert(result.warnings.some((warning) => warning.includes('default SectionID="1" for 1 members')));
+    assert(result.warnings.some((warning) => warning.includes("remain in Common X")));
+});
+
+test("1.1-draft rejects missing fallback definitions, invalid references, and unmapped groups containing members", () => {
+    const cases = [
+        [({ data }) => { data.sections = data.sections.filter((section) => section.id !== "1"); }, /default section 1 is not defined/],
+        [({ member }) => { member.sectionId = "does-not-exist"; }, /references a missing section/],
+        [({ panel }) => { panel.memberGroups[0].members = ["does-not-exist"]; }, /Missing referenced member/],
+        [({ panel }) => { panel.memberGroups[0].type = "FutureType"; }, /cannot represent members/],
+    ];
+    for (const [mutate, error] of cases) {
+        const fixture = planBracingSample();
+        mutate(fixture);
+        assert.throws(() => generateOtxml(fixture.data), error);
+    }
+});
+
+test("ignores support members and support-only nodes but preserves shared tower nodes", () => {
+    const data = sample();
+    data.schemaVersion = "1.1-draft";
+    const id = data.panels[0].legs[0].members.shift();
+    const member = data.members.find((entry) => entry.id === id);
+    delete member.betaAngleDegrees;
+    delete member.sectionId;
+    delete member.propertySets;
+    const sharedNode = data.members.find((entry) => entry.id !== id).startNodeId;
+    member.endNodeId = sharedNode;
+    member.startNodeId = "support-only-node";
+    data.nodes.push({ id: "support-only-node", x: 1, y: 2, z: 3 });
+    data.towerInformation.memberGroups = [{ id: "supports", type: "Supports", label: "Supports", members: [id] }];
+    data.sections.find((section) => section.id === "1").contour = [{ polygonId: "1", x: 0, y: 0, z: 1 }];
+    for (const connector of [false, true]) {
+        const before = JSON.stringify(data);
+        const result = generateOtxml(data, { connector });
+        const tree = parse(result.xml);
+        assert.equal(JSON.stringify(data), before);
+        assert.equal(find(tree, "Support"), undefined);
+        assert.equal(find(tree, "Supports"), undefined);
+        assert.equal(find(tree, "SupportMember"), undefined);
+        assert.equal(find(tree, "SupportSections"), undefined);
+        assert.equal(find(tree, "SupportSection"), undefined);
+        assert.equal(find(tree, "SupportPolyLine"), undefined);
+        assert.equal(find(tree, "SupportNodes"), undefined);
+        const nodes = find(tree, "Nodes").elements.map((entry) => entry.attributes.ID);
+        assert(!nodes.includes("support-only-node"));
+        assert(nodes.includes(sharedNode));
+        assert(result.warnings.some((warning) => warning.includes("Ignored 1 support members")));
+        assert(!result.warnings.some((warning) => warning.includes("default SectionID")));
+        assert(find(tree, "Sections").elements.some((entry) => entry.name === "Section" && entry.attributes.ID === "1"));
+    }
+});
+
 test("CLI writes validated output without overwriting existing files", () => {
     const directory = fs.mkdtempSync(path.join(os.tmpdir(), "otxml-generator-"));
     const output = path.join(directory, "output.otxml");

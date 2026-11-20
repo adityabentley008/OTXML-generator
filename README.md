@@ -47,9 +47,9 @@ Python/lxml, and XSD violations throw errors rather than producing output.
 `PanelProperty` element and root order. The default retains the original
 sample's `Panel` element and order.
 
-## Current common-data draft
+## Supported common-data drafts
 
-[model.ts](./src/model.ts) defines `1.0-draft`; the provided
+[model.ts](./src/model.ts) supports `1.0-draft` and `1.1-draft`; the provided
 [example](./examples/746-common-data.json) maps the supplied OTXML. The sample
 contains project/tower data, two panels, 21 members, 51 nodes and 53 sections.
 Original attribute strings are retained in optional `sourceAttributes`: common
@@ -63,20 +63,35 @@ formatting. When source attributes are absent, source-only fields cannot be
 reconstructed. In particular, output without them has not been proven to meet
 all connector requirements.
 
-The IFC reader emits the same `1.0-draft` model, including optional contour,
-materials, releases, provenance and explicit partial-export metadata. Its
-TypeScript copy of the model must evolve in step with this package until the
-contract is extracted into a shared package.
+For IFC-derived `1.1-draft`, panel `memberGroups` with `type: "PlanBracing"`
+are serialized under `PlanBracingDetails`. Members without `sectionId` use
+`SectionID="1"` with a warning, and section `1` must already exist in the
+input. Explicit assignments must reference existing sections and are never
+replaced. The fallback is not a recovered engineering assignment.
 
-The draft also supports member materials and releases, material property
-provenance and section contours for IFC-derived X. It rejects plan/hip bracing
-and unsupported fields rather than silently dropping them. Units must be
+IFC property sets, group source attributes and unmapped groups without members
+remain in Common X and are not written to OTXML. Unmapped groups containing
+members and hip bracing fail explicitly. `1.0-draft` keeps its original
+validation, including required section assignments and no plan/hip bracing.
+
+Both drafts support member materials and releases, material property
+provenance and section contours. Units must be
 Y-up nodes in metres, panel and tower
 dimensions in feet, and section dimensions in inches; the generator does not
 perform unit conversions. The example's unit assumptions require confirmation
 for other sources. Unknown weight units and other unmapped source attributes are
 preserved but are not interpreted. Expand the model and mappings explicitly
 before adding new sources or formats.
+
+### Support groups
+
+Support output is temporarily disabled while its schema is being discussed.
+In `1.1-draft`, `Support` and `Supports` member groups (including descendants)
+may remain in Common X. Their members are ignored with a warning and nodes
+used exclusively by those members are omitted. Nodes shared with tower members
+are preserved. No support XML tags are generated, no support-specific fields
+or section-1 fallback are required, and the input JSON is not modified.
+Other unused nodes, sections and materials retain their existing behavior.
 
 The source declares 46 panels but contains two, and section 3 has negative
 dimensions. Both are preserved and reported as warnings; missing panels or

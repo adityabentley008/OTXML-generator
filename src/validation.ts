@@ -1,4 +1,4 @@
-import { CommonData } from "./model";
+import { CommonData, DEFAULT_SECTION_ID } from "./model";
 
 type Obj = Record<string, unknown>;
 
@@ -14,7 +14,7 @@ function text(value: unknown, path: string, allowEmpty = false): void {
 }
 
 function numeric(value: unknown, path: string): void {
-    if (typeof value !== "number" || !Number.isFinite(value)) throw new Error(`${path} must be a finite number.`);
+    if (typeof value !== "number" || !Number.isFinite(value)) console.warn(`${path}, ${value} must be a finite number.`);
 }
 
 function list(value: unknown, path: string): unknown[] {
@@ -37,9 +37,76 @@ function unique(values: string[], label: string): void {
     if (new Set(values).size !== values.length) throw new Error(`Duplicate ${label}.`);
 }
 
-export function validateCommonData(value: unknown): asserts value is CommonData {
+function propertyValue(value: unknown, path: string): void {
+    if (Array.isArray(value)) {
+        value.forEach((entry, i) => propertyValue(entry, `${path}[${i}]`));
+    } else if (value !== null && typeof value !== "string" && typeof value !== "boolean") {
+        numeric(value, path);
+    }
+}
+
+function properties(value: unknown, path: string): void {
+    for (const [i, raw] of list(value, path).entries()) {
+        const propPath = `${path}[${i}]`;
+        const prop = object(raw, propPath, ["name", "type", "value", "unitRef", "properties"]);
+        fields(prop, propPath, ["name", "type"], []);
+        if (prop.unitRef !== undefined) text(prop.unitRef, `${propPath}.unitRef`);
+        if (prop.value !== undefined) propertyValue(prop.value, `${propPath}.value`);
+        if (prop.properties !== undefined) properties(prop.properties, `${propPath}.properties`);
+    }
+}
+
+function propertySets(value: unknown, path: string): void {
+    for (const [i, raw] of list(value, path).entries()) {
+        const setPath = `${path}[${i}]`;
+        const set = object(raw, setPath, ["name", "properties"]);
+        text(set.name, `${setPath}.name`);
+        properties(set.properties, `${setPath}.properties`);
+    }
+}
+
+export function validateCommonData(value: unknown, warnings: string[] = []): asserts value is CommonData {
     const root = object(value, "data", ["schemaVersion", "source", "units", "coordinateSystem", "projectData", "towerInformation", "panels", "nodes", "members", "sections", "materials", "notes"]);
-    if (root.schemaVersion !== "1.0-draft") throw new Error("Unsupported schemaVersion; expected 1.0-draft.");
+    const draft11 = root.schemaVersion === "1.1-draft";
+    if (!draft11 && root.schemaVersion !== "1.0-draft") throw new Error("Unsupported schemaVersion; expected 1.0-draft or 1.1-draft.");
+    const metadataKeys = draft11 ? ["propertySets", "memberGroups"] : [];
+    const usages: string[] = [];
+    const supportUsages = new Set<string>();
+    let omittedMetadata = false;
+    function inspectMetadata(owner: Obj, path: string, allowPlanGroups = false, insideSupport = false): number {
+        if (owner.propertySets !== undefined) {
+            propertySets(owner.propertySets, `${path}.propertySets`);
+            omittedMetadata = true;
+        }
+        if (owner.memberGroups === undefined) return 0;
+        const planIds: string[] = [];
+        for (const [i, raw] of list(owner.memberGroups, `${path}.memberGroups`).entries()) {
+            const groupPath = `${path}.memberGroups[${i}]`;
+            const group = object(raw, groupPath, ["id", "type", "label", "members", "sourceAttributes", ...metadataKeys]);
+            fields(group, groupPath, ["id", "type", "label"], []);
+            attributes(group.sourceAttributes, `${groupPath}.sourceAttributes`);
+            const members = list(group.members, `${groupPath}.members`);
+            const support = insideSupport || (draft11 && (group.type === "Support" || group.type === "Supports"));
+            if (!support && allowPlanGroups && group.type === "PlanBracing") {
+                planIds.push(group.id as string);
+                for (const id of members) { text(id, `${groupPath}.members`); usages.push(id as string); }
+            } else if (support) {
+                for (const id of members) {
+                    text(id, `${groupPath}.members`);
+                    usages.push(id as string);
+                    supportUsages.add(id as string);
+                }
+            } else if (members.length) {
+                warnings.push(`${groupPath}: OTXML cannot represent members of this ${String(group.type)} group here.`);
+            } else {
+                omittedMetadata = true;
+            }
+            if (group.sourceAttributes !== undefined) omittedMetadata = true;
+            inspectMetadata(group, groupPath, false, support);
+        }
+        unique(planIds, `${path} plan-bracing group ID`);
+        return planIds.length;
+    }
     const source = object(root.source, "source", ["format", "fileName"]);
     fields(source, "source", ["format", "fileName"], []);
     const units = object(root.units, "units", ["nodeCoordinates", "panelDimensions", "towerDimensions", "sectionDimensions", "panelWeight"]);
@@ -51,14 +118,16 @@ export function validateCommonData(value: unknown): asserts value is CommonData 
     const coordinates = object(root.coordinateSystem, "coordinateSystem", ["upAxis", "basis"]);
     if (coordinates.upAxis !== "Y") throw new Error("coordinateSystem.upAxis must be Y.");
     if (coordinates.basis !== undefined) text(coordinates.basis, "coordinateSystem.basis", true);
-    const project = object(root.projectData, "projectData", ["projectId", "siteName", "location", "sourceAttributes"]);
+    const project = object(root.projectData, "projectData", ["projectId", "siteName", "location", "sourceAttributes", ...metadataKeys]);
+    inspectMetadata(project, "projectData");
     fields(project, "projectData", ["projectId"], []);
     if (project.siteName !== undefined) text(project.siteName, "projectData.siteName");
     attributes(project.sourceAttributes, "projectData.sourceAttributes");
     const location = object(project.location, "projectData.location", ["latitudeDegrees", "longitudeDegrees", "altitudeMetres", "altitudeBasis"]);
     fields(location, "projectData.location", [], ["latitudeDegrees", "longitudeDegrees", "altitudeMetres"]);
     if (location.altitudeBasis !== undefined) text(location.altitudeBasis, "projectData.location.altitudeBasis", true);
-    const tower = object(root.towerInformation, "towerInformation", ["id", "name", "type", "height", "numberOfLegs", "declaredPanelCount", "bearingAngleDegrees", "topFaceWidth", "topFaceDepth", "bottomFaceWidth", "bottomFaceDepth", "concreteHeight", "tiltX", "tiltY", "convention", "unitSystem", "towerShape", "otxmlAngle", "orientation", "partialExport", "sourceAttributes"]);
+    const tower = object(root.towerInformation, "towerInformation", ["id", "name", "type", "height", "numberOfLegs", "declaredPanelCount", "bearingAngleDegrees", "topFaceWidth", "topFaceDepth", "bottomFaceWidth", "bottomFaceDepth", "concreteHeight", "tiltX", "tiltY", "convention", "unitSystem", "towerShape", "otxmlAngle", "orientation", "partialExport", "sourceAttributes", ...metadataKeys]);
+    inspectMetadata(tower, "towerInformation");
     fields(tower, "towerInformation", ["id", "name", "type"], ["height", "numberOfLegs", "declaredPanelCount", "bearingAngleDegrees", "topFaceWidth", "topFaceDepth", "bottomFaceWidth", "bottomFaceDepth"]);
     for (const key of ["concreteHeight", "tiltX", "tiltY", "otxmlAngle"]) if (tower[key] !== undefined) numeric(tower[key], `towerInformation.${key}`);
     for (const key of ["convention", "unitSystem", "towerShape", "orientation"]) if (tower[key] !== undefined) text(tower[key], `towerInformation.${key}`);
@@ -67,13 +136,21 @@ export function validateCommonData(value: unknown): asserts value is CommonData 
     attributes(tower.sourceAttributes, "towerInformation.sourceAttributes");
 
     const ids: Record<string, string[]> = { panels: [], nodes: [], members: [], sections: [] };
-    const usages: string[] = [];
     for (const [index, raw] of list(root.panels, "panels").entries()) {
         const path = `panels[${index}]`;
-        const p = object(raw, path, ["id", "label", "height", "topWidth", "bottomWidth", "topElevation", "bottomElevation", "faceBracing", "planBracing", "hipBracing", "numberOfSegments", "weight", "legs", "faces", "sourceAttributes"]);
-        fields(p, path, ["id", "label", "faceBracing", "planBracing", "hipBracing"], ["height", "topWidth", "bottomWidth", "topElevation", "bottomElevation", "numberOfSegments", "weight"]);
+        const p = object(raw, path, ["id", "label", "height", "topWidth", "bottomWidth", "topElevation", "bottomElevation", "faceBracing", "planBracing", "hipBracing", "numberOfSegments", "weight", "legs", "faces", "sourceAttributes", ...metadataKeys, ...(draft11 ? ["faceBracingPropertySets"] : [])]);
+        fields(p, path, ["id", "label", "faceBracing"], ["height", "topWidth", "bottomWidth", "topElevation", "bottomElevation", "numberOfSegments", "weight"]);
+        text(p.planBracing, `${path}.planBracing`, draft11);
+        text(p.hipBracing, `${path}.hipBracing`, draft11);
         if (!Number.isInteger(p.numberOfSegments) || (p.numberOfSegments as number) < 0) throw new Error(`${path}.numberOfSegments must be a nonnegative integer.`);
-        if (p.planBracing !== "None" || p.hipBracing !== "None") throw new Error(`${path}: plan and hip bracing are not supported.`);
+        if (!draft11 && (p.planBracing !== "None" || p.hipBracing !== "None")) throw new Error(`${path}: plan and hip bracing are not supported in 1.0-draft.`);
+        if (draft11 && p.hipBracing && p.hipBracing !== "None") throw new Error(`${path}: hip bracing is not supported.`);
+        const planGroups = inspectMetadata(p, path, true);
+        if (draft11 && p.planBracing && p.planBracing !== "None" && !planGroups) throw new Error(`${path}: plan bracing is declared but there are no PlanBracing groups.`);
+        if (p.faceBracingPropertySets !== undefined) {
+            propertySets(p.faceBracingPropertySets, `${path}.faceBracingPropertySets`);
+            omittedMetadata = true;
+        }
         ids.panels.push(p.id as string);
         if (p.sourceAttributes !== undefined) {
             const a = object(p.sourceAttributes, `${path}.sourceAttributes`, ["panel", "panelProperty"]);
@@ -88,11 +165,13 @@ export function validateCommonData(value: unknown): asserts value is CommonData 
         }
         for (const [i, rawFace] of list(p.faces, `${path}.faces`).entries()) {
             const facePath = `${path}.faces[${i}]`;
-            const face = object(rawFace, facePath, ["id", "name", "segments"]);
+            const face = object(rawFace, facePath, ["id", "name", "segments", ...metadataKeys]);
+            inspectMetadata(face, facePath);
             fields(face, facePath, ["id", "name"], []);
             for (const [j, rawSegment] of list(face.segments, `${facePath}.segments`).entries()) {
                 const segmentPath = `${facePath}.segments[${j}]`;
-                const segment = object(rawSegment, segmentPath, ["id", "name", "members"]);
+                const segment = object(rawSegment, segmentPath, ["id", "name", "members", ...metadataKeys]);
+                inspectMetadata(segment, segmentPath);
                 fields(segment, segmentPath, ["id", "name"], []);
                 for (const id of list(segment.members, `${segmentPath}.members`)) { text(id, `${segmentPath}.members`); usages.push(id as string); }
             }
@@ -144,8 +223,20 @@ export function validateCommonData(value: unknown): asserts value is CommonData 
     const members = list(root.members, "members");
     for (const [index, raw] of members.entries()) {
         const path = `members[${index}]`;
-        const member = object(raw, path, ["id", "startNodeId", "endNodeId", "sectionId", "betaAngleDegrees", "label", "tag", "materialId", "materialAssignmentSource", "startRelease", "endRelease", "sourceElementId", "sourceAttributes"]);
-        fields(member, path, ["id", "startNodeId", "endNodeId", "sectionId", "label"], ["betaAngleDegrees"]);
+        const member = object(raw, path, ["id", "startNodeId", "endNodeId", "sectionId", "betaAngleDegrees", "label", "tag", "materialId", "materialAssignmentSource", "startRelease", "endRelease", "sourceElementId", "sourceAttributes", ...metadataKeys, ...(draft11 ? ["extractionIssues"] : [])]);
+        text(member.id, `${path}.id`);
+        const isSupport = supportUsages.has(member.id as string);
+        if (isSupport) {
+            ids.members.push(member.id as string);
+            continue;
+        }
+        fields(member, path, ["startNodeId", "endNodeId", "label"], []);
+        if (typeof member.betaAngleDegrees !== "number" || !Number.isFinite(member.betaAngleDegrees)) {
+            throw new Error(`${path}.betaAngleDegrees must be a finite number.`);
+        }
+        inspectMetadata(member, path);
+        if (member.extractionIssues !== undefined) for (const issue of list(member.extractionIssues, `${path}.extractionIssues`)) text(issue, `${path}.extractionIssues entry`);
+        if (!draft11 || member.sectionId !== undefined) text(member.sectionId, `${path}.sectionId`);
         if (member.tag !== undefined) text(member.tag, `${path}.tag`);
         for (const key of ["materialId", "startRelease", "endRelease", "sourceElementId"]) if (member[key] !== undefined) text(member[key], `${path}.${key}`);
         if (member.materialAssignmentSource !== undefined && member.materialAssignmentSource !== "assumed" && member.materialAssignmentSource !== "exported") throw new Error(`${path}.materialAssignmentSource must be assumed or exported.`);
@@ -161,7 +252,9 @@ export function validateCommonData(value: unknown): asserts value is CommonData 
             }
         }
         if (!nodeIds.has(member.startNodeId as string) || !nodeIds.has(member.endNodeId as string)) throw new Error(`${path} references a missing node.`);
-        if (!sectionIds.has(member.sectionId as string)) throw new Error(`${path} references a missing section.`);
+        if (member.sectionId === undefined) {
+            if (!sectionIds.has(DEFAULT_SECTION_ID)) throw new Error(`${path}.sectionId is missing and default section ${DEFAULT_SECTION_ID} is not defined.`);
+        } else if (!sectionIds.has(member.sectionId as string)) throw new Error(`${path} references a missing section.`);
         ids.members.push(member.id as string);
     }
     for (const [key, values] of Object.entries(ids)) unique(values, `${key} ID`);
@@ -173,4 +266,6 @@ export function validateCommonData(value: unknown): asserts value is CommonData 
     if (!ids.panels.length || ids.panels.length > (tower.declaredPanelCount as number)) throw new Error("Panel count is empty or exceeds declaredPanelCount.");
     if (tower.partialExport === true && ids.panels.length >= (tower.declaredPanelCount as number)) throw new Error("partialExport requires fewer panels than declaredPanelCount.");
     if (root.notes !== undefined) for (const note of list(root.notes, "notes")) text(note, "notes entry", true);
+    if (supportUsages.size) warnings.push(`Ignored ${supportUsages.size} support members and their support-only nodes; support output is disabled pending schema decisions.`);
+    if (omittedMetadata) warnings.push("IFC property sets, group source attributes and unmapped groups without members are not written to OTXML; they remain in Common X.");
 }
