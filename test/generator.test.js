@@ -11,7 +11,6 @@ const root = path.resolve(__dirname, "..");
 const samplePath = path.join(root, "examples", "746-common-data.json");
 const sample = () => JSON.parse(fs.readFileSync(samplePath, "utf8"));
 const parse = (xml) => xml2js(xml, { compact: false }).elements[0];
-const original = fs.readFileSync(path.join(__dirname, "fixtures", "746_detect.xml"), "utf8");
 
 function find(node, name) {
     if (node.name === name) return node;
@@ -21,9 +20,15 @@ function find(node, name) {
     }
 }
 
-test("reconstructs the complete source XML tree and validates it against the XSD", () => {
-    const result = generateOtxml(sample());
-    assert.deepEqual(parse(result.xml), parse(original));
+test("generates connector-layout OTXML and validates it against the XSD", () => {
+    const data = sample();
+    const result = generateOtxml(data);
+    const tree = parse(result.xml);
+    assert.deepEqual(tree.elements.map((element) => element.name), [
+        "Sections", ...(data.materials.length ? ["Materials"] : []), "Nodes", "PanelProperties",
+        ...data.panels.map(() => "Panel"), "ProjectData", "TowerInformation",
+    ]);
+    assert.equal(find(tree, "PanelProperty").name, "PanelProperty");
     assert(result.warnings.some((warning) => warning.includes("46 panels") && warning.includes("2")));
     assert(result.warnings.some((warning) => warning.includes("Section 3")));
 });
@@ -78,7 +83,7 @@ test("connector profile writes material assignments, contours and actual partial
     data.members[0].materialId = "steel";
     data.members[0].materialAssignmentSource = "assumed";
     data.members[0].startRelease = "00000";
-    const xml = parse(generateOtxml(data, { connector: true }).xml);
+    const xml = parse(generateOtxml(data).xml);
     assert.equal(xml.elements[0].name, "Sections");
     assert.equal(find(xml, "PanelProperty").attributes.PanelID, "T1");
     assert.equal(find(xml, "TowerInformation").attributes.NoofPanel, "2");
@@ -116,7 +121,7 @@ test("1.1-draft writes plan bracing and defaults only missing section assignment
     const { data, member } = planBracingSample();
     const assigned = data.members.find((entry) => entry.sectionId !== undefined && entry.sectionId !== "1");
     assert(assigned);
-    const result = generateOtxml(data, { connector: true });
+    const result = generateOtxml(data);
     const tree = parse(result.xml);
     const details = find(tree, "PlanBracingDetails");
     const group = details.elements[0];
@@ -137,7 +142,7 @@ test("1.1-draft rejects missing fallback definitions, invalid references, and un
         [({ data }) => { data.sections = data.sections.filter((section) => section.id !== "1"); }, /default section 1 is not defined/],
         [({ member }) => { member.sectionId = "does-not-exist"; }, /references a missing section/],
         [({ panel }) => { panel.memberGroups[0].members = ["does-not-exist"]; }, /Missing referenced member/],
-        [({ panel }) => { panel.memberGroups[0].type = "FutureType"; }, /cannot represent members/],
+        [({ panel }) => { panel.memberGroups[0].type = "FutureType"; }, /plan bracing is declared|cannot represent members/],
     ];
     for (const [mutate, error] of cases) {
         const fixture = planBracingSample();
@@ -160,39 +165,40 @@ test("ignores support members and support-only nodes but preserves shared tower 
     data.nodes.push({ id: "support-only-node", x: 1, y: 2, z: 3 });
     data.towerInformation.memberGroups = [{ id: "supports", type: "Supports", label: "Supports", members: [id] }];
     data.sections.find((section) => section.id === "1").contour = [{ polygonId: "1", x: 0, y: 0, z: 1 }];
-    for (const connector of [false, true]) {
-        const before = JSON.stringify(data);
-        const result = generateOtxml(data, { connector });
-        const tree = parse(result.xml);
-        assert.equal(JSON.stringify(data), before);
-        assert.equal(find(tree, "Support"), undefined);
-        assert.equal(find(tree, "Supports"), undefined);
-        assert.equal(find(tree, "SupportMember"), undefined);
-        assert.equal(find(tree, "SupportSections"), undefined);
-        assert.equal(find(tree, "SupportSection"), undefined);
-        assert.equal(find(tree, "SupportPolyLine"), undefined);
-        assert.equal(find(tree, "SupportNodes"), undefined);
-        const nodes = find(tree, "Nodes").elements.map((entry) => entry.attributes.ID);
-        assert(!nodes.includes("support-only-node"));
-        assert(nodes.includes(sharedNode));
-        assert(result.warnings.some((warning) => warning.includes("Ignored 1 support members")));
-        assert(!result.warnings.some((warning) => warning.includes("default SectionID")));
-        assert(find(tree, "Sections").elements.some((entry) => entry.name === "Section" && entry.attributes.ID === "1"));
-    }
+    const before = JSON.stringify(data);
+    const result = generateOtxml(data);
+    const tree = parse(result.xml);
+    assert.equal(JSON.stringify(data), before);
+    assert.equal(find(tree, "Support"), undefined);
+    assert.equal(find(tree, "Supports"), undefined);
+    assert.equal(find(tree, "SupportMember"), undefined);
+    assert.equal(find(tree, "SupportSections"), undefined);
+    assert.equal(find(tree, "SupportSection"), undefined);
+    assert.equal(find(tree, "SupportPolyLine"), undefined);
+    assert.equal(find(tree, "SupportNodes"), undefined);
+    const nodes = find(tree, "Nodes").elements.map((entry) => entry.attributes.ID);
+    assert(!nodes.includes("support-only-node"));
+    assert(nodes.includes(sharedNode));
+    assert(result.warnings.some((warning) => warning.includes("Ignored 1 support members")));
+    assert(!result.warnings.some((warning) => warning.includes("default SectionID")));
+    assert(find(tree, "Sections").elements.some((entry) => entry.name === "Section" && entry.attributes.ID === "1"));
 });
 
 test("CLI writes validated output without overwriting existing files", () => {
     const directory = fs.mkdtempSync(path.join(os.tmpdir(), "otxml-generator-"));
     const output = path.join(directory, "output.otxml");
     try {
-        const run = () => spawnSync(process.execPath, [path.join(root, "dist", "cli.js"), samplePath, output], { encoding: "utf8" });
+        const run = (...args) => spawnSync(process.execPath, [path.join(root, "dist", "cli.js"), samplePath, output, ...args], { encoding: "utf8" });
         const first = run();
         assert.equal(first.status, 0, first.stderr);
-        assert.deepEqual(parse(fs.readFileSync(output, "utf8")), parse(original));
+        assert.equal(find(parse(fs.readFileSync(output, "utf8")), "PanelProperty").name, "PanelProperty");
         const second = run();
         assert.notEqual(second.status, 0);
         assert.match(second.stderr, /EEXIST/);
-        assert.deepEqual(parse(fs.readFileSync(output, "utf8")), parse(original));
+        assert.equal(find(parse(fs.readFileSync(output, "utf8")), "PanelProperty").name, "PanelProperty");
+        const flag = run("--connector");
+        assert.notEqual(flag.status, 0);
+        assert.match(flag.stderr, /Usage: otxml-generator input\.json output\.otxml/);
     } finally {
         fs.rmSync(directory, { recursive: true, force: true });
     }

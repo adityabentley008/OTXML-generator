@@ -8,10 +8,10 @@ export * from "./model";
 
 export interface GenerateResult { xml: string; warnings: string[]; }
 
-export function generateOtxml(data: unknown, options: { pythonExecutable?: string; connector?: boolean } = {}): GenerateResult {
+export function generateOtxml(data: unknown, options: { pythonExecutable?: string } = {}): GenerateResult {
     const warnings: string[] = [];
     validateCommonData(data, warnings);
-    const xml = serialize(data, options.connector);
+    const xml = serialize(data);
     validateOtxml(xml, options.pythonExecutable);
     const ignoredSupports = new Set(supportMembers(data).map((member) => member.id));
     const defaults = data.members.filter((member) => !ignoredSupports.has(member.id) && member.sectionId === undefined).length;

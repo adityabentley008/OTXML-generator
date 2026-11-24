@@ -11,7 +11,7 @@ const validator = [
 ].join("\n");
 
 export function validateOtxml(xml: string, pythonExecutable = "python"): void {
-    const schema = path.resolve(__dirname, "..", "schema", "otxml.xsd");
+    const schema = path.resolve(__dirname, "..", "schema", "sst.xsd");
     const result = spawnSync(pythonExecutable, ["-c", validator, schema], {
         input: xml, encoding: "utf8", maxBuffer: 8 * 1024 * 1024,
     });

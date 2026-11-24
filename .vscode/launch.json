@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
     {
-        "command": "npm run generate -- \"D:\\testIfcs\\IFC3.json\" \"D:\\testIfcs\\IFC3.otxml\" --connector",
+        "command": "npm run generate -- \"D:\\testIfcs\\IFC3.json\" \"D:\\testIfcs\\IFC3.otxml\"",
         "name": "Run npm start",
         "request": "launch",
         "type": "node-terminal"

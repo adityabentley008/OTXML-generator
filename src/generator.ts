@@ -49,8 +49,8 @@ function tower(data: CommonData): Element {
     return element("TowerInformation", mapped(t.sourceAttributes, values));
 }
 
-function panelProperty(panel: Panel, connector: boolean): Element {
-    return element(connector ? "PanelProperty" : "Panel", mapped(panel.sourceAttributes && panel.sourceAttributes.panelProperty, {
+function panelProperty(panel: Panel): Element {
+    return element("PanelProperty", mapped(panel.sourceAttributes && panel.sourceAttributes.panelProperty, {
         PanelID: panel.id, Label: panel.label, Height: panel.height, TopWidth: panel.topWidth,
         BottomWidth: panel.bottomWidth, TopElevation: panel.topElevation, BottomElevation: panel.bottomElevation,
         FaceBracing: panel.faceBracing, PlanBracing: panel.planBracing, HipBracing: panel.hipBracing,
@@ -91,7 +91,7 @@ function panelElement(panel: Panel, members: Map<string, Member>): Element {
 
 const sectionDimensionKeys = ["Radius", "WallThickness", "Width", "Depth", "Thickness", "FilletRadius", "EdgeRadius", "OuterDiameter", "InnerDiameter", "Diameter", "Tnom"];
 
-export function serialize(data: CommonData, connector = false): string {
+export function serialize(data: CommonData): string {
     const members = new Map(data.members.map((member): [string, Member] => [member.id, member]));
     const sections = data.sections.map((section) => {
         const original = { ...section.sourceAttributes };
@@ -111,14 +111,12 @@ export function serialize(data: CommonData, connector = false): string {
     const nodes = data.nodes.filter((node) => !omittedNodes.has(node.id)).map((node) => element("Node", mapped(node.sourceAttributes, { ID: node.id, X: node.x, Y: node.y, Z: node.z })));
     const projectElement = project(data);
     const towerElement = tower(data);
-    const panelProperties = element("PanelProperties", {}, data.panels.map((panel) => panelProperty(panel, connector)));
+    const panelProperties = element("PanelProperties", {}, data.panels.map(panelProperty));
     const panels = data.panels.map((panel) => panelElement(panel, members));
     const nodeTable = element("Nodes", {}, nodes);
     const sectionTable = element("Sections", {}, sections);
     const materialTable = materials.length ? [element("Materials", {}, materials)] : [];
-    const elements = connector
-        ? [sectionTable, ...materialTable, nodeTable, panelProperties, ...panels, projectElement, towerElement]
-        : [projectElement, towerElement, panelProperties, ...panels, nodeTable, sectionTable, ...materialTable];
+    const elements = [sectionTable, ...materialTable, nodeTable, panelProperties, ...panels, projectElement, towerElement];
     const document: Element = {
         declaration: { attributes: { version: "1.0", encoding: "UTF-8" } },
         elements: [element("Staad", {}, elements)],

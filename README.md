@@ -20,8 +20,7 @@ npm ci
 python -m pip install lxml
 npm test
 npm run generate -- ".\examples\746-common-data.json" "C:\data\generated.otxml"
-# For IFC-derived common data and the existing connector reader:
-npm run generate -- "C:\data\tower.json" "C:\data\tower.otxml" --connector
+npm run generate -- "C:\data\tower.json" "C:\data\tower.otxml"
 ```
 
 The output must not already exist. After `npm run build`, the CLI can also be
@@ -39,13 +38,11 @@ fs.writeFileSync("output.otxml", xml, { flag: "wx" });
 console.log(warnings);
 ```
 
-The optional second argument `{ pythonExecutable: "...", connector: true }`
-selects a Python
+The optional second argument `{ pythonExecutable: "..." }` selects a Python
 executable for API callers. Invalid data, unsupported features, unavailable
 Python/lxml, and XSD violations throw errors rather than producing output.
-`connector: true` (CLI `--connector`) uses the existing IFC converter's
-`PanelProperty` element and root order. The default retains the original
-sample's `Panel` element and order.
+The generator always uses the connector-compatible `PanelProperty` element
+and root element order; there is no layout-selection option.
 
 ## Supported common-data drafts
 
@@ -57,11 +54,10 @@ fields take precedence when edited, while unmapped attributes are preserved.
 Equivalent numeric source strings are kept unchanged. Panel/face/segment
 hierarchy and member references are explicit; unused nodes and sections remain.
 
-The generator recreates the supplied OTXML's **element order, names, attributes,
-and values**, not its original whitespace, quote style, or XML declaration
-formatting. When source attributes are absent, source-only fields cannot be
-reconstructed. In particular, output without them has not been proven to meet
-all connector requirements.
+The generator recreates the supplied OTXML's **element names, attributes, and
+values**, not its original whitespace, quote style, XML declaration formatting,
+or top-level element order. It always emits the connector-compatible layout.
+When source attributes are absent, source-only fields cannot be reconstructed.
 
 For IFC-derived `1.1-draft`, panel `memberGroups` with `type: "PlanBracing"`
 are serialized under `PlanBracingDetails`. Members without `sectionId` use
@@ -97,7 +93,7 @@ The source declares 46 panels but contains two, and section 3 has negative
 dimensions. Both are preserved and reported as warnings; missing panels or
 engineering values are never invented.
 
-[schema/otxml.xsd](./schema/otxml.xsd) is the compatibility schema extended
+[schema/sst.xsd](./schema/sst.xsd) is the SST compatibility schema extended
 from the supplied XSD. It accepts known root elements in any order and many
 attributes are optional strings. XSD validation does **not** establish geometric,
 structural, engineering, or complete connector correctness.
