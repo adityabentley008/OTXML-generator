@@ -1,5 +1,5 @@
 import { Element, js2xml } from "xml-js";
-import { CommonData, DEFAULT_SECTION_ID, Member, Panel, SourceAttributes } from "./model";
+import { CommonData, DEFAULT_SECTION_ID, Member, MemberGroup, Panel, Pole, SourceAttributes } from "./model";
 import { supportOnlyNodeIds } from "./supports";
 
 type AttributeValue = string | number;
@@ -38,14 +38,14 @@ function tower(data: CommonData): Element {
     const t = data.towerInformation;
     const values: Record<string, AttributeValue> = {
         TowerID: t.id, TowerName: t.name, TowerType: t.type, TowerHeight: t.height,
-        NoOfLegs: t.numberOfLegs, NoofPanel: t.partialExport ? data.panels.length : t.declaredPanelCount, BearingAngle: t.bearingAngleDegrees,
+        NoOfLegs: t.numberOfLegs!, NoofPanel: t.partialExport ? data.panels!.length : t.declaredPanelCount!, BearingAngle: t.bearingAngleDegrees,
         TopFaceWidth: t.topFaceWidth, TopFaceDepth: t.topFaceDepth, BottomFaceWidth: t.bottomFaceWidth,
         BottomFaceDepth: t.bottomFaceDepth,
     };
     for (const [key, value] of Object.entries({ ConcreteHeight: t.concreteHeight, TowerTiltX: t.tiltX, TowerTiltY: t.tiltY, Convention: t.convention, UnitSystem: t.unitSystem, TowerShape: t.towerShape, OTXMLAngle: t.otxmlAngle, Orientation: t.orientation })) {
         if (value !== undefined) values[key] = value;
     }
-    if (t.partialExport) { values.SourcePanelCount = t.declaredPanelCount; values.PartialExport = "True"; }
+    if (t.partialExport) { values.SourcePanelCount = t.declaredPanelCount!; values.PartialExport = "True"; }
     return element("TowerInformation", mapped(t.sourceAttributes, values));
 }
 
@@ -91,7 +91,126 @@ function panelElement(panel: Panel, members: Map<string, Member>): Element {
 
 const sectionDimensionKeys = ["Radius", "WallThickness", "Width", "Depth", "Thickness", "FilletRadius", "EdgeRadius", "OuterDiameter", "InnerDiameter", "Diameter", "Tnom"];
 
-export function serialize(data: CommonData): string {
+function monopoleProject(data: CommonData): Element {
+    const p = data.projectData;
+    const original = { ...p.sourceAttributes };
+    for (const key of ["SourceAppElementId", "Site_Lattitude", "Site_Longitude", "Site_Altitude"]) delete original[key];
+    return element("ProjectData", mapped(original, {
+        ID: p.projectId, ...(p.siteName === undefined ? {} : { SiteName: p.siteName }),
+        SiteLattitude: p.location.latitudeDegrees, SiteLongitude: p.location.longitudeDegrees,
+        SiteAltitude: p.location.altitudeMetres,
+    }));
+}
+
+function monopoleTower(data: CommonData): Element {
+    const t = data.towerInformation;
+    const original = { ...t.sourceAttributes };
+    for (const key of ["OTXMLAngle", "Orientation", "TowerShape", "NoOfLegs", "NoofPanel", "SourcePanelCount", "PartialExport"]) delete original[key];
+    const values: Record<string, AttributeValue> = {
+        TowerID: t.id, TowerName: t.name, TowerType: t.type, TowerHeight: t.height,
+        BearingAngle: t.bearingAngleDegrees, TopFaceWidth: t.topFaceWidth, TopFaceDepth: t.topFaceDepth,
+        BottomFaceWidth: t.bottomFaceWidth, BottomFaceDepth: t.bottomFaceDepth,
+    };
+    for (const [key, value] of Object.entries({ ConcreteHeight: t.concreteHeight, TowerTiltX: t.tiltX,
+        TowerTiltY: t.tiltY, Convention: t.convention, UnitSystem: t.unitSystem })) {
+        if (value !== undefined) values[key] = value;
+    }
+    return element("TowerInformation", mapped(original, values));
+}
+
+function poleProperty(pole: Pole): Element {
+    const values: Record<string, AttributeValue> = { PoleID: pole.id, Label: pole.label, ComponentName: "Pole" };
+    for (const [key, value] of Object.entries({
+        SectionLength: pole.sectionLength, TopElevation: pole.topElevation, BottomElevation: pole.bottomElevation,
+        TopFlatDiameter: pole.topFlatDiameter, BottomFlatDiameter: pole.bottomFlatDiameter,
+        TopTipDiameter: pole.topTipDiameter, BottomTipDiameter: pole.bottomTipDiameter,
+        Thickness: pole.thickness, PolesectionType: pole.sectionType,
+        TopFlatWidth: pole.topFlatWidth, BottomFlatWidth: pole.bottomFlatWidth,
+    })) if (value !== undefined) values[key] = value;
+    return element("PoleProperty", mapped(undefined, values));
+}
+
+function monopoleRadCenters(data: CommonData, warnings: string[]): Element[] {
+    const result: Element[] = [];
+    const seen = new Set<string>();
+    const visit = (groups: MemberGroup[] | undefined): void => {
+        for (const group of groups || []) {
+            if (group.type === "RadCenter") {
+                if (seen.has(group.id)) throw new Error(`Duplicate RadCenter ID ${group.id}.`);
+                seen.add(group.id);
+                const source = group.sourceAttributes || {};
+                const properties = (group.propertySets || []).reduce<Array<{ name: string; value?: unknown }>>(
+                    (all, set) => all.concat(set.properties), []);
+                const value = (name: string): string | undefined => {
+                    if (source[name] !== undefined) return source[name];
+                    const matches = properties.filter((property) => property.name === name && (typeof property.value === "string" || typeof property.value === "number"));
+                    return matches.length === 1 ? String(matches[0].value) : undefined;
+                };
+                const elevation = value("Elevation");
+                if (elevation === undefined || elevation.trim() === "" || !Number.isFinite(Number(elevation))) {
+                    warnings.push(`RadCenter ${group.id} has no valid elevation and was not written to OTXML.`);
+                } else {
+                    const attrs: SourceAttributes = { ID: group.id, Elevation: elevation, ComponentName: "RadCenter" };
+                    const operator = value("Operator");
+                    if (operator !== undefined) attrs.Operator = operator;
+                    const sourceId = source.SourceAppElementId || value("SourceAppElement ID of RadCenter");
+                    if (sourceId !== undefined) attrs.SourceAppElementId = sourceId;
+                    result.push(element("RadCenterProperty", attrs));
+                }
+            }
+            visit(group.memberGroups);
+        }
+    };
+    visit(data.projectData.memberGroups);
+    visit(data.towerInformation.memberGroups);
+    for (const pole of data.poles || []) visit(pole.memberGroups);
+    return result;
+}
+
+function serializeMonopole(data: CommonData, warnings: string[]): string {
+    const members = new Map(data.members.map((member): [string, Member] => [member.id, member]));
+    const poles = data.poles!;
+    const omittedNodes = supportOnlyNodeIds(data);
+    const nodes = data.nodes.filter((node) => !omittedNodes.has(node.id))
+        .map((node) => element("Node", mapped(node.sourceAttributes, { ID: node.id, X: node.x, Y: node.y, Z: node.z })));
+    const poleElements = poles.map((pole) => element("Pole", { ID: pole.id }, pole.members.map((id) => {
+        const member = members.get(id)!;
+        const values: Record<string, AttributeValue> = {
+            PolePropertyID: pole.id, ID: member.id, StartNodeID: member.startNodeId,
+            EndNodeID: member.endNodeId, Label: member.label,
+        };
+        if (member.sectionId !== undefined) values.SectionID = member.sectionId;
+        if (member.betaAngleDegrees !== undefined) values.BetaAngle = member.betaAngleDegrees;
+        return element("PhysicalMember", mapped(undefined, values));
+    })));
+    const sections = data.sections.map((section) => element("Section", mapped(undefined, {
+        ID: section.id, Name: section.shape, ...section.dimensions,
+    })));
+    const radCenters = monopoleRadCenters(data, warnings);
+    if (poles.some((pole) => pole.sectionProfile !== undefined)) warnings.push("Pole section profile labels cannot be represented by monopole.xsd and remain in Common X.");
+    if (poles.some((pole) => pole.members.length > 1)) warnings.push("The connector may use only the first physical member of each pole; verify multi-member poles before use.");
+    if (data.towerInformation.orientation !== undefined || data.towerInformation.otxmlAngle !== undefined || data.towerInformation.towerShape !== undefined) {
+        warnings.push("monopole.xsd does not allow tower Orientation, OTXMLAngle or TowerShape; these values remain in Common X and connector defaults may affect rendering.");
+    }
+    if (data.materials.length || data.members.some((member) => member.materialId !== undefined || member.startRelease !== undefined || member.endRelease !== undefined || member.tag !== undefined)) {
+        warnings.push("Material assignments, releases, and member tags cannot be represented by monopole.xsd and remain in Common X.");
+    }
+    if (data.sections.some((section) => section.name !== undefined || section.sourceAttributes !== undefined)) {
+        warnings.push("Section source names and attributes are not written to monopole OTXML.");
+    }
+    if (data.projectData.sourceAttributes?.SourceAppElementId !== undefined || data.members.some((member) => member.sourceElementId !== undefined || member.sourceAttributes !== undefined)) {
+        warnings.push("Project and member source identifiers or source attributes are not written to monopole OTXML; they remain in Common X.");
+    }
+    return documentXml([
+        monopoleProject(data), monopoleTower(data), element("Nodes", {}, nodes),
+        element("PoleProperties", {}, poles.map(poleProperty)), ...poleElements,
+        ...(radCenters.length ? [element("RadCenterProperties", {}, radCenters)] : []),
+        ...(sections.length ? [element("Sections", {}, sections)] : []),
+    ]);
+}
+
+export function serialize(data: CommonData, warnings: string[] = []): string {
+    if (data.towerInformation.type.toLowerCase() === "monopole") return serializeMonopole(data, warnings);
     const members = new Map(data.members.map((member): [string, Member] => [member.id, member]));
     const sections = data.sections.map((section) => {
         const original = { ...section.sourceAttributes };
@@ -111,12 +230,16 @@ export function serialize(data: CommonData): string {
     const nodes = data.nodes.filter((node) => !omittedNodes.has(node.id)).map((node) => element("Node", mapped(node.sourceAttributes, { ID: node.id, X: node.x, Y: node.y, Z: node.z })));
     const projectElement = project(data);
     const towerElement = tower(data);
-    const panelProperties = element("PanelProperties", {}, data.panels.map(panelProperty));
-    const panels = data.panels.map((panel) => panelElement(panel, members));
+    const panelProperties = element("PanelProperties", {}, data.panels!.map(panelProperty));
+    const panels = data.panels!.map((panel) => panelElement(panel, members));
     const nodeTable = element("Nodes", {}, nodes);
     const sectionTable = element("Sections", {}, sections);
     const materialTable = materials.length ? [element("Materials", {}, materials)] : [];
     const elements = [sectionTable, ...materialTable, nodeTable, panelProperties, ...panels, projectElement, towerElement];
+    return documentXml(elements);
+}
+
+function documentXml(elements: Element[]): string {
     const document: Element = {
         declaration: { attributes: { version: "1.0", encoding: "UTF-8" } },
         elements: [element("Staad", {}, elements)],

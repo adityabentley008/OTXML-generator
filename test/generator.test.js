@@ -6,6 +6,7 @@ const { spawnSync } = require("node:child_process");
 const test = require("node:test");
 const { xml2js } = require("xml-js");
 const { generateOtxml } = require("../dist");
+const { validateOtxml } = require("../dist/xsd");
 
 const root = path.resolve(__dirname, "..");
 const samplePath = path.join(root, "examples", "746-common-data.json");
@@ -19,6 +20,117 @@ function find(node, name) {
         if (result) return result;
     }
 }
+
+function monopoleSample() {
+    return {
+        schemaVersion: "1.1-draft",
+        source: { format: "IFC", fileName: "monopole.ifc" },
+        units: {
+            nodeCoordinates: { unit: "m" }, towerDimensions: { unit: "ft" },
+            sectionDimensions: { unit: "in" }, poleDimensions: { unit: "unknown" },
+        },
+        coordinateSystem: { upAxis: "Y" },
+        projectData: { projectId: "1", location: { latitudeDegrees: 44.1, longitudeDegrees: -72.9, altitudeMetres: 682 },
+            sourceAttributes: { ComponentName: "ProjectData", SourceAppElementId: "ProjectData_1", Site_Lattitude: "44.1" } },
+        towerInformation: { id: "tower", name: "Pole & Tower", type: "Monopole", height: 98.68, bearingAngleDegrees: 0,
+            topFaceWidth: 2.33, topFaceDepth: 2.33, bottomFaceWidth: 3.9, bottomFaceDepth: 3.9,
+            orientation: "OpenTower", otxmlAngle: 0, sourceAttributes: { ComponentName: "TowerInformation", OTXMLAngle: "0" },
+            memberGroups: [{ id: "radcenters", type: "RadCenters", label: "RadCenters", members: [], memberGroups: [
+                { id: "rad1", type: "RadCenter", label: "Elev", members: [],
+                    sourceAttributes: { Elevation: "94.55", Operator: "-", SourceAppElementId: "Elevation:94.55" } },
+            ] }] },
+        poles: [{ id: "1", label: "Pole 1", sourceIfcId: "3081", parentIfcId: "262", sourceElementId: "IFC_pole",
+            members: ["3081"], sectionLength: 98.68, topElevation: 98.68, bottomElevation: 0,
+            topFlatDiameter: 2.33, bottomFlatDiameter: 3.9, topTipDiameter: 2.35, bottomTipDiameter: 3.92,
+            thickness: 0.02, sectionType: "Tapered", topFlatWidth: 0, bottomFlatWidth: 0, sectionProfile: "TT508" }],
+        nodes: [{ id: "1", x: -0.126, y: 30.07, z: -0.0105 }, { id: "2", x: 0, y: 0, z: 0 }],
+        members: [{ id: "3081", sourceKind: "pole", label: "Pole 1", sourceElementId: "IFC_pole", startNodeId: "1", endNodeId: "2" }],
+        sections: [], materials: [],
+    };
+}
+
+test("generates monopole properties, shared pole members and rad centers under the monopole XSD", () => {
+    const data = monopoleSample();
+    const before = JSON.stringify(data);
+    const result = generateOtxml(data);
+    const tree = parse(result.xml);
+    assert.equal(JSON.stringify(data), before);
+    assert.deepEqual(tree.elements.map((entry) => entry.name),
+        ["ProjectData", "TowerInformation", "Nodes", "PoleProperties", "Pole", "RadCenterProperties"]);
+    assert.deepEqual(find(tree, "PhysicalMember").attributes,
+        { PolePropertyID: "1", ID: "3081", StartNodeID: "1", EndNodeID: "2", Label: "Pole 1" });
+    assert.equal(find(tree, "PoleProperty").attributes.Thickness, "0.02");
+    assert.equal(find(tree, "PoleProperty").attributes.PolesectionType, "Tapered");
+    assert.equal(find(tree, "RadCenterProperty").attributes.Elevation, "94.55");
+    assert.equal(find(tree, "TowerInformation").attributes.TowerName, "Pole & Tower");
+    assert.equal(find(tree, "Panel"), undefined);
+    assert.equal(find(tree, "Sections"), undefined);
+    assert(result.warnings.some((warning) => warning.includes("units are unknown")));
+    assert(result.warnings.some((warning) => warning.includes("SectionID was omitted")));
+    assert(result.warnings.some((warning) => warning.includes("Orientation")));
+    assert.throws(() => validateOtxml(result.xml), /XSD validation failed/);
+    validateOtxml(result.xml, "python", "monopole");
+});
+
+test("validates monopole pole, node, section, and member references", () => {
+    const cases = [
+        [(d) => { delete d.poles[0].members; }, /poles\[0\]\.members/],
+        [(d) => { d.poles[0].members = ["missing"]; }, /Missing referenced member/],
+        [(d) => { d.poles.push({ ...d.poles[0] }); }, /Duplicate poles ID|Duplicate member reference/],
+        [(d) => { d.members[0].endNodeId = "missing"; }, /missing node/],
+        [(d) => { d.members[0].endNodeId = "1"; }, /identical pole endpoints/],
+        [(d) => { d.members[0].sectionId = "missing"; }, /missing section/],
+        [(d) => { d.poles[0].thickness = "bad"; }, /thickness must be a finite number/],
+        [(d) => { d.panels = [{}]; }, /cannot contain panels/],
+        [(d) => { d.units.poleDimensions.unit = "m"; }, /unit conversion/],
+        [(d) => { d.sections.push({ id: "1", shape: "LShape", dimensions: {}, contour: [{ polygonId: "1", x: 0, y: 0, z: 0 }] }); }, /cannot be represented/],
+    ];
+    for (const [mutate, error] of cases) {
+        const data = monopoleSample();
+        mutate(data);
+        assert.throws(() => generateOtxml(data), error);
+    }
+});
+
+test("writes multiple poles and explicit section references without inventing sections", () => {
+    const data = monopoleSample();
+    data.sections.push({ id: "section", shape: "HollowCircle", dimensions: { Radius: 1 } });
+    data.members[0].sectionId = "section";
+    data.poles.push({ ...data.poles[0], id: "2", label: "Pole 2", members: ["member2"] });
+    data.members.push({ id: "member2", label: "Pole 2", startNodeId: "2", endNodeId: "1", betaAngleDegrees: 12 });
+    const result = generateOtxml(data);
+    const tree = parse(result.xml);
+    const poles = tree.elements.filter((entry) => entry.name === "Pole");
+    assert.equal(poles.length, 2);
+    assert.equal(poles[0].elements[0].attributes.SectionID, "section");
+    assert.equal(poles[1].elements[0].attributes.PolePropertyID, "2");
+    assert.equal(poles[1].elements[0].attributes.BetaAngle, "12");
+    assert.equal(poles[1].elements[0].attributes.SectionID, undefined);
+    assert.equal(find(tree, "Section").attributes.ID, "section");
+});
+
+test("reports omitted rad centers instead of guessing elevations", () => {
+    const data = monopoleSample();
+    delete data.towerInformation.memberGroups[0].memberGroups[0].sourceAttributes.Elevation;
+    const result = generateOtxml(data);
+    assert.equal(find(parse(result.xml), "RadCenterProperties"), undefined);
+    assert(result.warnings.some((warning) => warning.includes("no valid elevation")));
+});
+
+test("CLI selects the monopole schema for monopole JSON", () => {
+    const directory = fs.mkdtempSync(path.join(os.tmpdir(), "otxml-pole-"));
+    const input = path.join(directory, "input.json");
+    const output = path.join(directory, "output.otxml");
+    try {
+        fs.writeFileSync(input, JSON.stringify(monopoleSample()));
+        const run = spawnSync(process.execPath, [path.join(root, "dist", "cli.js"), input, output], { encoding: "utf8" });
+        assert.equal(run.status, 0, run.stderr);
+        assert.equal(find(parse(fs.readFileSync(output, "utf8")), "PhysicalMember").attributes.PolePropertyID, "1");
+    } finally {
+        for (const file of [input, output]) if (fs.existsSync(file)) fs.unlinkSync(file);
+        fs.rmdirSync(directory);
+    }
+});
 
 test("generates connector-layout OTXML and validates it against the XSD", () => {
     const data = sample();

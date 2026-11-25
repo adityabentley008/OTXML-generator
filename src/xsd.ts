@@ -10,8 +10,8 @@ const validator = [
     "schema.assertValid(document)",
 ].join("\n");
 
-export function validateOtxml(xml: string, pythonExecutable = "python"): void {
-    const schema = path.resolve(__dirname, "..", "schema", "sst.xsd");
+export function validateOtxml(xml: string, pythonExecutable = "python", towerType: "sst" | "monopole" = "sst"): void {
+    const schema = path.resolve(__dirname, "..", "schema", `${towerType}.xsd`);
     const result = spawnSync(pythonExecutable, ["-c", validator, schema], {
         input: xml, encoding: "utf8", maxBuffer: 8 * 1024 * 1024,
     });

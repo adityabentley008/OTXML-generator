@@ -41,8 +41,9 @@ console.log(warnings);
 The optional second argument `{ pythonExecutable: "..." }` selects a Python
 executable for API callers. Invalid data, unsupported features, unavailable
 Python/lxml, and XSD violations throw errors rather than producing output.
-The generator always uses the connector-compatible `PanelProperty` element
-and root element order; there is no layout-selection option.
+The generator selects `sst.xsd` or `monopole.xsd` from `towerInformation.type`.
+SST output uses the connector-compatible `PanelProperty` layout; there is no
+layout-selection option.
 
 ## Supported common-data drafts
 
@@ -78,6 +79,38 @@ perform unit conversions. The example's unit assumptions require confirmation
 for other sources. Unknown weight units and other unmapped source attributes are
 preserved but are not interpreted. Expand the model and mappings explicitly
 before adding new sources or formats.
+
+### Monopole towers
+
+Common X `1.1-draft` monopoles use `poles`, each with `members` referencing
+the shared top-level `members` and `nodes` collections, instead of panels.
+The IFC extractor represents the original IFC Pole as a member; it does not
+claim that a separate IFC beam exists. Re-extract older monopole JSON that has
+pole endpoint IDs but no `members` list. Example:
+
+```powershell
+Set-Location D:\projects\ifc-to-otxml
+npm run extract -- "D:\testIfcs\ifc4.ifc" "C:\data\monopole.json" --compact
+Set-Location D:\projects\otxml-generator
+npm run generate -- "C:\data\monopole.json" "C:\data\monopole.otxml"
+```
+
+Pole properties and referenced members are emitted in the order required by
+[monopole.xsd](./schema/monopole.xsd). Members must reference existing,
+distinct endpoint nodes. Missing section IDs and beta angles are omitted,
+not defaulted. Pole dimensions with `unit: "unknown"` are passed through with
+a warning; verify their units before use. Source rad centers with an elevation
+are emitted, including after compact extraction; rad centers missing a valid
+elevation are skipped with a warning. Other unmapped groups and IFC properties
+remain in Common X rather than being invented as equipment.
+
+The supplied monopole schema does not permit tower `Orientation`, pole
+`SectionProfile`, member material/release attributes, or section contours.
+The generator warns when applicable; contours are rejected. The connector may
+use defaults for omitted values, so **XSD validation does not guarantee that
+the resulting iModel matches the source**. In particular, orientation can
+affect the connector's solid/hollow pole choice. Confirm the schema and units
+before relying on rendered or engineering results.
 
 ### Support groups
 

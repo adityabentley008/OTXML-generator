@@ -66,11 +66,18 @@ function propertySets(value: unknown, path: string): void {
 }
 
 export function validateCommonData(value: unknown, warnings: string[] = []): asserts value is CommonData {
-    const root = object(value, "data", ["schemaVersion", "source", "units", "coordinateSystem", "projectData", "towerInformation", "panels", "nodes", "members", "sections", "materials", "notes"]);
+    const root = object(value, "data", ["schemaVersion", "source", "units", "coordinateSystem", "projectData", "towerInformation", "panels", "poles", "nodes", "members", "sections", "materials", "notes"]);
     const draft11 = root.schemaVersion === "1.1-draft";
     if (!draft11 && root.schemaVersion !== "1.0-draft") throw new Error("Unsupported schemaVersion; expected 1.0-draft or 1.1-draft.");
+    const towerInput = root.towerInformation;
+    const monopole = typeof towerInput === "object" && towerInput !== null && !Array.isArray(towerInput) &&
+        typeof (towerInput as Obj).type === "string" && ((towerInput as Obj).type as string).toLowerCase() === "monopole";
+    if (monopole && !draft11) throw new Error("Monopoles require schemaVersion 1.1-draft.");
+    if (!monopole && root.poles !== undefined) throw new Error("poles are only supported for monopole towers.");
+    if (monopole && root.panels !== undefined && list(root.panels, "panels").length) throw new Error("Monopole towers cannot contain panels.");
     const metadataKeys = draft11 ? ["propertySets", "memberGroups"] : [];
     const usages: string[] = [];
+    const poleUsages = new Set<string>();
     const supportUsages = new Set<string>();
     let omittedMetadata = false;
     function inspectMetadata(owner: Obj, path: string, allowPlanGroups = false, insideSupport = false): number {
@@ -109,11 +116,21 @@ export function validateCommonData(value: unknown, warnings: string[] = []): ass
     }
     const source = object(root.source, "source", ["format", "fileName"]);
     fields(source, "source", ["format", "fileName"], []);
-    const units = object(root.units, "units", ["nodeCoordinates", "panelDimensions", "towerDimensions", "sectionDimensions", "panelWeight"]);
-    for (const [key, expected] of Object.entries({ nodeCoordinates: "m", panelDimensions: "ft", towerDimensions: "ft", sectionDimensions: "in", panelWeight: "unknown" })) {
+    const units = object(root.units, "units", ["nodeCoordinates", "panelDimensions", "towerDimensions", "sectionDimensions", "panelWeight", ...(monopole ? ["poleDimensions"] : [])]);
+    const requiredUnits = monopole
+        ? { nodeCoordinates: "m", towerDimensions: "ft", sectionDimensions: "in" }
+        : { nodeCoordinates: "m", panelDimensions: "ft", towerDimensions: "ft", sectionDimensions: "in", panelWeight: "unknown" };
+    for (const [key, expected] of Object.entries(requiredUnits)) {
         const unit = object(units[key], `units.${key}`, ["unit", "basis"]);
         if (unit.unit !== expected) throw new Error(`units.${key}.unit must be ${expected}; unit conversion is not supported.`);
         if (unit.basis !== undefined) text(unit.basis, `units.${key}.basis`, true);
+    }
+    if (monopole) {
+        const unit = object(units.poleDimensions, "units.poleDimensions", ["unit", "basis"]);
+        text(unit.unit, "units.poleDimensions.unit");
+        if (unit.unit !== "unknown" && unit.unit !== "ft") throw new Error("units.poleDimensions.unit must be ft or unknown; unit conversion is not supported.");
+        if (unit.basis !== undefined) text(unit.basis, "units.poleDimensions.basis", true);
+        if (unit.unit === "unknown") warnings.push("Pole dimension units are unknown; values are written unchanged and must be confirmed before use.");
     }
     const coordinates = object(root.coordinateSystem, "coordinateSystem", ["upAxis", "basis"]);
     if (coordinates.upAxis !== "Y") throw new Error("coordinateSystem.upAxis must be Y.");
@@ -125,18 +142,30 @@ export function validateCommonData(value: unknown, warnings: string[] = []): ass
     attributes(project.sourceAttributes, "projectData.sourceAttributes");
     const location = object(project.location, "projectData.location", ["latitudeDegrees", "longitudeDegrees", "altitudeMetres", "altitudeBasis"]);
     fields(location, "projectData.location", [], ["latitudeDegrees", "longitudeDegrees", "altitudeMetres"]);
+    if (monopole) for (const key of ["latitudeDegrees", "longitudeDegrees", "altitudeMetres"]) {
+        if (typeof location[key] !== "number" || !Number.isFinite(location[key])) throw new Error(`projectData.location.${key} must be a finite number.`);
+    }
     if (location.altitudeBasis !== undefined) text(location.altitudeBasis, "projectData.location.altitudeBasis", true);
     const tower = object(root.towerInformation, "towerInformation", ["id", "name", "type", "height", "numberOfLegs", "declaredPanelCount", "bearingAngleDegrees", "topFaceWidth", "topFaceDepth", "bottomFaceWidth", "bottomFaceDepth", "concreteHeight", "tiltX", "tiltY", "convention", "unitSystem", "towerShape", "otxmlAngle", "orientation", "partialExport", "sourceAttributes", ...metadataKeys]);
     inspectMetadata(tower, "towerInformation");
-    fields(tower, "towerInformation", ["id", "name", "type"], ["height", "numberOfLegs", "declaredPanelCount", "bearingAngleDegrees", "topFaceWidth", "topFaceDepth", "bottomFaceWidth", "bottomFaceDepth"]);
+    fields(tower, "towerInformation", ["id", "name", "type"], ["height", ...(!monopole ? ["numberOfLegs", "declaredPanelCount"] : []), "bearingAngleDegrees", "topFaceWidth", "topFaceDepth", "bottomFaceWidth", "bottomFaceDepth"]);
+    if (monopole) for (const key of ["height", "bearingAngleDegrees", "topFaceWidth", "topFaceDepth", "bottomFaceWidth", "bottomFaceDepth"]) {
+        if (typeof tower[key] !== "number" || !Number.isFinite(tower[key])) throw new Error(`towerInformation.${key} must be a finite number.`);
+    }
+    if (monopole) for (const key of ["concreteHeight", "tiltX", "tiltY", "otxmlAngle"]) {
+        if (tower[key] !== undefined && (typeof tower[key] !== "number" || !Number.isFinite(tower[key]))) throw new Error(`towerInformation.${key} must be a finite number.`);
+    }
     for (const key of ["concreteHeight", "tiltX", "tiltY", "otxmlAngle"]) if (tower[key] !== undefined) numeric(tower[key], `towerInformation.${key}`);
     for (const key of ["convention", "unitSystem", "towerShape", "orientation"]) if (tower[key] !== undefined) text(tower[key], `towerInformation.${key}`);
     if (tower.partialExport !== undefined && typeof tower.partialExport !== "boolean") throw new Error("towerInformation.partialExport must be a boolean.");
-    for (const key of ["numberOfLegs", "declaredPanelCount"]) if (!Number.isInteger(tower[key]) || (tower[key] as number) < 1) throw new Error(`towerInformation.${key} must be a positive integer.`);
+    if (!monopole) for (const key of ["numberOfLegs", "declaredPanelCount"]) if (!Number.isInteger(tower[key]) || (tower[key] as number) < 1) throw new Error(`towerInformation.${key} must be a positive integer.`);
+    if (monopole && (tower.numberOfLegs !== undefined || tower.declaredPanelCount !== undefined || tower.partialExport !== undefined)) {
+        throw new Error("Monopole towerInformation must not contain panel or leg counts.");
+    }
     attributes(tower.sourceAttributes, "towerInformation.sourceAttributes");
 
-    const ids: Record<string, string[]> = { panels: [], nodes: [], members: [], sections: [] };
-    for (const [index, raw] of list(root.panels, "panels").entries()) {
+    const ids: Record<string, string[]> = { panels: [], poles: [], nodes: [], members: [], sections: [] };
+    for (const [index, raw] of (monopole ? [] : list(root.panels, "panels")).entries()) {
         const path = `panels[${index}]`;
         const p = object(raw, path, ["id", "label", "height", "topWidth", "bottomWidth", "topElevation", "bottomElevation", "faceBracing", "planBracing", "hipBracing", "numberOfSegments", "weight", "legs", "faces", "sourceAttributes", ...metadataKeys, ...(draft11 ? ["faceBracingPropertySets"] : [])]);
         fields(p, path, ["id", "label", "faceBracing"], ["height", "topWidth", "bottomWidth", "topElevation", "bottomElevation", "numberOfSegments", "weight"]);
@@ -177,10 +206,41 @@ export function validateCommonData(value: unknown, warnings: string[] = []): ass
             }
         }
     }
+    if (monopole) {
+        for (const [index, raw] of list(root.poles, "poles").entries()) {
+            const path = `poles[${index}]`;
+            const pole = object(raw, path, ["id", "label", "sourceIfcId", "parentIfcId", "sourceElementId", "members",
+                "sectionLength", "topElevation", "bottomElevation", "topFlatDiameter", "bottomFlatDiameter", "topTipDiameter",
+                "bottomTipDiameter", "thickness", "sectionType", "topFlatWidth", "bottomFlatWidth", "sectionProfile",
+                "extractionIssues", ...metadataKeys]);
+            fields(pole, path, ["id", "label", "sectionType"], []);
+            for (const key of ["sectionLength", "topElevation", "bottomElevation", "topFlatDiameter", "bottomFlatDiameter", "topTipDiameter", "bottomTipDiameter", "thickness"]) {
+                if (typeof pole[key] !== "number" || !Number.isFinite(pole[key])) throw new Error(`${path}.${key} must be a finite number.`);
+            }
+            for (const key of ["topFlatWidth", "bottomFlatWidth"]) {
+                if (pole[key] !== undefined && (typeof pole[key] !== "number" || !Number.isFinite(pole[key]))) throw new Error(`${path}.${key} must be a finite number.`);
+            }
+            for (const key of ["sourceIfcId", "parentIfcId", "sourceElementId", "sectionProfile"]) if (pole[key] !== undefined) text(pole[key], `${path}.${key}`);
+            if (pole.extractionIssues !== undefined) for (const issue of list(pole.extractionIssues, `${path}.extractionIssues`)) text(issue, `${path}.extractionIssues entry`);
+            inspectMetadata(pole, path);
+            ids.poles.push(pole.id as string);
+            const refs = list(pole.members, `${path}.members`);
+            if (!refs.length) throw new Error(`${path}.members must contain at least one pole member.`);
+            for (const id of refs) {
+                text(id, `${path}.members`);
+                usages.push(id as string);
+                poleUsages.add(id as string);
+            }
+        }
+        if (!ids.poles.length) throw new Error("Monopole towers must contain at least one pole.");
+    }
     for (const [index, raw] of list(root.nodes, "nodes").entries()) {
         const path = `nodes[${index}]`;
         const node = object(raw, path, ["id", "x", "y", "z", "sourceAttributes"]);
         fields(node, path, ["id"], ["x", "y", "z"]); attributes(node.sourceAttributes, `${path}.sourceAttributes`);
+        if (monopole) for (const key of ["x", "y", "z"]) {
+            if (typeof node[key] !== "number" || !Number.isFinite(node[key])) throw new Error(`${path}.${key} must be a finite number.`);
+        }
         ids.nodes.push(node.id as string);
     }
     for (const [index, raw] of list(root.sections, "sections").entries()) {
@@ -193,11 +253,13 @@ export function validateCommonData(value: unknown, warnings: string[] = []): ass
             const point = object(rawPoint, pointPath, ["polygonId", "x", "y", "z"]);
             fields(point, pointPath, ["polygonId"], ["x", "y", "z"]);
         }
+        if (monopole && section.contour !== undefined && list(section.contour, `${path}.contour`).length) throw new Error(`${path}.contour cannot be represented by monopole.xsd.`);
         if (typeof section.dimensions !== "object" || section.dimensions === null || Array.isArray(section.dimensions)) throw new Error(`${path}.dimensions must be an object.`);
         const supportedDimensions = ["Radius", "WallThickness", "Width", "Depth", "Thickness", "FilletRadius", "EdgeRadius", "OuterDiameter", "InnerDiameter", "Diameter", "Tnom"];
         for (const [key, dimension] of Object.entries(section.dimensions)) {
             if (!supportedDimensions.includes(key)) throw new Error(`Unsupported field ${path}.dimensions.${key}.`);
             numeric(dimension, `${path}.dimensions.${key}`);
+            if (monopole && (typeof dimension !== "number" || !Number.isFinite(dimension))) throw new Error(`${path}.dimensions.${key} must be a finite number.`);
         }
         ids.sections.push(section.id as string);
     }
@@ -221,9 +283,18 @@ export function validateCommonData(value: unknown, warnings: string[] = []): ass
         }
     }
     const members = list(root.members, "members");
+    if (monopole) {
+        const present = new Set<string>();
+        for (const raw of members) {
+            if (typeof raw === "object" && raw !== null && !Array.isArray(raw) && typeof (raw as Obj).id === "string") {
+                present.add((raw as Obj).id as string);
+            }
+        }
+        for (const id of poleUsages) if (!present.has(id)) throw new Error(`Missing referenced member ${id}.`);
+    }
     for (const [index, raw] of members.entries()) {
         const path = `members[${index}]`;
-        const member = object(raw, path, ["id", "startNodeId", "endNodeId", "sectionId", "betaAngleDegrees", "label", "tag", "materialId", "materialAssignmentSource", "startRelease", "endRelease", "sourceElementId", "sourceAttributes", ...metadataKeys, ...(draft11 ? ["extractionIssues"] : [])]);
+        const member = object(raw, path, ["id", "startNodeId", "endNodeId", "sectionId", "betaAngleDegrees", "label", "tag", "materialId", "materialAssignmentSource", "startRelease", "endRelease", "sourceElementId", "sourceAttributes", ...(monopole ? ["sourceKind"] : []), ...metadataKeys, ...(draft11 ? ["extractionIssues"] : [])]);
         text(member.id, `${path}.id`);
         const isSupport = supportUsages.has(member.id as string);
         if (isSupport) {
@@ -231,9 +302,11 @@ export function validateCommonData(value: unknown, warnings: string[] = []): ass
             continue;
         }
         fields(member, path, ["startNodeId", "endNodeId", "label"], []);
-        if (typeof member.betaAngleDegrees !== "number" || !Number.isFinite(member.betaAngleDegrees)) {
+        const poleMember = monopole && poleUsages.has(member.id as string);
+        if ((!poleMember || member.betaAngleDegrees !== undefined) && (typeof member.betaAngleDegrees !== "number" || !Number.isFinite(member.betaAngleDegrees))) {
             throw new Error(`${path}.betaAngleDegrees must be a finite number.`);
         }
+        if (member.sourceKind !== undefined && member.sourceKind !== "pole") throw new Error(`${path}.sourceKind must be pole.`);
         inspectMetadata(member, path);
         if (member.extractionIssues !== undefined) for (const issue of list(member.extractionIssues, `${path}.extractionIssues`)) text(issue, `${path}.extractionIssues entry`);
         if (!draft11 || member.sectionId !== undefined) text(member.sectionId, `${path}.sectionId`);
@@ -252,9 +325,10 @@ export function validateCommonData(value: unknown, warnings: string[] = []): ass
             }
         }
         if (!nodeIds.has(member.startNodeId as string) || !nodeIds.has(member.endNodeId as string)) throw new Error(`${path} references a missing node.`);
-        if (member.sectionId === undefined) {
+        if (poleMember && member.startNodeId === member.endNodeId) throw new Error(`${path} has identical pole endpoints.`);
+        if (member.sectionId === undefined && !poleMember) {
             if (!sectionIds.has(DEFAULT_SECTION_ID)) throw new Error(`${path}.sectionId is missing and default section ${DEFAULT_SECTION_ID} is not defined.`);
-        } else if (!sectionIds.has(member.sectionId as string)) throw new Error(`${path} references a missing section.`);
+        } else if (member.sectionId !== undefined && !sectionIds.has(member.sectionId as string)) throw new Error(`${path} references a missing section.`);
         ids.members.push(member.id as string);
     }
     for (const [key, values] of Object.entries(ids)) unique(values, `${key} ID`);
@@ -262,9 +336,9 @@ export function validateCommonData(value: unknown, warnings: string[] = []): ass
     const memberIds = new Set(ids.members);
     const referenced = new Set(usages);
     for (const id of usages) if (!memberIds.has(id)) throw new Error(`Missing referenced member ${id}.`);
-    for (const id of ids.members) if (!referenced.has(id)) throw new Error(`Member ${id} is not referenced by a panel.`);
-    if (!ids.panels.length || ids.panels.length > (tower.declaredPanelCount as number)) throw new Error("Panel count is empty or exceeds declaredPanelCount.");
-    if (tower.partialExport === true && ids.panels.length >= (tower.declaredPanelCount as number)) throw new Error("partialExport requires fewer panels than declaredPanelCount.");
+    for (const id of ids.members) if (!referenced.has(id)) throw new Error(`Member ${id} is not referenced by a ${monopole ? "pole" : "panel"}.`);
+    if (!monopole && (!ids.panels.length || ids.panels.length > (tower.declaredPanelCount as number))) throw new Error("Panel count is empty or exceeds declaredPanelCount.");
+    if (!monopole && tower.partialExport === true && ids.panels.length >= (tower.declaredPanelCount as number)) throw new Error("partialExport requires fewer panels than declaredPanelCount.");
     if (root.notes !== undefined) for (const note of list(root.notes, "notes")) text(note, "notes entry", true);
     if (supportUsages.size) warnings.push(`Ignored ${supportUsages.size} support members and their support-only nodes; support output is disabled pending schema decisions.`);
     if (omittedMetadata) warnings.push("IFC property sets, group source attributes and unmapped groups without members are not written to OTXML; they remain in Common X.");

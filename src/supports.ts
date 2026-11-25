@@ -11,12 +11,13 @@ export function supportMembers(data: CommonData): Member[] {
     }
     visit(data.projectData.memberGroups);
     visit(data.towerInformation.memberGroups);
-    for (const panel of data.panels) {
+    for (const panel of data.panels || []) {
         visit(panel.memberGroups);
         for (const face of panel.faces) {
             visit(face.memberGroups);
             for (const segment of face.segments) visit(segment.memberGroups);
         }
+        for (const pole of data.poles || []) visit(pole.memberGroups);
     }
     for (const member of data.members) visit(member.memberGroups);
     return data.members.filter((member) => ids.has(member.id));
